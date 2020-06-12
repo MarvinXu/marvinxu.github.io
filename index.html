@@ -1,196 +1,765 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+<meta name="referrer" content="no-referrer" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#222">
+  <link rel="manifest" href="/images/site.webmanifest">
+  <meta name="msapplication-config" content="/images/browserconfig.xml">
 
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
   <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="Marvin&#39;s Blog">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="Marvin&#39;s Blog">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="Marvin Xu">
 <meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<link rel="canonical" href="http://yoursite.com/">
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Marvin's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Marvin's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">5</span></a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
       
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/06/11/hello-world/" class="article-date">
-  <time datetime="2020-06-11T13:36:35.008Z" itemprop="datePublished">2020-06-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/11/hello-world/">Hello World</a>
-    </h1>
-  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/12/yuque/How%20to%20add%20more%20to%20Git%20Bash%20on%20Windows/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="Marvin Xu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Marvin's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/06/12/yuque/How%20to%20add%20more%20to%20Git%20Bash%20on%20Windows/" class="post-title-link" itemprop="url">How to add more to Git Bash on Windows</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-06-12 21:23:33 / Modified: 22:59:11" itemprop="dateCreated datePublished" datetime="2020-06-12T21:23:33+08:00">2020-06-12</time>
+            </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+          <p><a href="https://gist.github.com/evanwill/0207876c3243bbb6863e65ec5dc3f058" target="_blank" rel="noopener">https://gist.github.com/evanwill/0207876c3243bbb6863e65ec5dc3f058</a></p>
+<p><a href="https://git-for-windows.github.io/" target="_blank" rel="noopener">Git for Windows</a> comes bundled with the “Git Bash” terminal which is incredibly handy for unix-like commands on a windows machine.<br>It is missing a few standard linux utilities, but it is easy to add ones that have a windows binary available.</p>
+<p>The basic idea is that <code>C:\Program Files\Git\mingw64\</code> is your <code>/</code> directory according to Git Bash (<em>note:</em> depending on how you installed it, the directory might be different. from the start menu, right click on the Git Bash icon and open file location. It might be something like <code>C:\Users\name\AppData\Local\Programs\Git</code>, the <code>mingw64</code> in this directory is your root. Find it by using <code>pwd -W</code>).<br>If you go to that directory, you will find the typical linux root folder structure (<code>bin</code>, <code>etc</code>, <code>lib</code> and so on).</p>
+<p>If you are missing a utility, such as wget, track down a binary for windows and copy the files to the corresponding directories.<br>Sometimes the windows binary have funny prefixes, so you should <strong>rename</strong> the <code>.exe</code> file to the standard name.<br>Since <code>bin</code> is on the PATH, it will be automatically available to Git Bash.</p>
+<p><em>Note:</em> Many interactive utilities, such as <code>python</code>, <code>ipython</code> or <code>nano</code>, will not display properly with Git Bash’s mintty terminal.<br>Try invoking them with <code>winpty</code> instead, for example <code>winpty ipython</code> will work nicely.<br>The Git-for-Windows team is focused on supporting Git, not a full UNIX shell environment.<br>If you are interested in more complete package with build tools, check my notes on <a href="https://evanwill.github.io/_drafts/notes/cygwin.html" target="_blank" rel="noopener">Cygwin</a> or <a href="https://evanwill.github.io/_drafts/notes/cmdr.html" target="_blank" rel="noopener">Cmder</a>–or install <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10" target="_blank" rel="noopener">Windows Subsystem for Linux</a> or <a href="https://docs.microsoft.com/en-us/windows/wsl/wsl2-about" target="_blank" rel="noopener">WSL2</a>.</p>
+<p>Here are some utilities to add:</p>
+<h2 id="Wget"><a href="#Wget" class="headerlink" title="Wget"></a>Wget</h2><ul>
+<li>Download the lastest wget binary for windows from <a href="https://eternallybored.org/misc/wget/" target="_blank" rel="noopener">eternallybored</a> (they are available as a zip with documentation, or just an exe)</li>
+<li>If you downloaded the zip, extract all (if windows built in zip utility gives an error, use <a href="http://www.7-zip.org/" target="_blank" rel="noopener">7-zip</a>).</li>
+<li>Rename the file <code>wget64.exe</code> to <code>wget.exe</code> if necessary.</li>
+<li>Move <code>wget.exe</code> to your <code>Git\mingw64\bin\</code>.</li>
+</ul>
+<p><em>Note: I have noticed some bugs when using Wget on Git Bash to create WARC files. For more complex use of Wget, consider <a href="https://evanwill.github.io/_drafts/notes/cygwin.html" target="_blank" rel="noopener">Cygwin</a> instead.</em></p>
+<h2 id="Hugo"><a href="#Hugo" class="headerlink" title="Hugo"></a>Hugo</h2><p><a href="http://gohugo.io/" target="_blank" rel="noopener">Hugo</a> static site generator can be downloaded as a binary and does not have a installer.<br>Dropping it into your <code>bin</code> easily adds it to your Git Bash path.<br>Grab the Windows 64-bit version from the <a href="https://github.com/gohugoio/hugo/releases" target="_blank" rel="noopener">releases page</a>.<br>Unzip the download, then copy <code>hugo.exe</code> into your <code>Git\mingw64\bin</code> directory.</p>
+<h2 id="Xpdf"><a href="#Xpdf" class="headerlink" title="Xpdf"></a>Xpdf</h2><p><a href="http://www.xpdfreader.com/index.html" target="_blank" rel="noopener">Xpdf</a> is a handy utility for manipulating PDF files.</p>
+<ul>
+<li>Download the <a href="http://www.xpdfreader.com/download.html" target="_blank" rel="noopener">windows version “Xpdf tools”</a>.</li>
+<li>Extract zip.</li>
+<li>Copy the contents of <code>xpdf-tools-win-4.00\bin64\</code> into your <code>Git\mingw64\bin\</code>.</li>
+<li>Check the <a href="http://www.xpdfreader.com/support.html" target="_blank" rel="noopener">docs</a> to get started with tools such as <code>pdftotext</code> and <code>pdftopng</code>.</li>
+</ul>
+<h2 id="make"><a href="#make" class="headerlink" title="make"></a>make</h2><blockquote>
+<p>Keep in mind you can easy add <code>make</code>, but it doesn’t come packaged with all the standard UNIX build toolchain–so you will have to ensure those are installed <em>and</em> on your PATH, or you will encounter endless error messages.</p>
+</blockquote>
+<ul>
+<li>Go to <a href="https://sourceforge.net/projects/ezwinports/files/" target="_blank" rel="noopener">ezwinports</a>.</li>
+<li>Download <code>make-4.1-2-without-guile-w32-bin.zip</code> (get the version without guile).</li>
+<li>Extract zip.</li>
+<li>Copy the contents to your <code>Git\mingw64\</code> merging the folders, but do NOT overwrite/replace any existing files.</li>
+</ul>
+<h2 id="Nano"><a href="#Nano" class="headerlink" title="Nano"></a>Nano</h2><blockquote>
+<p>As of 2018, recent versions of Git Bash include Nano, so this is unnecessary! Just be sure to choose Nano as your default editor when installing Git for Windows.</p>
+</blockquote>
+<ul>
+<li>Download the Nano binary from Nano <a href="https://www.nano-editor.org/dist/win32-support/" target="_blank" rel="noopener">win32-support</a> page. You just need the <code>.exe</code> file, which is named <code>nano-git-0d9a7347243.exe</code> (as of this writing).</li>
+<li>Rename the file to <code>nano.exe</code>, and copy to the <code>mingw64\bin</code> directory.</li>
+<li>This version of Nano will not work with Git Bash alone, but can be invoked using <code>winpty</code>, for example, <code>winpty nano test.txt</code>.</li>
+</ul>
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/06/11/hello-world/" data-id="ckbau3z8y0000igawhm6d4ijf" class="article-share-link">Share</a>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
       
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/12/yuque/hexo+travisCI%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2github%20pages/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="Marvin Xu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Marvin's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/06/12/yuque/hexo+travisCI%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2github%20pages/" class="post-title-link" itemprop="url">hexo+travisCI自动部署github pages</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-06-12 17:24:27 / Modified: 22:59:11" itemprop="dateCreated datePublished" datetime="2020-06-12T17:24:27+08:00">2020-06-12</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
+          <h2 id="两种方式"><a href="#两种方式" class="headerlink" title="两种方式"></a>两种方式</h2><p>利用 github pages 搭建个人博客一般有两种组织方式：</p>
+<ol>
+<li>建两个项目，一个项目 blog 用于存放博客源码，另一个项目 xxx.github.io 用于部署生成的静态文件</li>
+<li>只建一个项目 blog，master 分支存放博客源码，生成的静态文件部署到 gh-pages 分支</li>
+</ol>
+<p>区别是第一种可以直接用<a href="https://xxx.github.io" target="_blank" rel="noopener">https://xxx.github.io</a>访问博客，而第二种要加项目名，即<a href="https://xxx.github.io/blog" target="_blank" rel="noopener">https://xxx.github.io/blog</a>，我选的是第一种。</p>
+<h2 id="hexo-快速搭建"><a href="#hexo-快速搭建" class="headerlink" title="hexo 快速搭建"></a>hexo 快速搭建</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm i -g hexo-cli</span><br><span class="line">hexo init blog-hexo</span><br><span class="line"><span class="built_in">cd</span> blog-hexo</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h3><p><a href="https://github.com/next-theme/hexo-theme-next" target="_blank" rel="noopener">https://github.com/next-theme/hexo-theme-next</a></p>
+<h3 id="手动部署"><a href="#手动部署" class="headerlink" title="手动部署"></a>手动部署</h3><blockquote>
+<p>Just for a reminder，本文重点是后面的 Travis CI 自动部署</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
+
+<p>_config.yml 添加配置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: https://github.com/MarvinXu/marvinxu.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<h2 id="travisCI-自动部署"><a href="#travisCI-自动部署" class="headerlink" title="travisCI 自动部署"></a>travisCI 自动部署</h2><h3 id="1-登录-travisCI-并关联项目"><a href="#1-登录-travisCI-并关联项目" class="headerlink" title="1. 登录 travisCI 并关联项目"></a>1. 登录 travisCI 并关联项目</h3><p><a href="https://travis-ci.org/" target="_blank" rel="noopener">https://travis-ci.org/</a> 使用 github 账号登录，关联 blog 项目</p>
+<h3 id="2-blog-项目添加-travis-yml"><a href="#2-blog-项目添加-travis-yml" class="headerlink" title="2. blog 项目添加.travis.yml"></a>2. blog 项目添加.travis.yml</h3><p>流程：构建生成静态页 -&gt; 部署到 marvinxu.github.io<br>参考 <a href="https://docs.travis-ci.com/user/deployment/pages/" target="_blank" rel="noopener">https://docs.travis-ci.com/user/deployment/pages/</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">language: node_js</span><br><span class="line">node_js:</span><br><span class="line">  - 8</span><br><span class="line">script:</span><br><span class="line">  - <span class="string">"npm run build"</span></span><br><span class="line">cache:</span><br><span class="line">  directories:</span><br><span class="line">    - node_modules</span><br><span class="line">deploy:</span><br><span class="line">  provider: pages</span><br><span class="line">  skip_cleanup: <span class="literal">true</span></span><br><span class="line">  <span class="comment"># access token存储在环境变量中防止泄露，后面会说明如何添加</span></span><br><span class="line">  github_token: <span class="variable">$GITHUB_TOKEN</span></span><br><span class="line">  keep_history: <span class="literal">true</span></span><br><span class="line">  <span class="comment"># 指定部署的repo，默认为当前repo</span></span><br><span class="line">  repo: MarvinXu/marvinxu.github.io</span><br><span class="line">  <span class="comment"># 指定branch，默认为gh-pages</span></span><br><span class="line">  target_branch: master</span><br><span class="line">  <span class="comment"># 指定要部署的文件夹，hexo构建生成在public目录下</span></span><br><span class="line">  local_dir: public</span><br><span class="line">  on:</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-获取-github-token"><a href="#3-获取-github-token" class="headerlink" title="3. 获取 github token"></a>3. 获取 github token</h3><p>路径：Settings -&gt; Developer settings -&gt; Personal access tokens -&gt; generate new token<br>因为我们的 blog 项目是 public 的，只需选择 public_repo 权限，确定得到 token 串</p>
+<blockquote>
+<p>问题记录：我第一次选的权限是整个 repo，结果触发构建时报错了，提示“gh-token is invalid”，后来改为只选择 public_repo 才正常<br><a href="https://stackoverflow.com/questions/50227342/gh-token-is-invalid-github-pages-deployment-on-travis/62341297#62341297" target="_blank" rel="noopener">https://stackoverflow.com/questions/50227342/gh-token-is-invalid-github-pages-deployment-on-travis/62341297#62341297</a> &gt; <a href="https://stackoverflow.com/questions/23277391/how-to-publish-to-github-pages-from-travis-ci" target="_blank" rel="noopener">https://stackoverflow.com/questions/23277391/how-to-publish-to-github-pages-from-travis-ci</a></p>
+</blockquote>
+<h3 id="4-在-travisCI-项目中添加环境变量"><a href="#4-在-travisCI-项目中添加环境变量" class="headerlink" title="4. 在 travisCI 项目中添加环境变量"></a>4. 在 travisCI 项目中添加环境变量</h3><p>在项目设置里，添加变量名为 GITHUB_TOKEN，值为刚才获取的 token<br><img src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1591956537089-d4ddced6-4ad7-4d98-9197-75f4fe42dc38.png#align=left&display=inline&height=185&margin=%5Bobject%20Object%5D&name=image.png&originHeight=369&originWidth=1512&size=50103&status=done&style=none&width=756" alt="image.png"><br>至此已经完成自动部署的配置，当 blog 项目发生 push 操作时，自动部署就会触发啦~</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/11/yuque/git-style-guide/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="Marvin Xu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Marvin's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/06/11/yuque/git-style-guide/" class="post-title-link" itemprop="url">git-style-guide</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-06-11 20:06:39" itemprop="dateCreated datePublished" datetime="2020-06-11T20:06:39+08:00">2020-06-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-06-12 22:59:11" itemprop="dateModified" datetime="2020-06-12T22:59:11+08:00">2020-06-12</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="branch"><a href="#branch" class="headerlink" title="branch"></a>branch</h2><ul>
+<li>分支名要求简洁、清楚描述分支的作用，使用短横线’-‘分隔</li>
+<li>合并后删除远端分支</li>
+</ul>
+<h2 id="commit"><a href="#commit" class="headerlink" title="commit"></a>commit</h2><ul>
+<li>一个提交对应一个逻辑修改。不要将多个逻辑修改放在一次提交，也不要将一个逻辑修改拆分为多次提交。</li>
+<li>确保每次提交改动的文件与此次修改相关。不要把 merge 过来的代码放到本次提交。</li>
+<li>小步提交、尽早提交。只有提交过的代码才是可恢复的。</li>
+</ul>
+<h3 id="commit-message"><a href="#commit-message" class="headerlink" title="commit message"></a>commit message</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="built_in">type</span>&gt;(&lt;scope&gt;): &lt;subject&gt;</span><br><span class="line">&lt;BLANK LINE&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;BLANK LINE&gt;</span><br><span class="line">&lt;footer&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>&lt;type&gt;</code> 修改类型，<strong>只允许使用下面列出的类型</strong></li>
+<li><code>&lt;scope&gt;</code> 影响的范围，写项目中对应的目录名称，如 index、fastsell、deliveryman</li>
+<li><code>&lt;subject&gt;</code> 简要说明修改的内容</li>
+<li><code>&lt;body&gt;</code> 补充、详细说明 commit 内容</li>
+<li><code>&lt;footer&gt;</code> 附上需求或 bug 的 iwork 链接</li>
+</ul>
+<h4 id="types"><a href="#types" class="headerlink" title="types"></a>types</h4><ul>
+<li>feat: (feature) 新功能</li>
+<li>fix: 修复错误</li>
+<li>refactor: 代码重构，既不修复错误也不添加功能</li>
+<li>chore: 构建过程或辅助工具的变动</li>
+<li>docs: 文档</li>
+<li>style: 格式（缩进、空行等）</li>
+</ul>
+<h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fix(order): 修复订单列表和详情商品图大小问题</span><br><span class="line">旧商品图是后端拼接尺寸和裁剪参数，新商品不带这些参数，前端需要做下兼容</span><br><span class="line">http://iwork3.58corp.com/bug/detail/ZZYP-2222</span><br></pre></td></tr></table></figure>
+
+<h2 id="开发流程"><a href="#开发流程" class="headerlink" title="开发流程"></a>开发流程</h2><ol>
+<li>分支开发，每个新需求或 bug 修复从远端 master 创建新分支</li>
+<li>分支提测，每次提测前<code>rebase origin/master</code></li>
+<li>QA 测试完成后发起 MR，由管理员<strong>手动</strong>合并到 master（跟直接 accept mr 相比会少一个 merge commit）</li>
+<li>再次提测，QA 验证 master 代码无误后上线</li>
+</ol>
+<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips:"></a>Tips:</h2><ol>
+<li>如果你想合并几个 commit，应该用 <code>git rebase -i HEAD~4</code></li>
+<li>如果你刚提交完一个 commit，发现还有点东西忘了改，这时可以用 <code>git commit --amend</code></li>
+<li>…</li>
+</ol>
+<h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2><ol>
+<li><a href="https://bingohuang.gitbooks.io/progit2/" target="_blank" rel="noopener">Pro Git，第二版，简体中文</a></li>
+<li><a href="https://github.com/agis/git-style-guide" target="_blank" rel="noopener">git style guide</a></li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/11/yuque/%E4%B8%83%E7%89%9B%E4%BA%91%E5%9B%BE%E5%BA%8A%E6%8C%82%E4%BA%86%EF%BC%9F%E4%B8%8D%E7%94%A8%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E6%89%BE%E5%9B%9E%E5%9B%BE%E7%89%87/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="Marvin Xu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Marvin's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/06/11/yuque/%E4%B8%83%E7%89%9B%E4%BA%91%E5%9B%BE%E5%BA%8A%E6%8C%82%E4%BA%86%EF%BC%9F%E4%B8%8D%E7%94%A8%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E6%89%BE%E5%9B%9E%E5%9B%BE%E7%89%87/" class="post-title-link" itemprop="url">七牛云图床挂了？不用自定义域名找回图片</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-06-11 18:07:18" itemprop="dateCreated datePublished" datetime="2020-06-11T18:07:18+08:00">2020-06-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-06-12 22:59:11" itemprop="dateModified" datetime="2020-06-12T22:59:11+08:00">2020-06-12</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><ul>
+<li>新创建的存储空间有 30 天的测试域名，利用这个测试域名可以下载文件。</li>
+<li>利用七牛云提供的命令行工具，把原空间文件批量拷贝到新空间</li>
+</ul>
+<h2 id="1-下载-CLI-工具并绑定账号"><a href="#1-下载-CLI-工具并绑定账号" class="headerlink" title="1. 下载 CLI 工具并绑定账号"></a><strong>1. 下载 CLI 工具并绑定账号</strong></h2><p><a href="https://developer.qiniu.com/kodo/tools/1302/qshell" target="_blank" rel="noopener">https://developer.qiniu.com/kodo/tools/1302/qshell</a><br>以 window 为例，下载后在当前文件夹执行命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./qshell-windows-x64.exe account [AccessKey] [SecretKey]</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-下载原空间文件列表"><a href="#2-下载原空间文件列表" class="headerlink" title="2. 下载原空间文件列表"></a>2. 下载原空间文件列表</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./qshell-windows-x64.exe listbucket marvinxu-blog list.txt</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：下载完后的列表里包含文件类型、大小等其他信息，统统删掉，每行只保留文件名</strong></p>
+<h2 id="3-在七牛云控制台新建空间"><a href="#3-在七牛云控制台新建空间" class="headerlink" title="3. 在七牛云控制台新建空间"></a><strong>3. 在七牛云控制台新建空间</strong></h2><p><strong><img src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1591870705500-e2df6f7c-445b-4a31-9baf-725d206d4b10.png#align=left&display=inline&height=217&margin=%5Bobject%20Object%5D&name=image.png&originHeight=434&originWidth=1244&size=42893&status=done&style=none&width=622" alt="image.png"></strong><br><strong>注意</strong>：新建空间一定要与域名失效空间在一个地区服务器上，否则无法拷贝进文件。</p>
+<h2 id="4-批量拷贝文件到新空间"><a href="#4-批量拷贝文件到新空间" class="headerlink" title="4. 批量拷贝文件到新空间"></a>4. 批量拷贝文件到新空间</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./qshell-windows-x64.exe batchcopy --force --overwrite marvinxu-blog marvin2006 list.txt</span><br></pre></td></tr></table></figure>
+
+<p>##</p>
+<h2 id="5-下载文件"><a href="#5-下载文件" class="headerlink" title="5. 下载文件"></a>5. 下载文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./qshell-windows-x64.exe qdownload download.conf</span><br></pre></td></tr></table></figure>
+
+<p>download.conf</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"dest_dir"</span>: <span class="string">"E:\\qiniu"</span>,</span><br><span class="line">  <span class="attr">"bucket"</span>: <span class="string">"marvin2006"</span>,</span><br><span class="line">  <span class="attr">"cdn_domain"</span>: <span class="string">"qbr9xkevc.bkt.clouddn.com"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意路径要双斜杠，否则解析错误</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/19/yuque/%E7%94%A8Adobe%20Acrobat%E4%B8%BA%E7%94%B5%E5%AD%90%E4%B9%A6%E5%88%B6%E4%BD%9C%E4%B9%A6%E7%AD%BE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="Marvin Xu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Marvin's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/04/19/yuque/%E7%94%A8Adobe%20Acrobat%E4%B8%BA%E7%94%B5%E5%AD%90%E4%B9%A6%E5%88%B6%E4%BD%9C%E4%B9%A6%E7%AD%BE/" class="post-title-link" itemprop="url">用Adobe Acrobat为电子书制作书签</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-04-19 18:42:16" itemprop="dateCreated datePublished" datetime="2020-04-19T18:42:16+08:00">2020-04-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-06-12 22:59:11" itemprop="dateModified" datetime="2020-06-12T22:59:11+08:00">2020-06-12</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>最近在翻看《JavaScript 高级程序设计 第 3 版》这本书，发现有些内容过时了，找了找发现第 4 版英文原版已经有了，但是网上找的免费的 PDF 都没有书签，看得很费劲，闲的自己做了个书签。</p>
+<h2 id="1-印刷版和页码相关知识"><a href="#1-印刷版和页码相关知识" class="headerlink" title="1. 印刷版和页码相关知识"></a>1. 印刷版和页码相关知识</h2><p>因为下载的这个 PDF 是印刷版，而且它除了没有书签，连<strong>页码也不连续</strong>，导致我一开始做书签的时候非常懵逼。通过查资料和跟其他制作好的电子书对比，让我逐渐对这个东西有了一些了解。</p>
+<p>印刷版 PDF 有两个特点：</p>
+<ol>
+<li>左右页边距大小不一，且相邻页的页边距也不一致（因为要装订且分正反页）</li>
+<li>有空白页（因为分正反页有的地方需要空一页，比如封面、章结尾）</li>
+</ol>
+<p>页码：很多书籍都会用<strong>分段页码</strong>，比如正文之前用小写罗马数字（i、ii、ixii…），正文部分用阿拉伯数字，这导致了正文部分的页码跟 PDF 的页码数不一致</p>
+<blockquote>
+<p>因为懒的再去找 Reference，上面都是基于我的理解写出来的，所以可能有不对</p>
+</blockquote>
+<h2 id="2-制作步骤"><a href="#2-制作步骤" class="headerlink" title="2. 制作步骤"></a>2. 制作步骤</h2><p>软件准备：Adobe Acrobat DC 2020 + AutoBookmark 插件<br>插件链接  <a href="https://www.evermap.com/autobookmark.asp#SystemReq" target="_blank" rel="noopener">https://www.evermap.com/autobookmark.asp#SystemReq</a></p>
+<h4 id="1-通过页面标签设置分段页码"><a href="#1-通过页面标签设置分段页码" class="headerlink" title="1. 通过页面标签设置分段页码"></a>1. 通过页面标签设置分段页码</h4><p><img src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1587296148943-24b1019d-3096-4193-974e-f86ae9e7a2e0.png#align=left&display=inline&height=432&margin=%5Bobject%20Object%5D&name=image.png&originHeight=863&originWidth=443&size=70368&status=done&style=none&width=222" alt="image.png">)<img src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1587296234660-9d5d1b0c-6b21-432f-865f-5aa2bf23e0e7.png#align=left&display=inline&height=309&margin=%5Bobject%20Object%5D&name=image.png&originHeight=618&originWidth=567&size=60376&status=done&style=none&width=283.5" alt="image.png"><br>正文前部分用小写罗马数字，正文用阿拉伯数字<br>设置完之后，正文部分的页码就对上了：<br><img src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1587296771074-39201b8d-6062-4701-929c-873174d03d0b.png#align=left&display=inline&height=478&margin=%5Bobject%20Object%5D&name=image.png&originHeight=955&originWidth=1130&size=231274&status=done&style=none&width=565" alt="image.png"></p>
+<h4 id="2-补充空白页，使页码连续"><a href="#2-补充空白页，使页码连续" class="headerlink" title="2. 补充空白页，使页码连续"></a>2. 补充空白页，使页码连续</h4><p><img src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1587297407455-7f5d245a-0c8d-4080-9892-12e2998dd7ad.png#align=left&display=inline&height=394&margin=%5Bobject%20Object%5D&name=image.png&originHeight=787&originWidth=1093&size=239768&status=done&style=none&width=546.5" alt="image.png"><br>检查章节末尾，如果页码不连续就补空白页</p>
+<h4 id="3-开始添加书签"><a href="#3-开始添加书签" class="headerlink" title="3. 开始添加书签"></a>3. 开始添加书签</h4><p>光标选中章节标题，菜单栏点击增效工具-&gt;bookmarks-&gt;Generate from Text Styles，发现会自动获取章节标题的样式<br><img src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1587297901083-2dafafb5-f761-4be5-b742-2b15f549169a.png#align=left&display=inline&height=367&margin=%5Bobject%20Object%5D&name=image.png&originHeight=734&originWidth=653&size=77224&status=done&style=none&width=326.5" alt="image.png"><br>然后选中二级标题，点击 Add 按钮，加入二级标题的样式，以此类推，把各级标题都添加进去。<br>为了识别准确率，限定页码范围在正文部分。<br>点 OK，就会自动生成书签了~</p>
+<h4 id="4-修改已生成的书签"><a href="#4-修改已生成的书签" class="headerlink" title="4. 修改已生成的书签"></a>4. 修改已生成的书签</h4><p>如果需要批量编辑已生成的书签，比如加上序号、前缀等，可以从   增效工具-&gt;bookmarks-&gt;Modify Bookmarks 中选择需要的操作。<br>比如现在我想给每个章节书签前加上“Chapter {number}: ”，选择 Add Prefix / Suffix To Bookmarks<br><img src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1587298412772-e1c5f564-5ef1-4b91-ba59-9fddc7bf3b07.png#align=left&display=inline&height=329&margin=%5Bobject%20Object%5D&name=image.png&originHeight=657&originWidth=563&size=65232&status=done&style=none&width=281.5" alt="image.png"><br>看下最终生成的效果：<br><img src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1587298474308-4d4f03d6-52ac-4090-996f-bca9a0a4a711.png#align=left&display=inline&height=439&margin=%5Bobject%20Object%5D&name=image.png&originHeight=877&originWidth=405&size=46644&status=done&style=none&width=202.5" alt="image.png"><br>总共 1000 多个书签，如果手动添加那可真是浪费时间呢！</p>
+<p>最后分享一下带书签版本的《Professional JavaScript for Web Developers 4th Edition》<br><a href="https://www.yuque.com/attachments/yuque/0/2020/pdf/1310147/1587298816551-c5da2293-d382-488c-9fbd-9a0ba8898ccb.pdf?_lake_card=%7B%22uid%22%3A%221587298814004-0%22%2C%22src%22%3A%22https%3A%2F%2Fwww.yuque.com%2Fattachments%2Fyuque%2F0%2F2020%2Fpdf%2F1310147%2F1587298816551-c5da2293-d382-488c-9fbd-9a0ba8898ccb.pdf%22%2C%22name%22%3A%22Professional.JavaScript.for.Web.Developers.4th.Edition.Bookmark.v2.pdf%22%2C%22size%22%3A5740868%2C%22type%22%3A%22application%2Fpdf%22%2C%22ext%22%3A%22pdf%22%2C%22progress%22%3A%7B%22percent%22%3A99%7D%2C%22status%22%3A%22done%22%2C%22percent%22%3A0%2C%22id%22%3A%22rrmfx%22%2C%22card%22%3A%22file%22%7D" target="_blank" rel="noopener">Professional.JavaScript.for.Web.Developers.4th.Edition.Bookmark.v2.pdf</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Marvin Xu"
+      src="/uploads/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Marvin Xu</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/MarvinXu" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;MarvinXu" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:272077995@qq.com" title="E-Mail → mailto:272077995@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Marvin Xu</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
     </footer>
   </div>
-  
-</article>
-
 
   
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
 
 
-</section>
-        
-          <aside id="sidebar">
-  
-    
+<script src="/js/schemes/pisces.js"></script>
 
-  
-    
 
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li></ul>
-    </div>
-  </div>
+<script src="/js/next-boot.js"></script>
+
+
 
 
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2020/06/11/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
 
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2020 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
 
 
   
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
 
   
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-  </div>
 </body>
 </html>
