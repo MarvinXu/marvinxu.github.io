@@ -148,7 +148,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://marvinxu.top/2020/06/12/yuque/%E8%AF%AD%E9%9B%80web-hook%E8%A7%A6%E5%8F%91travis-ci%E6%9E%84%E5%BB%BA/">
+    <link itemprop="mainEntityOfPage" href="https://marvinxu.top/2020/06/12/yuque/%E8%AF%AD%E9%9B%80%E6%96%87%E7%AB%A0%E5%90%8C%E6%AD%A5%E5%88%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -162,7 +162,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/06/12/yuque/%E8%AF%AD%E9%9B%80web-hook%E8%A7%A6%E5%8F%91travis-ci%E6%9E%84%E5%BB%BA/" class="post-title-link" itemprop="url">语雀web-hook触发travis-ci构建</a>
+            <a href="/2020/06/12/yuque/%E8%AF%AD%E9%9B%80%E6%96%87%E7%AB%A0%E5%90%8C%E6%AD%A5%E5%88%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="post-title-link" itemprop="url">语雀文章同步到个人博客</a>
         </h2>
 
         <div class="post-meta">
@@ -179,7 +179,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-06-13 04:34:52" itemprop="dateModified" datetime="2020-06-13T04:34:52+00:00">2020-06-13</time>
+                <time title="Modified: 2020-06-13 08:10:20" itemprop="dateModified" datetime="2020-06-13T08:10:20+00:00">2020-06-13</time>
               </span>
 
           
@@ -193,8 +193,46 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>云函数写法<br><a href="https://github.com/x-cold/aliyun-function/blob/master/travis_ci/travis_ci.js" target="_blank" rel="noopener">https://github.com/x-cold/aliyun-function/blob/master/travis_ci/travis_ci.js</a></p>
-<p>语雀 webhook 是 post 请求</p>
+          <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><blockquote>
+<p>接上篇 <a href="https://www.yuque.com/marvinxu/blog/gzlvqk" target="_blank" rel="noopener">hexo+travisCI 自动部署 github pages</a>，后面的部分操作是基于上篇的</p>
+</blockquote>
+<h2 id="yuque-hexo-拉取文章"><a href="#yuque-hexo-拉取文章" class="headerlink" title="yuque-hexo 拉取文章"></a>yuque-hexo 拉取文章</h2><p><a href="https://github.com/x-cold/yuque-hexo" target="_blank" rel="noopener">https://github.com/x-cold/yuque-hexo</a></p>
+<h3 id="安装-yuque-hexo"><a href="#安装-yuque-hexo" class="headerlink" title="安装 yuque-hexo"></a>安装 yuque-hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i --save-dev yuque-hexo</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改-package-json-文件"><a href="#修改-package-json-文件" class="headerlink" title="修改 package.json 文件"></a>修改 package.json 文件</h3><p>参数说明：以我的博客知识库为例，链接为<a href="https://www.yuque.com/marvinxu/blog" target="_blank" rel="noopener">https://www.yuque.com/marvinxu/blog</a>，login 和 repo 参数对应如下</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"yuqueConfig"</span>: &#123;</span><br><span class="line">    <span class="attr">"baseUrl"</span>: <span class="string">"https://www.yuque.com/api/v2"</span>,</span><br><span class="line">    <span class="attr">"login"</span>: <span class="string">"marvinxu"</span>,</span><br><span class="line">    <span class="attr">"repo"</span>: <span class="string">"blog"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"scripts"</span>: &#123;</span><br><span class="line">    <span class="attr">"sync"</span>: <span class="string">"yuque-hexo sync"</span>,</span><br><span class="line">    <span class="attr">"clean:yuque"</span>: <span class="string">"yuque-hexo clean"</span>,</span><br><span class="line">    <span class="attr">"build:yuque"</span>: <span class="string">"npm run sync &amp;&amp; hexo clean &amp;&amp; hexo g"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="本地测试"><a href="#本地测试" class="headerlink" title="本地测试"></a>本地测试</h3><p>语雀 token 获取：<a href="https://www.yuque.com/settings/tokens" target="_blank" rel="noopener">https://www.yuque.com/settings/tokens</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">YUQUE_TOKEN=xxx npm run sync</span><br></pre></td></tr></table></figure>
+
+<p>执行成功会得到类似如下的日志</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[INFO] clear previous directory.</span><br><span class="line">[INFO] remove yuque posts: &#x2F;home&#x2F;travis&#x2F;build&#x2F;MarvinXu&#x2F;blog-hexo&#x2F;source&#x2F;_posts&#x2F;yuque</span><br><span class="line">[INFO] reading from local file: &#x2F;home&#x2F;travis&#x2F;build&#x2F;MarvinXu&#x2F;blog-hexo&#x2F;yuque.json</span><br><span class="line">[INFO] article amount: 6</span><br><span class="line">[INFO] download article body: 语雀web-hook触发travis-ci构建</span><br><span class="line">[INFO] download articles done!</span><br><span class="line">[INFO] writing to local file: &#x2F;home&#x2F;travis&#x2F;build&#x2F;MarvinXu&#x2F;blog-hexo&#x2F;yuque.json</span><br><span class="line">[INFO] create posts directory (if it not exists): &#x2F;home&#x2F;travis&#x2F;build&#x2F;MarvinXu&#x2F;blog-hexo&#x2F;source&#x2F;_posts&#x2F;yuque</span><br><span class="line">[INFO] generate post file: &#x2F;home&#x2F;travis&#x2F;build&#x2F;MarvinXu&#x2F;blog-hexo&#x2F;source&#x2F;_posts&#x2F;yuque&#x2F;How to add more to Git Bash on Windows.md</span><br><span class="line">[INFO] generate post file: &#x2F;home&#x2F;travis&#x2F;build&#x2F;MarvinXu&#x2F;blog-hexo&#x2F;source&#x2F;_posts&#x2F;yuque&#x2F;hexo+travisCI自动部署github pages.md</span><br><span class="line">[INFO] generate post file: &#x2F;home&#x2F;travis&#x2F;build&#x2F;MarvinXu&#x2F;blog-hexo&#x2F;source&#x2F;_posts&#x2F;yuque&#x2F;git-style-guide.md</span><br><span class="line">[INFO] generate post file: &#x2F;home&#x2F;travis&#x2F;build&#x2F;MarvinXu&#x2F;blog-hexo&#x2F;source&#x2F;_posts&#x2F;yuque&#x2F;七牛云图床挂了？不用自定义域名找回图片.md</span><br><span class="line">[INFO] generate post file: &#x2F;home&#x2F;travis&#x2F;build&#x2F;MarvinXu&#x2F;blog-hexo&#x2F;source&#x2F;_posts&#x2F;yuque&#x2F;用Adobe Acrobat为电子书制作书签.md</span><br><span class="line">[INFO] generate post file: &#x2F;home&#x2F;travis&#x2F;build&#x2F;MarvinXu&#x2F;blog-hexo&#x2F;source&#x2F;_posts&#x2F;yuque&#x2F;语雀web-hook触发travis-ci构建.md</span><br><span class="line">[INFO] yuque-hexo sync done!</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置-TravisCI"><a href="#配置-TravisCI" class="headerlink" title="配置 TravisCI"></a>配置 TravisCI</h2><h3 id="修改-travis-yml"><a href="#修改-travis-yml" class="headerlink" title="修改.travis.yml"></a>修改.travis.yml</h3><p>script 要换成  npm run build:yuque</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">language: node_js</span><br><span class="line">node_js:</span><br><span class="line">  - 10</span><br><span class="line">script:</span><br><span class="line">  - <span class="string">"npm run build:yuque"</span></span><br><span class="line">cache:</span><br><span class="line">  directories:</span><br><span class="line">    - node_modules</span><br><span class="line">deploy:</span><br><span class="line">  provider: pages</span><br><span class="line">  skip_cleanup: <span class="literal">true</span></span><br><span class="line">  github_token: <span class="variable">$GITHUB_TOKEN</span>  <span class="comment"># Set in the settings page of your repository, as a secure variable</span></span><br><span class="line">  keep_history: <span class="literal">true</span></span><br><span class="line">  repo: MarvinXu/marvinxu.github.io</span><br><span class="line">  target_branch: master</span><br><span class="line">  local_dir: public</span><br><span class="line">  on:</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
+
+<h3 id="新增环境变量-YUQUE-TOKEN"><a href="#新增环境变量-YUQUE-TOKEN" class="headerlink" title="新增环境变量 YUQUE_TOKEN"></a>新增环境变量 YUQUE_TOKEN</h3><p><img src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592034125382-283aede7-7e4b-4dfd-a03e-82b14593520c.png#align=left&display=inline&height=125&margin=%5Bobject%20Object%5D&name=image.png&originHeight=249&originWidth=1004&size=25649&status=done&style=none&width=502" alt="image.png"></p>
+<h2 id="新建阿里云函数"><a href="#新建阿里云函数" class="headerlink" title="新建阿里云函数"></a>新建阿里云函数</h2><p>打开阿里云控制台，搜索“函数计算”，在某个服务下新建函数，选择“HTTP 函数”<br><img src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592034259601-b681eac4-ce6d-413d-a8a9-ab7751581821.png#align=left&display=inline&height=298&margin=%5Bobject%20Object%5D&name=image.png&originHeight=595&originWidth=1188&size=77287&status=done&style=none&width=594" alt="image.png"><br>注意配置触发器时，请求方式一定要加上 POST（语雀 webhook 是 POST 请求）<br><img src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592034434408-4701e454-0c25-4338-875b-72312a06a5d3.png#align=left&display=inline&height=242&margin=%5Bobject%20Object%5D&name=image.png&originHeight=484&originWidth=1021&size=56122&status=done&style=none&width=510.5" alt="image.png"><br>打开云函数，在“代码执行”里编写云函数，写法参考：<br><a href="https://github.com/x-cold/aliyun-function/blob/master/travis_ci/travis_ci.js" target="_blank" rel="noopener">https://github.com/x-cold/aliyun-function/blob/master/travis_ci/travis_ci.js</a></p>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>在“触发器”里，得到访问的路径，可在本地用 postman 调用，如果调用成功，就会触发 TravisCI 的构建。</p>
+<p>参数说明：</p>
+<table>
+<thead>
+<tr>
+<th>token</th>
+<th>从  <a href="https://travis-ci.org/account/preferences" target="_blank" rel="noopener">https://travis-ci.org/account/preferences</a>  获取</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>repos</td>
+<td>travis 项目 id 或 slug(eg: MarvinXu/blog-hexo)</td>
+</tr>
+<tr>
+<td>branch</td>
+<td>要构建的分支</td>
+</tr>
+</tbody></table>
+<p><a href="https://1255463568451268.cn-hangzhou.fc.aliyuncs.com/2016-08-15/proxy/travis-ci/yuque/?token=xxx&branch=master&repos=MarvinXu/blog-hexo" target="_blank" rel="noopener">https://1255463568451268.cn-hangzhou.fc.aliyuncs.com/2016-08-15/proxy/travis-ci/yuque/?token=xxx&amp;branch=master&amp;repos=MarvinXu/blog-hexo</a></p>
+<h2 id="配置语雀-webhook"><a href="#配置语雀-webhook" class="headerlink" title="配置语雀 webhook"></a>配置语雀 webhook</h2><p>你的知识库 -&gt; 设置 -&gt; 开发者 -&gt;添加 Web Hook<br>注意：单选“仅主动推送更新触发”没有用，必须配合后面的选项使用<br><img src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592035695558-9f8f4e92-ff6c-4d5b-887b-6d66da9b7c7d.png#align=left&display=inline&height=235&margin=%5Bobject%20Object%5D&name=image.png&originHeight=470&originWidth=716&size=47632&status=done&style=none&width=358" alt="image.png"></p>
 
       
     </div>
@@ -245,7 +283,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-06-13 04:34:52" itemprop="dateModified" datetime="2020-06-13T04:34:52+00:00">2020-06-13</time>
+                <time title="Modified: 2020-06-13 08:10:19" itemprop="dateModified" datetime="2020-06-13T08:10:19+00:00">2020-06-13</time>
               </span>
 
           
@@ -347,7 +385,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-06-13 04:34:52" itemprop="dateModified" datetime="2020-06-13T04:34:52+00:00">2020-06-13</time>
+                <time title="Modified: 2020-06-13 08:10:20" itemprop="dateModified" datetime="2020-06-13T08:10:20+00:00">2020-06-13</time>
               </span>
 
           
@@ -440,7 +478,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-06-13 04:34:52" itemprop="dateModified" datetime="2020-06-13T04:34:52+00:00">2020-06-13</time>
+                <time title="Modified: 2020-06-13 08:10:20" itemprop="dateModified" datetime="2020-06-13T08:10:20+00:00">2020-06-13</time>
               </span>
 
           
@@ -547,7 +585,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-06-13 04:34:52" itemprop="dateModified" datetime="2020-06-13T04:34:52+00:00">2020-06-13</time>
+                <time title="Modified: 2020-06-13 08:10:20" itemprop="dateModified" datetime="2020-06-13T08:10:20+00:00">2020-06-13</time>
               </span>
 
           
@@ -630,7 +668,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-06-13 04:34:52" itemprop="dateModified" datetime="2020-06-13T04:34:52+00:00">2020-06-13</time>
+                <time title="Modified: 2020-06-13 08:10:20" itemprop="dateModified" datetime="2020-06-13T08:10:20+00:00">2020-06-13</time>
               </span>
 
           
