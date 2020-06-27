@@ -16,11 +16,11 @@
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/jsdelivr/font-awesome/css/all.min.css">
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"marvinxu.top","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"marvinxu.top","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta property="og:type" content="website">
@@ -179,7 +179,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-06-14 13:04:10" itemprop="dateModified" datetime="2020-06-14T13:04:10+00:00">2020-06-14</time>
+                <time title="Modified: 2020-06-27 09:30:01" itemprop="dateModified" datetime="2020-06-27T09:30:01+00:00">2020-06-27</time>
               </span>
 
           
@@ -193,7 +193,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592139758781-40601637-64a1-4ab2-a846-a256cfbc3766.png#align=left&display=inline&height=452&margin=%5Bobject%20Object%5D&name=yuque_diagram.png&originHeight=452&originWidth=1436&size=63972&status=done&style=none&width=1436" alt="yuque_diagram.png"></p>
+          <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p><img data-src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592139758781-40601637-64a1-4ab2-a846-a256cfbc3766.png#align=left&display=inline&height=452&margin=%5Bobject%20Object%5D&name=yuque_diagram.png&originHeight=452&originWidth=1436&size=63972&status=done&style=none&width=1436" alt="yuque_diagram.png"></p>
 <blockquote>
 <p>接上篇 <a href="https://www.yuque.com/marvinxu/blog/gzlvqk" target="_blank" rel="noopener">hexo+travisCI 自动部署 github pages</a>，后面的部分操作是基于上篇的</p>
 </blockquote>
@@ -212,8 +212,8 @@
 <h2 id="配置-TravisCI"><a href="#配置-TravisCI" class="headerlink" title="配置 TravisCI"></a>配置 TravisCI</h2><h3 id="修改-travis-yml"><a href="#修改-travis-yml" class="headerlink" title="修改.travis.yml"></a>修改.travis.yml</h3><p>script 要换成  npm run build:yuque</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">language: node_js</span><br><span class="line">node_js:</span><br><span class="line">  - 10</span><br><span class="line">script:</span><br><span class="line">  - <span class="string">"npm run build:yuque"</span></span><br><span class="line">cache:</span><br><span class="line">  directories:</span><br><span class="line">    - node_modules</span><br><span class="line">deploy:</span><br><span class="line">  provider: pages</span><br><span class="line">  skip_cleanup: <span class="literal">true</span></span><br><span class="line">  github_token: <span class="variable">$GITHUB_TOKEN</span>  <span class="comment"># Set in the settings page of your repository, as a secure variable</span></span><br><span class="line">  keep_history: <span class="literal">true</span></span><br><span class="line">  repo: MarvinXu/marvinxu.github.io</span><br><span class="line">  target_branch: master</span><br><span class="line">  local_dir: public</span><br><span class="line">  on:</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
 
-<h3 id="新增环境变量-YUQUE-TOKEN"><a href="#新增环境变量-YUQUE-TOKEN" class="headerlink" title="新增环境变量 YUQUE_TOKEN"></a>新增环境变量 YUQUE_TOKEN</h3><p><img src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592034125382-283aede7-7e4b-4dfd-a03e-82b14593520c.png#align=left&display=inline&height=125&margin=%5Bobject%20Object%5D&name=image.png&originHeight=249&originWidth=1004&size=25649&status=done&style=none&width=502" alt="image.png"></p>
-<h2 id="新建阿里云函数"><a href="#新建阿里云函数" class="headerlink" title="新建阿里云函数"></a>新建阿里云函数</h2><p>打开阿里云控制台，搜索“函数计算”，在某个服务下新建函数，选择“HTTP 函数”<br><img src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592034259601-b681eac4-ce6d-413d-a8a9-ab7751581821.png#align=left&display=inline&height=298&margin=%5Bobject%20Object%5D&name=image.png&originHeight=595&originWidth=1188&size=77287&status=done&style=none&width=594" alt="image.png"><br>注意配置触发器时，请求方式一定要加上 POST（语雀 webhook 是 POST 请求）<br><img src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592034434408-4701e454-0c25-4338-875b-72312a06a5d3.png#align=left&display=inline&height=242&margin=%5Bobject%20Object%5D&name=image.png&originHeight=484&originWidth=1021&size=56122&status=done&style=none&width=510.5" alt="image.png"><br>打开云函数，在“代码执行”里编写云函数，写法参考：<br><a href="https://github.com/x-cold/aliyun-function/blob/master/travis_ci/travis_ci.js" target="_blank" rel="noopener">https://github.com/x-cold/aliyun-function/blob/master/travis_ci/travis_ci.js</a></p>
+<h3 id="新增环境变量-YUQUE-TOKEN"><a href="#新增环境变量-YUQUE-TOKEN" class="headerlink" title="新增环境变量 YUQUE_TOKEN"></a>新增环境变量 YUQUE_TOKEN</h3><p><img data-src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592034125382-283aede7-7e4b-4dfd-a03e-82b14593520c.png#align=left&display=inline&height=125&margin=%5Bobject%20Object%5D&name=image.png&originHeight=249&originWidth=1004&size=25649&status=done&style=none&width=502" alt="image.png"></p>
+<h2 id="新建阿里云函数"><a href="#新建阿里云函数" class="headerlink" title="新建阿里云函数"></a>新建阿里云函数</h2><p>打开阿里云控制台，搜索“函数计算”，在某个服务下新建函数，选择“HTTP 函数”<br><img data-src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592034259601-b681eac4-ce6d-413d-a8a9-ab7751581821.png#align=left&display=inline&height=298&margin=%5Bobject%20Object%5D&name=image.png&originHeight=595&originWidth=1188&size=77287&status=done&style=none&width=594" alt="image.png"><br>注意配置触发器时，请求方式一定要加上 POST（语雀 webhook 是 POST 请求）<br><img data-src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592034434408-4701e454-0c25-4338-875b-72312a06a5d3.png#align=left&display=inline&height=242&margin=%5Bobject%20Object%5D&name=image.png&originHeight=484&originWidth=1021&size=56122&status=done&style=none&width=510.5" alt="image.png"><br>打开云函数，在“代码执行”里编写云函数，写法参考：<br><a href="https://github.com/x-cold/aliyun-function/blob/master/travis_ci/travis_ci.js" target="_blank" rel="noopener">https://github.com/x-cold/aliyun-function/blob/master/travis_ci/travis_ci.js</a></p>
 <h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>在“触发器”里，得到访问的路径，可在本地用 postman 调用，如果调用成功，就会触发 TravisCI 的构建。</p>
 <p>参数说明：</p>
 <table>
@@ -233,7 +233,7 @@
 </tr>
 </tbody></table>
 <p><a href="https://1255463568451268.cn-hangzhou.fc.aliyuncs.com/2016-08-15/proxy/travis-ci/yuque/?token=xxx&branch=master&repos=MarvinXu/blog-hexo" target="_blank" rel="noopener">https://1255463568451268.cn-hangzhou.fc.aliyuncs.com/2016-08-15/proxy/travis-ci/yuque/?token=xxx&amp;branch=master&amp;repos=MarvinXu/blog-hexo</a></p>
-<h2 id="配置语雀-webhook"><a href="#配置语雀-webhook" class="headerlink" title="配置语雀 webhook"></a>配置语雀 webhook</h2><p>你的知识库 -&gt; 设置 -&gt; 开发者 -&gt;添加 Web Hook<br>注意：单选“仅主动推送更新触发”没有用，必须配合后面的选项使用<br><img src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592035695558-9f8f4e92-ff6c-4d5b-887b-6d66da9b7c7d.png#align=left&display=inline&height=235&margin=%5Bobject%20Object%5D&name=image.png&originHeight=470&originWidth=716&size=47632&status=done&style=none&width=358" alt="image.png"></p>
+<h2 id="配置语雀-webhook"><a href="#配置语雀-webhook" class="headerlink" title="配置语雀 webhook"></a>配置语雀 webhook</h2><p>你的知识库 -&gt; 设置 -&gt; 开发者 -&gt;添加 Web Hook<br>注意：单选“仅主动推送更新触发”没有用，必须配合后面的选项使用<br><img data-src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592035695558-9f8f4e92-ff6c-4d5b-887b-6d66da9b7c7d.png#align=left&display=inline&height=235&margin=%5Bobject%20Object%5D&name=image.png&originHeight=470&originWidth=716&size=47632&status=done&style=none&width=358" alt="image.png"></p>
 
       
     </div>
@@ -284,7 +284,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-06-14 13:04:10" itemprop="dateModified" datetime="2020-06-14T13:04:10+00:00">2020-06-14</time>
+                <time title="Modified: 2020-06-27 09:30:00" itemprop="dateModified" datetime="2020-06-27T09:30:00+00:00">2020-06-27</time>
               </span>
 
           
@@ -386,7 +386,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-06-14 13:04:10" itemprop="dateModified" datetime="2020-06-14T13:04:10+00:00">2020-06-14</time>
+                <time title="Modified: 2020-06-27 09:30:00" itemprop="dateModified" datetime="2020-06-27T09:30:00+00:00">2020-06-27</time>
               </span>
 
           
@@ -428,7 +428,7 @@
 <blockquote>
 <p>问题记录：我第一次选的权限是整个 repo，结果触发构建时报错了，提示“gh-token is invalid”，后来改为只选择 public_repo 才正常<br><a href="https://stackoverflow.com/questions/50227342/gh-token-is-invalid-github-pages-deployment-on-travis/62341297#62341297" target="_blank" rel="noopener">https://stackoverflow.com/questions/50227342/gh-token-is-invalid-github-pages-deployment-on-travis/62341297#62341297</a> &gt; <a href="https://stackoverflow.com/questions/23277391/how-to-publish-to-github-pages-from-travis-ci" target="_blank" rel="noopener">https://stackoverflow.com/questions/23277391/how-to-publish-to-github-pages-from-travis-ci</a></p>
 </blockquote>
-<h3 id="4-在-travisCI-项目中添加环境变量"><a href="#4-在-travisCI-项目中添加环境变量" class="headerlink" title="4. 在 travisCI 项目中添加环境变量"></a>4. 在 travisCI 项目中添加环境变量</h3><p>在项目设置里，添加变量名为 GITHUB_TOKEN，值为刚才获取的 token<br><img src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1591956537089-d4ddced6-4ad7-4d98-9197-75f4fe42dc38.png#align=left&display=inline&height=185&margin=%5Bobject%20Object%5D&name=image.png&originHeight=369&originWidth=1512&size=50103&status=done&style=none&width=756" alt="image.png"><br>至此已经完成自动部署的配置，当 blog 项目发生 push 操作时，自动部署就会触发啦~</p>
+<h3 id="4-在-travisCI-项目中添加环境变量"><a href="#4-在-travisCI-项目中添加环境变量" class="headerlink" title="4. 在 travisCI 项目中添加环境变量"></a>4. 在 travisCI 项目中添加环境变量</h3><p>在项目设置里，添加变量名为 GITHUB_TOKEN，值为刚才获取的 token<br><img data-src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1591956537089-d4ddced6-4ad7-4d98-9197-75f4fe42dc38.png#align=left&display=inline&height=185&margin=%5Bobject%20Object%5D&name=image.png&originHeight=369&originWidth=1512&size=50103&status=done&style=none&width=756" alt="image.png"><br>至此已经完成自动部署的配置，当 blog 项目发生 push 操作时，自动部署就会触发啦~</p>
 
       
     </div>
@@ -479,7 +479,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-06-14 13:04:10" itemprop="dateModified" datetime="2020-06-14T13:04:10+00:00">2020-06-14</time>
+                <time title="Modified: 2020-06-27 09:30:00" itemprop="dateModified" datetime="2020-06-27T09:30:00+00:00">2020-06-27</time>
               </span>
 
           
@@ -586,7 +586,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-06-14 13:04:10" itemprop="dateModified" datetime="2020-06-14T13:04:10+00:00">2020-06-14</time>
+                <time title="Modified: 2020-06-27 09:30:01" itemprop="dateModified" datetime="2020-06-27T09:30:01+00:00">2020-06-27</time>
               </span>
 
           
@@ -610,7 +610,7 @@
 <h2 id="2-下载原空间文件列表"><a href="#2-下载原空间文件列表" class="headerlink" title="2. 下载原空间文件列表"></a>2. 下载原空间文件列表</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./qshell-windows-x64.exe listbucket marvinxu-blog list.txt</span><br></pre></td></tr></table></figure>
 
 <p><strong>注意：下载完后的列表里包含文件类型、大小等其他信息，统统删掉，每行只保留文件名</strong></p>
-<h2 id="3-在七牛云控制台新建空间"><a href="#3-在七牛云控制台新建空间" class="headerlink" title="3. 在七牛云控制台新建空间"></a><strong>3. 在七牛云控制台新建空间</strong></h2><p><strong><img src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1591870705500-e2df6f7c-445b-4a31-9baf-725d206d4b10.png#align=left&display=inline&height=217&margin=%5Bobject%20Object%5D&name=image.png&originHeight=434&originWidth=1244&size=42893&status=done&style=none&width=622" alt="image.png"></strong><br><strong>注意</strong>：新建空间一定要与域名失效空间在一个地区服务器上，否则无法拷贝进文件。</p>
+<h2 id="3-在七牛云控制台新建空间"><a href="#3-在七牛云控制台新建空间" class="headerlink" title="3. 在七牛云控制台新建空间"></a><strong>3. 在七牛云控制台新建空间</strong></h2><p><strong><img data-src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1591870705500-e2df6f7c-445b-4a31-9baf-725d206d4b10.png#align=left&display=inline&height=217&margin=%5Bobject%20Object%5D&name=image.png&originHeight=434&originWidth=1244&size=42893&status=done&style=none&width=622" alt="image.png"></strong><br><strong>注意</strong>：新建空间一定要与域名失效空间在一个地区服务器上，否则无法拷贝进文件。</p>
 <h2 id="4-批量拷贝文件到新空间"><a href="#4-批量拷贝文件到新空间" class="headerlink" title="4. 批量拷贝文件到新空间"></a>4. 批量拷贝文件到新空间</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./qshell-windows-x64.exe batchcopy --force --overwrite marvinxu-blog marvin2006 list.txt</span><br></pre></td></tr></table></figure>
 
 <h2 id="5-下载文件"><a href="#5-下载文件" class="headerlink" title="5. 下载文件"></a>5. 下载文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./qshell-windows-x64.exe qdownload download.conf</span><br></pre></td></tr></table></figure>
@@ -669,7 +669,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-06-14 13:04:10" itemprop="dateModified" datetime="2020-06-14T13:04:10+00:00">2020-06-14</time>
+                <time title="Modified: 2020-06-27 09:30:01" itemprop="dateModified" datetime="2020-06-27T09:30:01+00:00">2020-06-27</time>
               </span>
 
           
@@ -695,10 +695,10 @@
 <p>因为懒的再去找 Reference，上面都是基于我的理解写出来的，所以可能有不对</p>
 </blockquote>
 <h2 id="2-制作步骤"><a href="#2-制作步骤" class="headerlink" title="2. 制作步骤"></a>2. 制作步骤</h2><p>软件准备：Adobe Acrobat DC 2020 + AutoBookmark 插件<br>插件链接  <a href="https://www.evermap.com/autobookmark.asp#SystemReq" target="_blank" rel="noopener">https://www.evermap.com/autobookmark.asp#SystemReq</a></p>
-<h4 id="1-通过页面标签设置分段页码"><a href="#1-通过页面标签设置分段页码" class="headerlink" title="1. 通过页面标签设置分段页码"></a>1. 通过页面标签设置分段页码</h4><p><img src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1587296148943-24b1019d-3096-4193-974e-f86ae9e7a2e0.png#align=left&display=inline&height=432&margin=%5Bobject%20Object%5D&name=image.png&originHeight=863&originWidth=443&size=70368&status=done&style=none&width=222" alt="image.png">)<img src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1587296234660-9d5d1b0c-6b21-432f-865f-5aa2bf23e0e7.png#align=left&display=inline&height=309&margin=%5Bobject%20Object%5D&name=image.png&originHeight=618&originWidth=567&size=60376&status=done&style=none&width=283.5" alt="image.png"><br>正文前部分用小写罗马数字，正文用阿拉伯数字<br>设置完之后，正文部分的页码就对上了：<br><img src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1587296771074-39201b8d-6062-4701-929c-873174d03d0b.png#align=left&display=inline&height=478&margin=%5Bobject%20Object%5D&name=image.png&originHeight=955&originWidth=1130&size=231274&status=done&style=none&width=565" alt="image.png"></p>
-<h4 id="2-补充空白页，使页码连续"><a href="#2-补充空白页，使页码连续" class="headerlink" title="2. 补充空白页，使页码连续"></a>2. 补充空白页，使页码连续</h4><p><img src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1587297407455-7f5d245a-0c8d-4080-9892-12e2998dd7ad.png#align=left&display=inline&height=394&margin=%5Bobject%20Object%5D&name=image.png&originHeight=787&originWidth=1093&size=239768&status=done&style=none&width=546.5" alt="image.png"><br>检查章节末尾，如果页码不连续就补空白页</p>
-<h4 id="3-开始添加书签"><a href="#3-开始添加书签" class="headerlink" title="3. 开始添加书签"></a>3. 开始添加书签</h4><p>光标选中章节标题，菜单栏点击增效工具-&gt;bookmarks-&gt;Generate from Text Styles，发现会自动获取章节标题的样式<br><img src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1587297901083-2dafafb5-f761-4be5-b742-2b15f549169a.png#align=left&display=inline&height=367&margin=%5Bobject%20Object%5D&name=image.png&originHeight=734&originWidth=653&size=77224&status=done&style=none&width=326.5" alt="image.png"><br>然后选中二级标题，点击 Add 按钮，加入二级标题的样式，以此类推，把各级标题都添加进去。<br>为了识别准确率，限定页码范围在正文部分。<br>点 OK，就会自动生成书签了~</p>
-<h4 id="4-修改已生成的书签"><a href="#4-修改已生成的书签" class="headerlink" title="4. 修改已生成的书签"></a>4. 修改已生成的书签</h4><p>如果需要批量编辑已生成的书签，比如加上序号、前缀等，可以从   增效工具-&gt;bookmarks-&gt;Modify Bookmarks 中选择需要的操作。<br>比如现在我想给每个章节书签前加上“Chapter {number}: ”，选择 Add Prefix / Suffix To Bookmarks<br><img src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1587298412772-e1c5f564-5ef1-4b91-ba59-9fddc7bf3b07.png#align=left&display=inline&height=329&margin=%5Bobject%20Object%5D&name=image.png&originHeight=657&originWidth=563&size=65232&status=done&style=none&width=281.5" alt="image.png"><br>看下最终生成的效果：<br><img src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1587298474308-4d4f03d6-52ac-4090-996f-bca9a0a4a711.png#align=left&display=inline&height=439&margin=%5Bobject%20Object%5D&name=image.png&originHeight=877&originWidth=405&size=46644&status=done&style=none&width=202.5" alt="image.png"><br>总共 1000 多个书签，如果手动添加那可真是浪费时间呢！</p>
+<h4 id="1-通过页面标签设置分段页码"><a href="#1-通过页面标签设置分段页码" class="headerlink" title="1. 通过页面标签设置分段页码"></a>1. 通过页面标签设置分段页码</h4><p><img data-src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1587296148943-24b1019d-3096-4193-974e-f86ae9e7a2e0.png#align=left&display=inline&height=432&margin=%5Bobject%20Object%5D&name=image.png&originHeight=863&originWidth=443&size=70368&status=done&style=none&width=222" alt="image.png">)<img data-src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1587296234660-9d5d1b0c-6b21-432f-865f-5aa2bf23e0e7.png#align=left&display=inline&height=309&margin=%5Bobject%20Object%5D&name=image.png&originHeight=618&originWidth=567&size=60376&status=done&style=none&width=283.5" alt="image.png"><br>正文前部分用小写罗马数字，正文用阿拉伯数字<br>设置完之后，正文部分的页码就对上了：<br><img data-src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1587296771074-39201b8d-6062-4701-929c-873174d03d0b.png#align=left&display=inline&height=478&margin=%5Bobject%20Object%5D&name=image.png&originHeight=955&originWidth=1130&size=231274&status=done&style=none&width=565" alt="image.png"></p>
+<h4 id="2-补充空白页，使页码连续"><a href="#2-补充空白页，使页码连续" class="headerlink" title="2. 补充空白页，使页码连续"></a>2. 补充空白页，使页码连续</h4><p><img data-src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1587297407455-7f5d245a-0c8d-4080-9892-12e2998dd7ad.png#align=left&display=inline&height=394&margin=%5Bobject%20Object%5D&name=image.png&originHeight=787&originWidth=1093&size=239768&status=done&style=none&width=546.5" alt="image.png"><br>检查章节末尾，如果页码不连续就补空白页</p>
+<h4 id="3-开始添加书签"><a href="#3-开始添加书签" class="headerlink" title="3. 开始添加书签"></a>3. 开始添加书签</h4><p>光标选中章节标题，菜单栏点击增效工具-&gt;bookmarks-&gt;Generate from Text Styles，发现会自动获取章节标题的样式<br><img data-src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1587297901083-2dafafb5-f761-4be5-b742-2b15f549169a.png#align=left&display=inline&height=367&margin=%5Bobject%20Object%5D&name=image.png&originHeight=734&originWidth=653&size=77224&status=done&style=none&width=326.5" alt="image.png"><br>然后选中二级标题，点击 Add 按钮，加入二级标题的样式，以此类推，把各级标题都添加进去。<br>为了识别准确率，限定页码范围在正文部分。<br>点 OK，就会自动生成书签了~</p>
+<h4 id="4-修改已生成的书签"><a href="#4-修改已生成的书签" class="headerlink" title="4. 修改已生成的书签"></a>4. 修改已生成的书签</h4><p>如果需要批量编辑已生成的书签，比如加上序号、前缀等，可以从   增效工具-&gt;bookmarks-&gt;Modify Bookmarks 中选择需要的操作。<br>比如现在我想给每个章节书签前加上“Chapter {number}: ”，选择 Add Prefix / Suffix To Bookmarks<br><img data-src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1587298412772-e1c5f564-5ef1-4b91-ba59-9fddc7bf3b07.png#align=left&display=inline&height=329&margin=%5Bobject%20Object%5D&name=image.png&originHeight=657&originWidth=563&size=65232&status=done&style=none&width=281.5" alt="image.png"><br>看下最终生成的效果：<br><img data-src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1587298474308-4d4f03d6-52ac-4090-996f-bca9a0a4a711.png#align=left&display=inline&height=439&margin=%5Bobject%20Object%5D&name=image.png&originHeight=877&originWidth=405&size=46644&status=done&style=none&width=202.5" alt="image.png"><br>总共 1000 多个书签，如果手动添加那可真是浪费时间呢！</p>
 <p>最后分享一下带书签版本的《Professional JavaScript for Web Developers 4th Edition》<br><a href="https://www.yuque.com/attachments/yuque/0/2020/pdf/1310147/1587298816551-c5da2293-d382-488c-9fbd-9a0ba8898ccb.pdf?_lake_card=%7B%22uid%22%3A%221587298814004-0%22%2C%22src%22%3A%22https%3A%2F%2Fwww.yuque.com%2Fattachments%2Fyuque%2F0%2F2020%2Fpdf%2F1310147%2F1587298816551-c5da2293-d382-488c-9fbd-9a0ba8898ccb.pdf%22%2C%22name%22%3A%22Professional.JavaScript.for.Web.Developers.4th.Edition.Bookmark.v2.pdf%22%2C%22size%22%3A5740868%2C%22type%22%3A%22application%2Fpdf%22%2C%22ext%22%3A%22pdf%22%2C%22progress%22%3A%7B%22percent%22%3A99%7D%2C%22status%22%3A%22done%22%2C%22percent%22%3A0%2C%22id%22%3A%22rrmfx%22%2C%22card%22%3A%22file%22%7D" target="_blank" rel="noopener">Professional.JavaScript.for.Web.Developers.4th.Edition.Bookmark.v2.pdf</a></p>
 
       
@@ -842,9 +842,10 @@
   </div>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
+  <script src="/jsdelivr/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="/jsdelivr/velocity/velocity.min.js"></script>
+  <script src="/jsdelivr/velocity/velocity.ui.min.js"></script>
 
 <script src="/js/utils.js"></script>
 
