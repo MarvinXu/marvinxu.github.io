@@ -20,7 +20,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"marvinxu.top","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"marvinxu.top","root":"/","scheme":"Pisces","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="https:&#x2F;&#x2F;gist.github.com&#x2F;evanwill&#x2F;0207876c3243bbb6863e65ec5dc3f058 Git for Windows comes bundled with the “Git Bash” terminal which is incredibly handy for unix-like commands on a windows machine.It is">
@@ -31,7 +31,7 @@
 <meta property="og:description" content="https:&#x2F;&#x2F;gist.github.com&#x2F;evanwill&#x2F;0207876c3243bbb6863e65ec5dc3f058 Git for Windows comes bundled with the “Git Bash” terminal which is incredibly handy for unix-like commands on a windows machine.It is">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-06-12T13:23:33.000Z">
-<meta property="article:modified_time" content="2020-06-30T09:15:45.056Z">
+<meta property="article:modified_time" content="2020-07-12T05:43:33.418Z">
 <meta property="article:author" content="Marvin Xu">
 <meta name="twitter:card" content="summary">
 
@@ -192,10 +192,24 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-06-30 09:15:45" itemprop="dateModified" datetime="2020-06-30T09:15:45+00:00">2020-06-30</time>
+                <time title="Modified: 2020-07-12 05:43:33" itemprop="dateModified" datetime="2020-07-12T05:43:33+00:00">2020-07-12</time>
               </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2020/06/12/yuque/How%20to%20add%20more%20to%20Git%20Bash%20on%20Windows/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/06/12/yuque/How%20to%20add%20more%20to%20Git%20Bash%20on%20Windows/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -206,32 +220,32 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><a href="https://gist.github.com/evanwill/0207876c3243bbb6863e65ec5dc3f058" target="_blank" rel="noopener">https://gist.github.com/evanwill/0207876c3243bbb6863e65ec5dc3f058</a></p>
-<p><a href="https://git-for-windows.github.io/" target="_blank" rel="noopener">Git for Windows</a> comes bundled with the “Git Bash” terminal which is incredibly handy for unix-like commands on a windows machine.<br>It is missing a few standard linux utilities, but it is easy to add ones that have a windows binary available.</p>
+        <p><span class="exturl" data-url="aHR0cHM6Ly9naXN0LmdpdGh1Yi5jb20vZXZhbndpbGwvMDIwNzg3NmMzMjQzYmJiNjg2M2U2NWVjNWRjM2YwNTg=">https://gist.github.com/evanwill/0207876c3243bbb6863e65ec5dc3f058<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXQtZm9yLXdpbmRvd3MuZ2l0aHViLmlvLw==">Git for Windows<i class="fa fa-external-link-alt"></i></span> comes bundled with the “Git Bash” terminal which is incredibly handy for unix-like commands on a windows machine.<br>It is missing a few standard linux utilities, but it is easy to add ones that have a windows binary available.</p>
 <p>The basic idea is that <code>C:\Program Files\Git\mingw64\</code> is your <code>/</code> directory according to Git Bash (<em>note:</em> depending on how you installed it, the directory might be different. from the start menu, right click on the Git Bash icon and open file location. It might be something like <code>C:\Users\name\AppData\Local\Programs\Git</code>, the <code>mingw64</code> in this directory is your root. Find it by using <code>pwd -W</code>).<br>If you go to that directory, you will find the typical linux root folder structure (<code>bin</code>, <code>etc</code>, <code>lib</code> and so on).</p>
 <p>If you are missing a utility, such as wget, track down a binary for windows and copy the files to the corresponding directories.<br>Sometimes the windows binary have funny prefixes, so you should <strong>rename</strong> the <code>.exe</code> file to the standard name.<br>Since <code>bin</code> is on the PATH, it will be automatically available to Git Bash.</p>
-<p><em>Note:</em> Many interactive utilities, such as <code>python</code>, <code>ipython</code> or <code>nano</code>, will not display properly with Git Bash’s mintty terminal.<br>Try invoking them with <code>winpty</code> instead, for example <code>winpty ipython</code> will work nicely.<br>The Git-for-Windows team is focused on supporting Git, not a full UNIX shell environment.<br>If you are interested in more complete package with build tools, check my notes on <a href="https://evanwill.github.io/_drafts/notes/cygwin.html" target="_blank" rel="noopener">Cygwin</a> or <a href="https://evanwill.github.io/_drafts/notes/cmdr.html" target="_blank" rel="noopener">Cmder</a>–or install <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10" target="_blank" rel="noopener">Windows Subsystem for Linux</a> or <a href="https://docs.microsoft.com/en-us/windows/wsl/wsl2-about" target="_blank" rel="noopener">WSL2</a>.</p>
+<p><em>Note:</em> Many interactive utilities, such as <code>python</code>, <code>ipython</code> or <code>nano</code>, will not display properly with Git Bash’s mintty terminal.<br>Try invoking them with <code>winpty</code> instead, for example <code>winpty ipython</code> will work nicely.<br>The Git-for-Windows team is focused on supporting Git, not a full UNIX shell environment.<br>If you are interested in more complete package with build tools, check my notes on <span class="exturl" data-url="aHR0cHM6Ly9ldmFud2lsbC5naXRodWIuaW8vX2RyYWZ0cy9ub3Rlcy9jeWd3aW4uaHRtbA==">Cygwin<i class="fa fa-external-link-alt"></i></span> or <span class="exturl" data-url="aHR0cHM6Ly9ldmFud2lsbC5naXRodWIuaW8vX2RyYWZ0cy9ub3Rlcy9jbWRyLmh0bWw=">Cmder<i class="fa fa-external-link-alt"></i></span>–or install <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vZW4tdXMvd2luZG93cy93c2wvaW5zdGFsbC13aW4xMA==">Windows Subsystem for Linux<i class="fa fa-external-link-alt"></i></span> or <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vZW4tdXMvd2luZG93cy93c2wvd3NsMi1hYm91dA==">WSL2<i class="fa fa-external-link-alt"></i></span>.</p>
 <p>Here are some utilities to add:</p>
 <h2 id="Wget"><a href="#Wget" class="headerlink" title="Wget"></a>Wget</h2><ul>
-<li>Download the lastest wget binary for windows from <a href="https://eternallybored.org/misc/wget/" target="_blank" rel="noopener">eternallybored</a> (they are available as a zip with documentation, or just an exe)</li>
-<li>If you downloaded the zip, extract all (if windows built in zip utility gives an error, use <a href="http://www.7-zip.org/" target="_blank" rel="noopener">7-zip</a>).</li>
+<li>Download the lastest wget binary for windows from <span class="exturl" data-url="aHR0cHM6Ly9ldGVybmFsbHlib3JlZC5vcmcvbWlzYy93Z2V0Lw==">eternallybored<i class="fa fa-external-link-alt"></i></span> (they are available as a zip with documentation, or just an exe)</li>
+<li>If you downloaded the zip, extract all (if windows built in zip utility gives an error, use <span class="exturl" data-url="aHR0cDovL3d3dy43LXppcC5vcmcv">7-zip<i class="fa fa-external-link-alt"></i></span>).</li>
 <li>Rename the file <code>wget64.exe</code> to <code>wget.exe</code> if necessary.</li>
 <li>Move <code>wget.exe</code> to your <code>Git\mingw64\bin\</code>.</li>
 </ul>
-<p><em>Note: I have noticed some bugs when using Wget on Git Bash to create WARC files. For more complex use of Wget, consider <a href="https://evanwill.github.io/_drafts/notes/cygwin.html" target="_blank" rel="noopener">Cygwin</a> instead.</em></p>
-<h2 id="Hugo"><a href="#Hugo" class="headerlink" title="Hugo"></a>Hugo</h2><p><a href="http://gohugo.io/" target="_blank" rel="noopener">Hugo</a> static site generator can be downloaded as a binary and does not have a installer.<br>Dropping it into your <code>bin</code> easily adds it to your Git Bash path.<br>Grab the Windows 64-bit version from the <a href="https://github.com/gohugoio/hugo/releases" target="_blank" rel="noopener">releases page</a>.<br>Unzip the download, then copy <code>hugo.exe</code> into your <code>Git\mingw64\bin</code> directory.</p>
-<h2 id="Xpdf"><a href="#Xpdf" class="headerlink" title="Xpdf"></a>Xpdf</h2><p><a href="http://www.xpdfreader.com/index.html" target="_blank" rel="noopener">Xpdf</a> is a handy utility for manipulating PDF files.</p>
+<p><em>Note: I have noticed some bugs when using Wget on Git Bash to create WARC files. For more complex use of Wget, consider <span class="exturl" data-url="aHR0cHM6Ly9ldmFud2lsbC5naXRodWIuaW8vX2RyYWZ0cy9ub3Rlcy9jeWd3aW4uaHRtbA==">Cygwin<i class="fa fa-external-link-alt"></i></span> instead.</em></p>
+<h2 id="Hugo"><a href="#Hugo" class="headerlink" title="Hugo"></a>Hugo</h2><p><span class="exturl" data-url="aHR0cDovL2dvaHVnby5pby8=">Hugo<i class="fa fa-external-link-alt"></i></span> static site generator can be downloaded as a binary and does not have a installer.<br>Dropping it into your <code>bin</code> easily adds it to your Git Bash path.<br>Grab the Windows 64-bit version from the <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2dvaHVnb2lvL2h1Z28vcmVsZWFzZXM=">releases page<i class="fa fa-external-link-alt"></i></span>.<br>Unzip the download, then copy <code>hugo.exe</code> into your <code>Git\mingw64\bin</code> directory.</p>
+<h2 id="Xpdf"><a href="#Xpdf" class="headerlink" title="Xpdf"></a>Xpdf</h2><p><span class="exturl" data-url="aHR0cDovL3d3dy54cGRmcmVhZGVyLmNvbS9pbmRleC5odG1s">Xpdf<i class="fa fa-external-link-alt"></i></span> is a handy utility for manipulating PDF files.</p>
 <ul>
-<li>Download the <a href="http://www.xpdfreader.com/download.html" target="_blank" rel="noopener">windows version “Xpdf tools”</a>.</li>
+<li>Download the <span class="exturl" data-url="aHR0cDovL3d3dy54cGRmcmVhZGVyLmNvbS9kb3dubG9hZC5odG1s">windows version “Xpdf tools”<i class="fa fa-external-link-alt"></i></span>.</li>
 <li>Extract zip.</li>
 <li>Copy the contents of <code>xpdf-tools-win-4.00\bin64\</code> into your <code>Git\mingw64\bin\</code>.</li>
-<li>Check the <a href="http://www.xpdfreader.com/support.html" target="_blank" rel="noopener">docs</a> to get started with tools such as <code>pdftotext</code> and <code>pdftopng</code>.</li>
+<li>Check the <span class="exturl" data-url="aHR0cDovL3d3dy54cGRmcmVhZGVyLmNvbS9zdXBwb3J0Lmh0bWw=">docs<i class="fa fa-external-link-alt"></i></span> to get started with tools such as <code>pdftotext</code> and <code>pdftopng</code>.</li>
 </ul>
 <h2 id="make"><a href="#make" class="headerlink" title="make"></a>make</h2><blockquote>
 <p>Keep in mind you can easy add <code>make</code>, but it doesn’t come packaged with all the standard UNIX build toolchain–so you will have to ensure those are installed <em>and</em> on your PATH, or you will encounter endless error messages.</p>
 </blockquote>
 <ul>
-<li>Go to <a href="https://sourceforge.net/projects/ezwinports/files/" target="_blank" rel="noopener">ezwinports</a>.</li>
+<li>Go to <span class="exturl" data-url="aHR0cHM6Ly9zb3VyY2Vmb3JnZS5uZXQvcHJvamVjdHMvZXp3aW5wb3J0cy9maWxlcy8=">ezwinports<i class="fa fa-external-link-alt"></i></span>.</li>
 <li>Download <code>make-4.1-2-without-guile-w32-bin.zip</code> (get the version without guile).</li>
 <li>Extract zip.</li>
 <li>Copy the contents to your <code>Git\mingw64\</code> merging the folders, but do NOT overwrite/replace any existing files.</li>
@@ -240,7 +254,7 @@
 <p>As of 2018, recent versions of Git Bash include Nano, so this is unnecessary! Just be sure to choose Nano as your default editor when installing Git for Windows.</p>
 </blockquote>
 <ul>
-<li>Download the Nano binary from Nano <a href="https://www.nano-editor.org/dist/win32-support/" target="_blank" rel="noopener">win32-support</a> page. You just need the <code>.exe</code> file, which is named <code>nano-git-0d9a7347243.exe</code> (as of this writing).</li>
+<li>Download the Nano binary from Nano <span class="exturl" data-url="aHR0cHM6Ly93d3cubmFuby1lZGl0b3Iub3JnL2Rpc3Qvd2luMzItc3VwcG9ydC8=">win32-support<i class="fa fa-external-link-alt"></i></span> page. You just need the <code>.exe</code> file, which is named <code>nano-git-0d9a7347243.exe</code> (as of this writing).</li>
 <li>Rename the file to <code>nano.exe</code>, and copy to the <code>mingw64\bin</code> directory.</li>
 <li>This version of Nano will not work with Git Bash alone, but can be invoked using <code>winpty</code>, for example, <code>winpty nano test.txt</code>.</li>
 </ul>
@@ -278,11 +292,7 @@
 
           </div>
           
-    
-  <div class="comments">
-    <div id="lv-container" data-id="city" data-uid="MTAyMC81MDQ3NC8yNjk2MQ"></div>
-  </div>
-  
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -353,10 +363,10 @@
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <a href="https://github.com/MarvinXu" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;MarvinXu" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL01hcnZpblh1" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;MarvinXu"><i class="fab fa-github fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <a href="mailto:272077995@qq.com" title="E-Mail → mailto:272077995@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+        <span class="exturl" data-url="bWFpbHRvOjI3MjA3Nzk5NUBxcS5jb20=" title="E-Mail → mailto:272077995@qq.com"><i class="fa fa-envelope fa-fw"></i></span>
       </span>
   </div>
 
@@ -387,7 +397,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Marvin Xu</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  <div class="powered-by">Powered by <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl theme-link" data-url="aHR0cHM6Ly9waXNjZXMudGhlbWUtbmV4dC5vcmc=">NexT.Pisces</span>
   </div>
 
         
@@ -423,6 +433,31 @@
 
 
   
+  <script>
+    (function(){
+      var canonicalURL, curProtocol;
+      //Get the <link> tag
+      var x=document.getElementsByTagName("link");
+		//Find the last canonical URL
+		if(x.length > 0){
+			for (i=0;i<x.length;i++){
+				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
+					canonicalURL=x[i].href;
+				}
+			}
+		}
+    //Get protocol
+	    if (!canonicalURL){
+	    	curProtocol = window.location.protocol.split(':')[0];
+	    }
+	    else{
+	    	curProtocol = canonicalURL.split(':')[0];
+	    }
+      //Get current URL if the canonical URL does not exist
+	    if (!canonicalURL) canonicalURL = window.location.href;
+	    //Assign script content. Replace current URL with the canonical URL
+      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
+  </script>
 
 
 
@@ -441,20 +476,33 @@
   
 
   
+
 
 <script>
-NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
-  window.livereOptions = {
-    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'zTPXKB1PSz9j7vFogu1ipUEw-9Nh9j0Va',
+      appKey     : 'IWIGt2rvCDJ8Pu9CnWYMUiOb',
+      placeholder: "Just go go",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
 });
 </script>
 
