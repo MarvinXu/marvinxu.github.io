@@ -127,7 +127,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">6</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">5</span></a>
 
   </li>
   </ul>
@@ -188,7 +188,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-07-12 06:33:24" itemprop="dateModified" datetime="2020-07-12T06:33:24+00:00">2020-07-12</time>
+                <time title="Modified: 2020-07-12 07:05:07" itemprop="dateModified" datetime="2020-07-12T07:05:07+00:00">2020-07-12</time>
               </span>
 
           
@@ -248,122 +248,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://marvinxu.top/2020/06/12/yuque/How%20to%20add%20more%20to%20Git%20Bash%20on%20Windows/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="//cdn.jsdelivr.net/gh/marvinxu/marvinxu.github.io@master/uploads/avatar.jpg">
-      <meta itemprop="name" content="Marvin Xu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Marvin's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/06/12/yuque/How%20to%20add%20more%20to%20Git%20Bash%20on%20Windows/" class="post-title-link" itemprop="url">How to add more to Git Bash on Windows</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-06-12 13:23:33" itemprop="dateCreated datePublished" datetime="2020-06-12T13:23:33+00:00">2020-06-12</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-07-12 06:33:24" itemprop="dateModified" datetime="2020-07-12T06:33:24+00:00">2020-07-12</time>
-              </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine: </span>
-    
-    <a title="valine" href="/2020/06/12/yuque/How%20to%20add%20more%20to%20Git%20Bash%20on%20Windows/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/06/12/yuque/How%20to%20add%20more%20to%20Git%20Bash%20on%20Windows/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><span class="exturl" data-url="aHR0cHM6Ly9naXN0LmdpdGh1Yi5jb20vZXZhbndpbGwvMDIwNzg3NmMzMjQzYmJiNjg2M2U2NWVjNWRjM2YwNTg=">https://gist.github.com/evanwill/0207876c3243bbb6863e65ec5dc3f058<i class="fa fa-external-link-alt"></i></span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9naXQtZm9yLXdpbmRvd3MuZ2l0aHViLmlvLw==">Git for Windows<i class="fa fa-external-link-alt"></i></span> comes bundled with the “Git Bash” terminal which is incredibly handy for unix-like commands on a windows machine.<br>It is missing a few standard linux utilities, but it is easy to add ones that have a windows binary available.</p>
-<p>The basic idea is that <code>C:\Program Files\Git\mingw64\</code> is your <code>/</code> directory according to Git Bash (<em>note:</em> depending on how you installed it, the directory might be different. from the start menu, right click on the Git Bash icon and open file location. It might be something like <code>C:\Users\name\AppData\Local\Programs\Git</code>, the <code>mingw64</code> in this directory is your root. Find it by using <code>pwd -W</code>).<br>If you go to that directory, you will find the typical linux root folder structure (<code>bin</code>, <code>etc</code>, <code>lib</code> and so on).</p>
-<p>If you are missing a utility, such as wget, track down a binary for windows and copy the files to the corresponding directories.<br>Sometimes the windows binary have funny prefixes, so you should <strong>rename</strong> the <code>.exe</code> file to the standard name.<br>Since <code>bin</code> is on the PATH, it will be automatically available to Git Bash.</p>
-<p><em>Note:</em> Many interactive utilities, such as <code>python</code>, <code>ipython</code> or <code>nano</code>, will not display properly with Git Bash’s mintty terminal.<br>Try invoking them with <code>winpty</code> instead, for example <code>winpty ipython</code> will work nicely.<br>The Git-for-Windows team is focused on supporting Git, not a full UNIX shell environment.<br>If you are interested in more complete package with build tools, check my notes on <span class="exturl" data-url="aHR0cHM6Ly9ldmFud2lsbC5naXRodWIuaW8vX2RyYWZ0cy9ub3Rlcy9jeWd3aW4uaHRtbA==">Cygwin<i class="fa fa-external-link-alt"></i></span> or <span class="exturl" data-url="aHR0cHM6Ly9ldmFud2lsbC5naXRodWIuaW8vX2RyYWZ0cy9ub3Rlcy9jbWRyLmh0bWw=">Cmder<i class="fa fa-external-link-alt"></i></span>–or install <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vZW4tdXMvd2luZG93cy93c2wvaW5zdGFsbC13aW4xMA==">Windows Subsystem for Linux<i class="fa fa-external-link-alt"></i></span> or <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vZW4tdXMvd2luZG93cy93c2wvd3NsMi1hYm91dA==">WSL2<i class="fa fa-external-link-alt"></i></span>.</p>
-<p>Here are some utilities to add:</p>
-<h2 id="Wget"><a href="#Wget" class="headerlink" title="Wget"></a>Wget</h2><ul>
-<li>Download the lastest wget binary for windows from <span class="exturl" data-url="aHR0cHM6Ly9ldGVybmFsbHlib3JlZC5vcmcvbWlzYy93Z2V0Lw==">eternallybored<i class="fa fa-external-link-alt"></i></span> (they are available as a zip with documentation, or just an exe)</li>
-<li>If you downloaded the zip, extract all (if windows built in zip utility gives an error, use <span class="exturl" data-url="aHR0cDovL3d3dy43LXppcC5vcmcv">7-zip<i class="fa fa-external-link-alt"></i></span>).</li>
-<li>Rename the file <code>wget64.exe</code> to <code>wget.exe</code> if necessary.</li>
-<li>Move <code>wget.exe</code> to your <code>Git\mingw64\bin\</code>.</li>
-</ul>
-<p><em>Note: I have noticed some bugs when using Wget on Git Bash to create WARC files. For more complex use of Wget, consider <span class="exturl" data-url="aHR0cHM6Ly9ldmFud2lsbC5naXRodWIuaW8vX2RyYWZ0cy9ub3Rlcy9jeWd3aW4uaHRtbA==">Cygwin<i class="fa fa-external-link-alt"></i></span> instead.</em></p>
-<h2 id="Hugo"><a href="#Hugo" class="headerlink" title="Hugo"></a>Hugo</h2><p><span class="exturl" data-url="aHR0cDovL2dvaHVnby5pby8=">Hugo<i class="fa fa-external-link-alt"></i></span> static site generator can be downloaded as a binary and does not have a installer.<br>Dropping it into your <code>bin</code> easily adds it to your Git Bash path.<br>Grab the Windows 64-bit version from the <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2dvaHVnb2lvL2h1Z28vcmVsZWFzZXM=">releases page<i class="fa fa-external-link-alt"></i></span>.<br>Unzip the download, then copy <code>hugo.exe</code> into your <code>Git\mingw64\bin</code> directory.</p>
-<h2 id="Xpdf"><a href="#Xpdf" class="headerlink" title="Xpdf"></a>Xpdf</h2><p><span class="exturl" data-url="aHR0cDovL3d3dy54cGRmcmVhZGVyLmNvbS9pbmRleC5odG1s">Xpdf<i class="fa fa-external-link-alt"></i></span> is a handy utility for manipulating PDF files.</p>
-<ul>
-<li>Download the <span class="exturl" data-url="aHR0cDovL3d3dy54cGRmcmVhZGVyLmNvbS9kb3dubG9hZC5odG1s">windows version “Xpdf tools”<i class="fa fa-external-link-alt"></i></span>.</li>
-<li>Extract zip.</li>
-<li>Copy the contents of <code>xpdf-tools-win-4.00\bin64\</code> into your <code>Git\mingw64\bin\</code>.</li>
-<li>Check the <span class="exturl" data-url="aHR0cDovL3d3dy54cGRmcmVhZGVyLmNvbS9zdXBwb3J0Lmh0bWw=">docs<i class="fa fa-external-link-alt"></i></span> to get started with tools such as <code>pdftotext</code> and <code>pdftopng</code>.</li>
-</ul>
-<h2 id="make"><a href="#make" class="headerlink" title="make"></a>make</h2><blockquote>
-<p>Keep in mind you can easy add <code>make</code>, but it doesn’t come packaged with all the standard UNIX build toolchain–so you will have to ensure those are installed <em>and</em> on your PATH, or you will encounter endless error messages.</p>
-</blockquote>
-<ul>
-<li>Go to <span class="exturl" data-url="aHR0cHM6Ly9zb3VyY2Vmb3JnZS5uZXQvcHJvamVjdHMvZXp3aW5wb3J0cy9maWxlcy8=">ezwinports<i class="fa fa-external-link-alt"></i></span>.</li>
-<li>Download <code>make-4.1-2-without-guile-w32-bin.zip</code> (get the version without guile).</li>
-<li>Extract zip.</li>
-<li>Copy the contents to your <code>Git\mingw64\</code> merging the folders, but do NOT overwrite/replace any existing files.</li>
-</ul>
-<h2 id="Nano"><a href="#Nano" class="headerlink" title="Nano"></a>Nano</h2><blockquote>
-<p>As of 2018, recent versions of Git Bash include Nano, so this is unnecessary! Just be sure to choose Nano as your default editor when installing Git for Windows.</p>
-</blockquote>
-<ul>
-<li>Download the Nano binary from Nano <span class="exturl" data-url="aHR0cHM6Ly93d3cubmFuby1lZGl0b3Iub3JnL2Rpc3Qvd2luMzItc3VwcG9ydC8=">win32-support<i class="fa fa-external-link-alt"></i></span> page. You just need the <code>.exe</code> file, which is named <code>nano-git-0d9a7347243.exe</code> (as of this writing).</li>
-<li>Rename the file to <code>nano.exe</code>, and copy to the <code>mingw64\bin</code> directory.</li>
-<li>This version of Nano will not work with Git Bash alone, but can be invoked using <code>winpty</code>, for example, <code>winpty nano test.txt</code>.</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://marvinxu.top/2020/06/12/yuque/hexo+travisCI%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2github%20pages/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -395,7 +279,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-07-12 06:33:24" itemprop="dateModified" datetime="2020-07-12T06:33:24+00:00">2020-07-12</time>
+                <time title="Modified: 2020-07-12 07:05:07" itemprop="dateModified" datetime="2020-07-12T07:05:07+00:00">2020-07-12</time>
               </span>
 
           
@@ -486,7 +370,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-07-12 06:33:24" itemprop="dateModified" datetime="2020-07-12T06:33:24+00:00">2020-07-12</time>
+                <time title="Modified: 2020-07-12 07:05:07" itemprop="dateModified" datetime="2020-07-12T07:05:07+00:00">2020-07-12</time>
               </span>
 
           
@@ -580,7 +464,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-07-12 06:33:24" itemprop="dateModified" datetime="2020-07-12T06:33:24+00:00">2020-07-12</time>
+                <time title="Modified: 2020-07-12 07:05:07" itemprop="dateModified" datetime="2020-07-12T07:05:07+00:00">2020-07-12</time>
               </span>
 
           
@@ -634,11 +518,105 @@
   
   
 
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://marvinxu.top/2020/04/19/yuque/%E7%94%A8Adobe%20Acrobat%E4%B8%BA%E7%94%B5%E5%AD%90%E4%B9%A6%E5%88%B6%E4%BD%9C%E4%B9%A6%E7%AD%BE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="//cdn.jsdelivr.net/gh/marvinxu/marvinxu.github.io@master/uploads/avatar.jpg">
+      <meta itemprop="name" content="Marvin Xu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Marvin's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/04/19/yuque/%E7%94%A8Adobe%20Acrobat%E4%B8%BA%E7%94%B5%E5%AD%90%E4%B9%A6%E5%88%B6%E4%BD%9C%E4%B9%A6%E7%AD%BE/" class="post-title-link" itemprop="url">用Adobe Acrobat为电子书制作书签</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-04-19 10:42:16" itemprop="dateCreated datePublished" datetime="2020-04-19T10:42:16+00:00">2020-04-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-07-12 07:05:07" itemprop="dateModified" datetime="2020-07-12T07:05:07+00:00">2020-07-12</time>
+              </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2020/04/19/yuque/%E7%94%A8Adobe%20Acrobat%E4%B8%BA%E7%94%B5%E5%AD%90%E4%B9%A6%E5%88%B6%E4%BD%9C%E4%B9%A6%E7%AD%BE/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/04/19/yuque/%E7%94%A8Adobe%20Acrobat%E4%B8%BA%E7%94%B5%E5%AD%90%E4%B9%A6%E5%88%B6%E4%BD%9C%E4%B9%A6%E7%AD%BE/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>最近在翻看《JavaScript 高级程序设计 第 3 版》这本书，发现有些内容过时了，找了找发现第 4 版英文原版已经有了，但是网上找的免费的 PDF 都没有书签，看得很费劲，闲的自己做了个书签。</p>
+<h2 id="1-印刷版和页码相关知识"><a href="#1-印刷版和页码相关知识" class="headerlink" title="1. 印刷版和页码相关知识"></a>1. 印刷版和页码相关知识</h2><p>因为下载的这个 PDF 是印刷版，而且它除了没有书签，连<strong>页码也不连续</strong>，导致我一开始做书签的时候非常懵逼。通过查资料和跟其他制作好的电子书对比，让我逐渐对这个东西有了一些了解。</p>
+<p>印刷版 PDF 有两个特点：</p>
+<ol>
+<li>左右页边距大小不一，且相邻页的页边距也不一致（因为要装订且分正反页）</li>
+<li>有空白页（因为分正反页有的地方需要空一页，比如封面、章结尾）</li>
+</ol>
+<p>页码：很多书籍都会用<strong>分段页码</strong>，比如正文之前用小写罗马数字（i、ii、ixii…），正文部分用阿拉伯数字，这导致了正文部分的页码跟 PDF 的页码数不一致</p>
+<blockquote>
+<p>因为懒的再去找 Reference，上面都是基于我的理解写出来的，所以可能有不对</p>
+</blockquote>
+<h2 id="2-制作步骤"><a href="#2-制作步骤" class="headerlink" title="2. 制作步骤"></a>2. 制作步骤</h2><p>软件准备：Adobe Acrobat DC 2020 + AutoBookmark 插件<br>插件链接  <span class="exturl" data-url="aHR0cHM6Ly93d3cuZXZlcm1hcC5jb20vYXV0b2Jvb2ttYXJrLmFzcCNTeXN0ZW1SZXE=">https://www.evermap.com/autobookmark.asp#SystemReq<i class="fa fa-external-link-alt"></i></span></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/04/19/yuque/%E7%94%A8Adobe%20Acrobat%E4%B8%BA%E7%94%B5%E5%AD%90%E4%B9%A6%E5%88%B6%E4%BD%9C%E4%B9%A6%E7%AD%BE/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
 
   
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
-  </nav>
 
 
 
@@ -705,7 +683,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
