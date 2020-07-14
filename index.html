@@ -188,7 +188,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-07-14 05:04:41" itemprop="dateModified" datetime="2020-07-14T05:04:41+00:00">2020-07-14</time>
+                <time title="Modified: 2020-07-14 05:06:04" itemprop="dateModified" datetime="2020-07-14T05:06:04+00:00">2020-07-14</time>
               </span>
 
           
@@ -218,26 +218,14 @@
       
           <h2 id="使用-CDN"><a href="#使用-CDN" class="headerlink" title="使用 CDN"></a>使用 CDN</h2><p>首先考察了一些 CDN 服务商，还是以免费为原则，参考<br><span class="exturl" data-url="aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vd3BqYW1lci9hcnRpY2xlcy8xMDkyNTc2NC5odG1s">https://www.cnblogs.com/wpjamer/articles/10925764.html<i class="fa fa-external-link-alt"></i></span><br>但试了几个我就放弃了，国内 CDN 都需要备案，Cloudfare 速度又太慢。。</p>
 <h3 id="jsDelivr"><a href="#jsDelivr" class="headerlink" title="jsDelivr"></a><strong>jsDelivr</strong></h3><p>后来发现这个，即插即用的方式真是如获至宝，所有 github 资源都能直接用 cdn 访问</p>
-<h4 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; load any GitHub release, commit, or branch</span><br><span class="line">&#x2F;&#x2F; note: we recommend using npm for projects that support it</span><br><span class="line">https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;user&#x2F;repo@version&#x2F;file</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; load jQuery v3.2.1</span><br><span class="line">https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;jquery&#x2F;jquery@3.2.1&#x2F;dist&#x2F;jquery.min.js</span><br></pre></td></tr></table></figure>
-
-<p>例子：<span class="exturl" data-url="aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL21hcnZpbnh1L21hcnZpbnh1LmdpdGh1Yi5pb0BtYXN0ZXIvaW1hZ2VzL2Zhdmljb24tMzJ4MzIucG5n">https://cdn.jsdelivr.net/gh/marvinxu/marvinxu.github.io@master/images/favicon-32x32.png<i class="fa fa-external-link-alt"></i></span></p>
-<h3 id="Hexo-next-主题-CDN-配置"><a href="#Hexo-next-主题-CDN-配置" class="headerlink" title="Hexo - next 主题 CDN 配置"></a>Hexo - next 主题 CDN 配置</h3><p>主题配置文件 config.yml：</p>
-<ul>
-<li>vendors 下配置 library 使用 CDN</li>
-<li>favicon\avatar 使用 CDN</li>
-</ul>
-<p>源码修改：<br>main.css -&gt; head.swig<br>js -&gt; engine.js</p>
-<p>直接看 commit 吧<br><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL01hcnZpblh1L2Jsb2ctaGV4by9jb21taXQvN2ZkZjI1MmUyZDgwZDY2MWI2ODQ3MTkwODYxNTk5MGY1YmI4OTJiOA==">https://github.com/MarvinXu/blog-hexo/commit/7fdf252e2d80d661b68471908615990f5bb892b8<i class="fa fa-external-link-alt"></i></span></p>
-<h2 id="HTML-瘦身"><a href="#HTML-瘦身" class="headerlink" title="HTML 瘦身"></a>HTML 瘦身</h2><p>因为 index.html 不走 CDN，所以也要控制大小。next 主题默认首页会展示文章全文，导致 index.html 很大，可以进行如下设置</p>
-<h3 id="设置文章截断"><a href="#设置文章截断" class="headerlink" title="设置文章截断"></a>设置文章截断</h3><p>语雀写文章的时候加入截断标志</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="comment">&lt;!--- more --&gt;</span></span></span><br></pre></td></tr></table></figure>
-
-<h3 id="减小首页-pagesize"><a href="#减小首页-pagesize" class="headerlink" title="减小首页 pagesize"></a>减小首页 pagesize</h3><p>config.yml</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Home page setting</span></span><br><span class="line"><span class="comment"># path: Root path for your blogs index page. (default = '')</span></span><br><span class="line"><span class="comment"># per_page: Posts displayed per page. (0 = disable pagination)</span></span><br><span class="line"><span class="comment"># order_by: Posts order. (Order by date descending by default)</span></span><br><span class="line"><span class="attr">index_generator:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">""</span></span><br><span class="line">  <span class="attr">per_page:</span> <span class="number">5</span></span><br><span class="line">  <span class="attr">order_by:</span> <span class="string">-date</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><p>之前加载 8<del>15s，加速后基本 1</del>2s</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9kb2NzL2FkdmFuY2VkLXNldHRpbmdzLmh0bWw=">https://theme-next.js.org/docs/advanced-settings.html<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvaGVscGVycyN1cmwtZm9y">https://hexo.io/docs/helpers#url-for<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9kb2NzL3RoZW1lLXNldHRpbmdzL3Bvc3RzLmh0bWw=">https://theme-next.js.org/docs/theme-settings/posts.html<i class="fa fa-external-link-alt"></i></span></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/07/12/yuque/Github%20Pages%20hexo%E5%8D%9A%E5%AE%A2%E5%8A%A0%E9%80%9F/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -287,7 +275,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-07-14 05:04:41" itemprop="dateModified" datetime="2020-07-14T05:04:41+00:00">2020-07-14</time>
+                <time title="Modified: 2020-07-14 05:06:04" itemprop="dateModified" datetime="2020-07-14T05:06:04+00:00">2020-07-14</time>
               </span>
 
           
@@ -378,7 +366,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-07-14 05:04:41" itemprop="dateModified" datetime="2020-07-14T05:04:41+00:00">2020-07-14</time>
+                <time title="Modified: 2020-07-14 05:06:04" itemprop="dateModified" datetime="2020-07-14T05:06:04+00:00">2020-07-14</time>
               </span>
 
           
@@ -469,7 +457,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-07-14 05:04:41" itemprop="dateModified" datetime="2020-07-14T05:04:41+00:00">2020-07-14</time>
+                <time title="Modified: 2020-07-14 05:06:04" itemprop="dateModified" datetime="2020-07-14T05:06:04+00:00">2020-07-14</time>
               </span>
 
           
@@ -563,7 +551,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-07-14 05:04:41" itemprop="dateModified" datetime="2020-07-14T05:04:41+00:00">2020-07-14</time>
+                <time title="Modified: 2020-07-14 05:06:04" itemprop="dateModified" datetime="2020-07-14T05:06:04+00:00">2020-07-14</time>
               </span>
 
           
