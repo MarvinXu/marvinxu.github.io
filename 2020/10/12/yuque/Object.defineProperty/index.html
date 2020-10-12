@@ -23,15 +23,19 @@
     var CONFIG = {"hostname":"marvinxu.top","root":"/","scheme":"Pisces","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Marvin&#39;s Blog">
-<meta property="og:url" content="https://marvinxu.top/archives/index.html">
+  <meta name="description" content="语法 Object.defineProperty(obj, prop, descriptor)  返回值：传入的 obj 描述通过赋值创建的属性默认是可枚举 (for…in \ Object.keys)，可以修改值，也可以被删除的。而 Object.defineProperty 可以修改这些特性。默认通过 Object.defineProperty 添加的属性是不可修改且不可枚举的。 两种形式的描">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Object.defineProperty">
+<meta property="og:url" content="https://marvinxu.top/2020/10/12/yuque/Object.defineProperty/index.html">
 <meta property="og:site_name" content="Marvin&#39;s Blog">
+<meta property="og:description" content="语法 Object.defineProperty(obj, prop, descriptor)  返回值：传入的 obj 描述通过赋值创建的属性默认是可枚举 (for…in \ Object.keys)，可以修改值，也可以被删除的。而 Object.defineProperty 可以修改这些特性。默认通过 Object.defineProperty 添加的属性是不可修改且不可枚举的。 两种形式的描">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-10-12T07:45:21.000Z">
+<meta property="article:modified_time" content="2020-10-12T07:48:35.457Z">
 <meta property="article:author" content="Marvin Xu">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://marvinxu.top/archives/">
+<link rel="canonical" href="https://marvinxu.top/2020/10/12/yuque/Object.defineProperty/">
 
 
 <script id="page-configurations">
@@ -39,12 +43,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Archive | Marvin's Blog</title>
+  <title>Object.defineProperty | Marvin's Blog</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171092339-1"></script>
     <script>
@@ -151,176 +155,153 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://marvinxu.top/2020/10/12/yuque/Object.defineProperty/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="//cdn.jsdelivr.net/gh/marvinxu/marvinxu.github.io@master/uploads/avatar.jpg">
+      <meta itemprop="name" content="Marvin Xu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Marvin's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Object.defineProperty
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-10-12 07:45:21 / Modified: 07:48:35" itemprop="dateCreated datePublished" datetime="2020-10-12T07:45:21+00:00">2020-10-12</time>
+            </span>
+
+          
   
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">Um..! 7 posts in total. Keep on posting.</span>
-      </div>
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2020/10/12/yuque/Object.defineProperty/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/10/12/yuque/Object.defineProperty/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2020</span>
-    </div>
+        <h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><blockquote>
+<p>Object.defineProperty(obj, prop, descriptor)</p>
+</blockquote>
+<p>返回值：传入的 obj</p>
+<h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>通过赋值创建的属性默认是可枚举 (for…in \ Object.keys)，可以修改值，也可以被删除的。而 Object.defineProperty 可以修改这些特性。<br>默认通过 Object.defineProperty 添加的属性是不可修改且不可枚举的。</p>
+<h3 id="两种形式的描述符"><a href="#两种形式的描述符" class="headerlink" title="两种形式的描述符"></a>两种形式的描述符</h3><ul>
+<li>data descriptor 数据描述符</li>
+<li>accessor descriptor 访问器描述符</li>
+</ul>
+<p>两种描述符都是对象，共享以下键值：</p>
+<ul>
+<li>configurable</li>
+<li>enumerable</li>
+</ul>
+<p>数据描述符特有：</p>
+<ul>
+<li>writable</li>
+<li>value</li>
+</ul>
+<p>访问器描述符特有：</p>
+<ul>
+<li>set</li>
+<li>get</li>
+</ul>
+<p>描述符只能为其一，如果有 (value || writable) &amp;&amp; (set || get) 则报错</p>
+<h3 id="回顾：对象属性类型"><a href="#回顾：对象属性类型" class="headerlink" title="回顾：对象属性类型"></a>回顾：对象属性类型</h3><p>与描述符对应的，对象属性也有两种类型</p>
+<ul>
+<li>数据属性</li>
+<li>访问器属性</li>
+</ul>
+<p>直接赋值的属性都是数据属性</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123; <span class="attr">a</span>: <span class="number">1</span> &#125;;</span><br><span class="line">obj.b = <span class="number">2</span>;</span><br></pre></td></tr></table></figure>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+<p>与描述符的键值对应的属性特性表现在这些内部值上 <code>[[Configurable]]</code> 、 <code>[[Enumerable]]</code>、<code>[[Writable]]</code> 、<code>[[Value]]</code><br>按上述方式定义的属性，前三个特性都是 true</p>
+<p>访问器属性必须用 <code>Object.defineProperty</code> 来定义</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;&#125;;</span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj, <span class="string">"name"</span>, &#123;</span><br><span class="line">  <span class="keyword">get</span>() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"hi"</span>;</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-10-12T07:45:21+00:00"
-              content="2020-10-12">
-          10-12
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/10/12/yuque/Object.defineProperty/" itemprop="url">
-            <span itemprop="name">Object.defineProperty</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-07-12T06:35:45+00:00"
-              content="2020-07-12">
-          07-12
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/07/12/yuque/Github%20Pages%20hexo%E5%8D%9A%E5%AE%A2%E5%8A%A0%E9%80%9F/" itemprop="url">
-            <span itemprop="name">Github Pages hexo博客加速</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-06-12T17:03:59+00:00"
-              content="2020-06-12">
-          06-12
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/06/12/yuque/%E8%AF%AD%E9%9B%80%E6%96%87%E7%AB%A0%E8%87%AA%E5%8A%A8%E5%90%8C%E6%AD%A5%E5%88%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" itemprop="url">
-            <span itemprop="name">语雀文章自动同步到个人博客</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-06-12T09:24:27+00:00"
-              content="2020-06-12">
-          06-12
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/06/12/yuque/hexo+travisCI%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2github%20pages/" itemprop="url">
-            <span itemprop="name">hexo+travisCI自动部署github pages</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-06-11T12:06:39+00:00"
-              content="2020-06-11">
-          06-11
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/06/11/yuque/git-style-guide/" itemprop="url">
-            <span itemprop="name">git-style-guide</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-06-11T10:07:18+00:00"
-              content="2020-06-11">
-          06-11
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/06/11/yuque/%E4%B8%83%E7%89%9B%E4%BA%91%E5%9B%BE%E5%BA%8A%E6%8C%82%E4%BA%86%EF%BC%9F%E4%B8%8D%E7%94%A8%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E6%89%BE%E5%9B%9E%E5%9B%BE%E7%89%87/" itemprop="url">
-            <span itemprop="name">七牛云图床挂了？不用自定义域名找回图片</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-04-19T10:42:16+00:00"
-              content="2020-04-19">
-          04-19
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/04/19/yuque/%E7%94%A8Adobe%20Acrobat%E4%B8%BA%E7%94%B5%E5%AD%90%E4%B9%A6%E5%88%B6%E4%BD%9C%E4%B9%A6%E7%AD%BE/" itemprop="url">
-            <span itemprop="name">用Adobe Acrobat为电子书制作书签</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
+<h3 id="几种特性的作用"><a href="#几种特性的作用" class="headerlink" title="几种特性的作用"></a>几种特性的作用</h3><h4 id="Configurable"><a href="#Configurable" class="headerlink" title="Configurable"></a>Configurable</h4><p>能否用 delete 删除属性，能否修改属性的特性，或者能否在数据属性和访问器属性间切换<br>如果 Configurable 为 false：</p>
+<ol>
+<li>新的 Configurable 为 true，报错</li>
+<li>新的 Enumerable 与旧的不一致，报错</li>
+<li>由数据属性变为访问器属性或反之，报错</li>
+<li>保持为数据属性，旧的 Writable 为 false，新的 Writable 为 true，报错</li>
+<li>保持为数据属性，旧的 Writable 为 false，新的 Value 跟旧的不一样，报错</li>
+</ol>
+<p><span class="exturl" data-url="aHR0cHM6Ly90YzM5LmVzL2VjbWEyNjIvI3NlYy12YWxpZGF0ZWFuZGFwcGx5cHJvcGVydHlkZXNjcmlwdG9y">https://tc39.es/ecma262/#sec-validateandapplypropertydescriptor<i class="fa fa-external-link-alt"></i></span><br>总结一下 Configurable 为 false 时能修改的特性：</p>
+<ol>
+<li>writable：true -&gt; false</li>
+<li>writable: true &amp; value: a -&gt; b</li>
+</ol>
+<h4 id="Writable"><a href="#Writable" class="headerlink" title="Writable"></a>Writable</h4><p>为 false 时，不能重新赋值，但如果 Configurable 为 true，可以通过 define value 修改值</p>
+<h4 id="Enumerable"><a href="#Enumerable" class="headerlink" title="Enumerable"></a>Enumerable</h4><p>是否可以在 <code>for...in</code> 和 <code>Object.keys()</code> 中被枚举<br>NOTE：</p>
+<ol>
+<li>不管 Enumberable 是 true 还是 false，Symbol 类型的 key 都不会在上述方法被枚举</li>
+<li><code>...</code> 展开运算符会包含 Symbol，且只有 Enumerable 为 true 的属性被枚举</li>
+</ol>
 
     </div>
-  </div>
-  
-  
-  
 
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/07/12/yuque/Github%20Pages%20hexo%E5%8D%9A%E5%AE%A2%E5%8A%A0%E9%80%9F/" rel="prev" title="Github Pages hexo博客加速">
+      <i class="fa fa-chevron-left"></i> Github Pages hexo博客加速
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -367,6 +348,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#语法"><span class="nav-number">1.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#描述"><span class="nav-number">2.</span> <span class="nav-text">描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#两种形式的描述符"><span class="nav-number">3.</span> <span class="nav-text">两种形式的描述符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#回顾：对象属性类型"><span class="nav-number">4.</span> <span class="nav-text">回顾：对象属性类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#几种特性的作用"><span class="nav-number">5.</span> <span class="nav-text">几种特性的作用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Configurable"><span class="nav-number">5.1.</span> <span class="nav-text">Configurable</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Writable"><span class="nav-number">5.2.</span> <span class="nav-text">Writable</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Enumerable"><span class="nav-number">5.3.</span> <span class="nav-text">Enumerable</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
