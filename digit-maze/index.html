@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .board{
+      width: 80vw;
+      margin: auto;
+    }
+    .row{
+      display: flex;
+    }
+    .col{
+      flex: 1;
+      height: 20vw;
+      line-height: 20vw;
+      text-align: center;
+      font-size: 10vw;
+      border: 1px solid;
+      box-sizing: border-box;
+    }
+    .start{
+      display: block;
+      width: 20vw;
+      margin: 20px auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div class="time">{{time}}</div>
+    <div class="board">
+      <div class="row" v-for="(row, i) in maze">
+        <div class="col" v-for="(item, j) in row" @click="click2(i, j)">{{item ? item : ''}}</div>
+      </div>
+    </div>
+    <button class="start" @click="start">start</button>
+    <button class="start" @click="end">end</button>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  <script>
+    const DEFAULT = [[1,2,3,4], [5,6,7,8], [9,10,11,12], [13,14,15,0]]
+    new Vue({
+      el: '#app',
+      data() {
+        return {
+          maze: [[1,2,3,4], [5,6,7,8], [9,10,11,12], [13,14,15,0]],
+          zeroPos: [3,3],
+          startTime: 0,
+          currentTime: 0,
+          isStart: false,
+          timer: null
+        }
+      },
+      computed:{
+        time(){
+          let diff = this.currentTime - this.startTime
+          return Math.floor(diff / 1000) + '.' + (diff % 1000)
+        }
+      },
+      created(){
+      },
+      methods: {
+        checkSuccess(){
+          let flag = true
+          for (let i = 0; i < 4; i ++) {
+            for (let j = 0; j < 4; j ++) {
+              if (this.maze[i][j] !== DEFAULT[i][j]) {
+                flag = false
+              }
+            }
+          }
+          return flag
+        },
+        end(){
+          console.log('end')
+          clearInterval(this.timer)
+          this.currentTime = Date.now()
+          this.isStart = false
+        },
+        start(){
+          this.shuffle()
+          this.isStart = true
+          this.startTime = Date.now()
+          this.timer = setInterval(() => {
+            this.currentTime = Date.now()
+          }, 10)
+        },
+        onClick(i, j){
+          const {maze} = this
+          const item = maze[i][j]
+          if (item === 0) return
+          
+          [[i, j-1], [i,j+1], [i-1,j],[i+1,j]].some(([m,n]) => {
+            if (m > 3 || n > 3 || m < 0 || n < 0) return false
+            if (maze[m][n] === 0) {
+              this.$set(maze[m], n, item)
+              this.$set(maze[i], j, 0)
+              this.zeroPos = [i,j]
+              return true
+            }
+            return false
+          })
+
+          if (this.isStart && this.checkSuccess()) {
+            this.end()
+          }
+
+          // maze.
+        },
+        click2(i,j){
+          let start = Date.now()
+          const [i0, j0] = this.zeroPos
+          if (i === i0) {
+            // 同行
+            if (j < j0) {
+              for (let k = j0-1; k >= j; k--){
+                this.onClick(i,k)
+              }
+            } else if (j > j0) {
+              for (let k = j0+1; k <= j; k++){
+                this.onClick(i,k)
+              }
+            }
+          }
+
+          if (j === j0) {
+            if (i < i0) {
+              for (let k = i0-1; k >= i; k--){
+                this.onClick(k,j)
+              }
+            } else if (i > i0) {
+              for (let k = i0+1; k <= i; k++){
+                this.onClick(k,j)
+              }
+            }
+          }
+          // console.log(Date.now() - start)
+        },
+        random(){
+          if (Math.random() > 0.5) {
+            // 选同行
+            this.click2(this.zeroPos[0], Math.ceil(Math.random() * 4) - 1)
+          } else {
+            this.click2(Math.ceil(Math.random() * 4) - 1, this.zeroPos[1])
+          }
+        },
+        shuffle(){
+          for (var i = 0; i < 1000; i ++) {
+            this.random()
+          }
+        }
+      }
+    });
+
+    function swap(a,b){
+      let temp = a
+      a = b
+      b = temp
+    }
+  </script>
+</body>
+</html>
