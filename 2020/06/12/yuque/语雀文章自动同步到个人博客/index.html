@@ -30,16 +30,16 @@
 <meta property="og:site_name" content="Marvin&#39;s Blog">
 <meta property="og:description" content="思路  接上篇 hexo+travisCI 自动部署 github pages，后面的部分操作是基于上篇的  yuque-hexo 拉取文章https:&#x2F;&#x2F;github.com&#x2F;x-cold&#x2F;yuque-hexo 安装 yuque-hexo1npm i --save-dev yuque-hexo">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592139758781-40601637-64a1-4ab2-a846-a256cfbc3766.png#align=left&display=inline&height=452&margin=%5Bobject%20Object%5D&name=yuque_diagram.png&originHeight=452&originWidth=1436&size=63972&status=done&style=none&width=1436">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592034125382-283aede7-7e4b-4dfd-a03e-82b14593520c.png#align=left&display=inline&height=125&margin=%5Bobject%20Object%5D&name=image.png&originHeight=249&originWidth=1004&size=25649&status=done&style=none&width=502">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592034259601-b681eac4-ce6d-413d-a8a9-ab7751581821.png#align=left&display=inline&height=298&margin=%5Bobject%20Object%5D&name=image.png&originHeight=595&originWidth=1188&size=77287&status=done&style=none&width=594">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592034434408-4701e454-0c25-4338-875b-72312a06a5d3.png#align=left&display=inline&height=242&margin=%5Bobject%20Object%5D&name=image.png&originHeight=484&originWidth=1021&size=56122&status=done&style=none&width=510.5">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592035695558-9f8f4e92-ff6c-4d5b-887b-6d66da9b7c7d.png#align=left&display=inline&height=235&margin=%5Bobject%20Object%5D&name=image.png&originHeight=470&originWidth=716&size=47632&status=done&style=none&width=358">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592139758781-40601637-64a1-4ab2-a846-a256cfbc3766.png#height=452&id=zHM4g&margin=%5Bobject%20Object%5D&name=yuque_diagram.png&originHeight=452&originWidth=1436&originalType=binary%E2%88%B6=1&size=63972&status=done&style=none&width=1436">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592034125382-283aede7-7e4b-4dfd-a03e-82b14593520c.png#height=125&id=sBFfe&margin=%5Bobject%20Object%5D&name=image.png&originHeight=249&originWidth=1004&originalType=binary%E2%88%B6=1&size=25649&status=done&style=none&width=502">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592034259601-b681eac4-ce6d-413d-a8a9-ab7751581821.png#height=298&id=PFBir&margin=%5Bobject%20Object%5D&name=image.png&originHeight=595&originWidth=1188&originalType=binary%E2%88%B6=1&size=77287&status=done&style=none&width=594">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592034434408-4701e454-0c25-4338-875b-72312a06a5d3.png#height=242&id=SMDt6&margin=%5Bobject%20Object%5D&name=image.png&originHeight=484&originWidth=1021&originalType=binary%E2%88%B6=1&size=56122&status=done&style=none&width=510.5">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592035695558-9f8f4e92-ff6c-4d5b-887b-6d66da9b7c7d.png#height=235&id=jXR23&margin=%5Bobject%20Object%5D&name=image.png&originHeight=470&originWidth=716&originalType=binary%E2%88%B6=1&size=47632&status=done&style=none&width=358">
 <meta property="article:published_time" content="2020-06-12T17:03:59.000Z">
-<meta property="article:modified_time" content="2021-06-05T13:27:27.029Z">
+<meta property="article:modified_time" content="2021-06-05T13:34:29.085Z">
 <meta property="article:author" content="Marvin Xu">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592139758781-40601637-64a1-4ab2-a846-a256cfbc3766.png#align=left&display=inline&height=452&margin=%5Bobject%20Object%5D&name=yuque_diagram.png&originHeight=452&originWidth=1436&size=63972&status=done&style=none&width=1436">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592139758781-40601637-64a1-4ab2-a846-a256cfbc3766.png#height=452&id=zHM4g&margin=%5Bobject%20Object%5D&name=yuque_diagram.png&originHeight=452&originWidth=1436&originalType=binary%E2%88%B6=1&size=63972&status=done&style=none&width=1436">
 
 <link rel="canonical" href="https://marvinxu.top/2020/06/12/yuque/%E8%AF%AD%E9%9B%80%E6%96%87%E7%AB%A0%E8%87%AA%E5%8A%A8%E5%90%8C%E6%AD%A5%E5%88%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
 
@@ -198,7 +198,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-06-05 13:27:27" itemprop="dateModified" datetime="2021-06-05T13:27:27+00:00">2021-06-05</time>
+                <time title="Modified: 2021-06-05 13:34:29" itemprop="dateModified" datetime="2021-06-05T13:34:29+00:00">2021-06-05</time>
               </span>
 
           
@@ -226,7 +226,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p><img data-src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592139758781-40601637-64a1-4ab2-a846-a256cfbc3766.png#align=left&display=inline&height=452&margin=%5Bobject%20Object%5D&name=yuque_diagram.png&originHeight=452&originWidth=1436&size=63972&status=done&style=none&width=1436" alt="yuque_diagram.png"></p>
+        <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p><img data-src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592139758781-40601637-64a1-4ab2-a846-a256cfbc3766.png#height=452&id=zHM4g&margin=%5Bobject%20Object%5D&name=yuque_diagram.png&originHeight=452&originWidth=1436&originalType=binary%E2%88%B6=1&size=63972&status=done&style=none&width=1436" alt="yuque_diagram.png"></p>
 <blockquote>
 <p>接上篇 <span class="exturl" data-url="aHR0cHM6Ly93d3cueXVxdWUuY29tL21hcnZpbnh1L2Jsb2cvZ3psdnFr">hexo+travisCI 自动部署 github pages<i class="fa fa-external-link-alt"></i></span>，后面的部分操作是基于上篇的</p>
 </blockquote>
@@ -247,28 +247,13 @@
 <h2 id="配置-TravisCI"><a href="#配置-TravisCI" class="headerlink" title="配置 TravisCI"></a>配置 TravisCI</h2><h3 id="修改-travis-yml"><a href="#修改-travis-yml" class="headerlink" title="修改.travis.yml"></a>修改.travis.yml</h3><p>script 要换成  npm run build:yuque</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">language: node_js</span><br><span class="line">node_js:</span><br><span class="line">  - 10</span><br><span class="line">script:</span><br><span class="line">  - <span class="string">"npm run build:yuque"</span></span><br><span class="line">cache:</span><br><span class="line">  directories:</span><br><span class="line">    - node_modules</span><br><span class="line">deploy:</span><br><span class="line">  provider: pages</span><br><span class="line">  skip_cleanup: <span class="literal">true</span></span><br><span class="line">  github_token: <span class="variable">$GITHUB_TOKEN</span>  <span class="comment"># Set in the settings page of your repository, as a secure variable</span></span><br><span class="line">  keep_history: <span class="literal">true</span></span><br><span class="line">  repo: MarvinXu/marvinxu.github.io</span><br><span class="line">  target_branch: master</span><br><span class="line">  local_dir: public</span><br><span class="line">  on:</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
 
-<h3 id="新增环境变量-YUQUE-TOKEN"><a href="#新增环境变量-YUQUE-TOKEN" class="headerlink" title="新增环境变量 YUQUE_TOKEN"></a>新增环境变量 YUQUE_TOKEN</h3><p><img data-src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592034125382-283aede7-7e4b-4dfd-a03e-82b14593520c.png#align=left&display=inline&height=125&margin=%5Bobject%20Object%5D&name=image.png&originHeight=249&originWidth=1004&size=25649&status=done&style=none&width=502" alt="image.png"></p>
-<h2 id="新建阿里云函数"><a href="#新建阿里云函数" class="headerlink" title="新建阿里云函数"></a>新建阿里云函数</h2><p>打开阿里云控制台，搜索“函数计算”，在某个服务下新建函数，选择“HTTP 函数”<br><img data-src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592034259601-b681eac4-ce6d-413d-a8a9-ab7751581821.png#align=left&display=inline&height=298&margin=%5Bobject%20Object%5D&name=image.png&originHeight=595&originWidth=1188&size=77287&status=done&style=none&width=594" alt="image.png"><br>注意配置触发器时，请求方式一定要加上 POST（语雀 webhook 是 POST 请求）<br><img data-src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592034434408-4701e454-0c25-4338-875b-72312a06a5d3.png#align=left&display=inline&height=242&margin=%5Bobject%20Object%5D&name=image.png&originHeight=484&originWidth=1021&size=56122&status=done&style=none&width=510.5" alt="image.png"><br>打开云函数，在“代码执行”里编写云函数，写法参考：<br><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3gtY29sZC9hbGl5dW4tZnVuY3Rpb24vYmxvYi9tYXN0ZXIvdHJhdmlzX2NpL3RyYXZpc19jaS5qcw==">https://github.com/x-cold/aliyun-function/blob/master/travis_ci/travis_ci.js<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="新增环境变量-YUQUE-TOKEN"><a href="#新增环境变量-YUQUE-TOKEN" class="headerlink" title="新增环境变量 YUQUE_TOKEN"></a>新增环境变量 YUQUE_TOKEN</h3><p><img data-src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592034125382-283aede7-7e4b-4dfd-a03e-82b14593520c.png#height=125&id=sBFfe&margin=%5Bobject%20Object%5D&name=image.png&originHeight=249&originWidth=1004&originalType=binary%E2%88%B6=1&size=25649&status=done&style=none&width=502" alt="image.png"></p>
+<h2 id="新建阿里云函数"><a href="#新建阿里云函数" class="headerlink" title="新建阿里云函数"></a>新建阿里云函数</h2><p>打开阿里云控制台，搜索“函数计算”，在某个服务下新建函数，选择“HTTP 函数”<br><img data-src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592034259601-b681eac4-ce6d-413d-a8a9-ab7751581821.png#height=298&id=PFBir&margin=%5Bobject%20Object%5D&name=image.png&originHeight=595&originWidth=1188&originalType=binary%E2%88%B6=1&size=77287&status=done&style=none&width=594" alt="image.png"><br>注意配置触发器时，请求方式一定要加上 POST（语雀 webhook 是 POST 请求）<br><img data-src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592034434408-4701e454-0c25-4338-875b-72312a06a5d3.png#height=242&id=SMDt6&margin=%5Bobject%20Object%5D&name=image.png&originHeight=484&originWidth=1021&originalType=binary%E2%88%B6=1&size=56122&status=done&style=none&width=510.5" alt="image.png"><br>打开云函数，在“代码执行”里编写云函数，写法参考：<br><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3gtY29sZC9hbGl5dW4tZnVuY3Rpb24vYmxvYi9tYXN0ZXIvdHJhdmlzX2NpL3RyYXZpc19jaS5qcw==">https://github.com/x-cold/aliyun-function/blob/master/travis_ci/travis_ci.js<i class="fa fa-external-link-alt"></i></span></p>
 <h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>在“触发器”里，得到访问的路径，可在本地用 postman 调用，如果调用成功，就会触发 TravisCI 的构建。</p>
 <p>参数说明：</p>
-<table>
-<thead>
-<tr>
-<th>token</th>
-<th>从  <span class="exturl" data-url="aHR0cHM6Ly90cmF2aXMtY2kub3JnL2FjY291bnQvcHJlZmVyZW5jZXM=">https://travis-ci.org/account/preferences<i class="fa fa-external-link-alt"></i></span>  获取</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>repos</td>
-<td>travis 项目 id 或 slug(eg: MarvinXu/blog-hexo)</td>
-</tr>
-<tr>
-<td>branch</td>
-<td>要构建的分支</td>
-</tr>
-</tbody></table>
+<p>| token | 从  <span class="exturl" data-url="aHR0cHM6Ly90cmF2aXMtY2kub3JnL2FjY291bnQvcHJlZmVyZW5jZXM=">https://travis-ci.org/account/preferences<i class="fa fa-external-link-alt"></i></span><br>  获取 |<br>| — | — |<br>| repos | travis 项目 id 或 slug(eg: MarvinXu/blog-hexo) |<br>| branch | 要构建的分支 |</p>
 <p><span class="exturl" data-url="aHR0cHM6Ly8xMjU1NDYzNTY4NDUxMjY4LmNuLWhhbmd6aG91LmZjLmFsaXl1bmNzLmNvbS8yMDE2LTA4LTE1L3Byb3h5L3RyYXZpcy1jaS95dXF1ZS8/dG9rZW49eHh4JmJyYW5jaD1tYXN0ZXImcmVwb3M9TWFydmluWHUvYmxvZy1oZXhv">https://1255463568451268.cn-hangzhou.fc.aliyuncs.com/2016-08-15/proxy/travis-ci/yuque/?token=xxx&amp;branch=master&amp;repos=MarvinXu/blog-hexo<i class="fa fa-external-link-alt"></i></span></p>
-<h2 id="配置语雀-webhook"><a href="#配置语雀-webhook" class="headerlink" title="配置语雀 webhook"></a>配置语雀 webhook</h2><p>你的知识库 -&gt; 设置 -&gt; 开发者 -&gt;添加 Web Hook<br>注意：单选“仅主动推送更新触发”没有用，必须配合后面的选项使用<br><img data-src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592035695558-9f8f4e92-ff6c-4d5b-887b-6d66da9b7c7d.png#align=left&display=inline&height=235&margin=%5Bobject%20Object%5D&name=image.png&originHeight=470&originWidth=716&size=47632&status=done&style=none&width=358" alt="image.png"></p>
+<h2 id="配置语雀-webhook"><a href="#配置语雀-webhook" class="headerlink" title="配置语雀 webhook"></a>配置语雀 webhook</h2><p>你的知识库 -&gt; 设置 -&gt; 开发者 -&gt;添加 Web Hook<br>注意：单选“仅主动推送更新触发”没有用，必须配合后面的选项使用<br><img data-src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592035695558-9f8f4e92-ff6c-4d5b-887b-6d66da9b7c7d.png#height=235&id=jXR23&margin=%5Bobject%20Object%5D&name=image.png&originHeight=470&originWidth=716&originalType=binary%E2%88%B6=1&size=47632&status=done&style=none&width=358" alt="image.png"></p>
 <p>好啦~ 现在可以在语雀写文章，发布或更新时勾选“文章有较大更新，推送…”，就会自动同步到博客啦~<br>欢迎访问我的博客 <a href="https://marvinxu.top">https://marvinxu.top</a></p>
 
     </div>
