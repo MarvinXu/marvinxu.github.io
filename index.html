@@ -127,7 +127,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">9</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">10</span></a>
 
   </li>
   </ul>
@@ -157,6 +157,111 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://marvinxu.top/2021/06/02/yuque/%E4%B8%80%E9%94%AE%E5%A4%8D%E5%88%B6%20markdown%20%E9%93%BE%E6%8E%A5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="//cdn.jsdelivr.net/gh/marvinxu/marvinxu.github.io@master/uploads/avatar.jpg">
+      <meta itemprop="name" content="Marvin Xu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Marvin's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/06/02/yuque/%E4%B8%80%E9%94%AE%E5%A4%8D%E5%88%B6%20markdown%20%E9%93%BE%E6%8E%A5/" class="post-title-link" itemprop="url">一键复制 markdown 链接</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-06-02 06:48:39" itemprop="dateCreated datePublished" datetime="2021-06-02T06:48:39+00:00">2021-06-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-06-05 13:27:26" itemprop="dateModified" datetime="2021-06-05T13:27:26+00:00">2021-06-05</time>
+              </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2021/06/02/yuque/%E4%B8%80%E9%94%AE%E5%A4%8D%E5%88%B6%20markdown%20%E9%93%BE%E6%8E%A5/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/06/02/yuque/%E4%B8%80%E9%94%AE%E5%A4%8D%E5%88%B6%20markdown%20%E9%93%BE%E6%8E%A5/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>大家在写文章或者作笔记的时候必不可少的都会贴上链接，作为参考（Reference），但是每次都要分步复制链接和标题太麻烦了，于是找了下相关的工具。<br>​</p>
+<p>一般有两种形式的链接：</p>
+<ol>
+<li>markdown 格式，适合纯文本的编辑器：<code>[百度一下，你就知道]([https://www.baidu.com/)](https://www.baidu.com/))</code></li>
+<li>富文本格式，适合富文本编辑器：<span class="exturl" data-url="aHR0cHM6Ly93d3cuYmFpZHUuY29tLw==">百度一下，你就知道<i class="fa fa-external-link-alt"></i></span></li>
+</ol>
+<h2 id="Chrome-插件"><a href="#Chrome-插件" class="headerlink" title="Chrome 插件"></a>Chrome 插件</h2><ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2xhb2JpZS9tVXJs">mUrl<i class="fa fa-external-link-alt"></i></span>：个人开发，轻量，仅支持 markdown</li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9jaHJvbWUuZ29vZ2xlLmNvbS93ZWJzdG9yZS9kZXRhaWwvdGFiY29weS9taWNkbGxpaGdvcHBtZWpwZWNta2lsZ2dtYWFnZmRtYi8=">TabCopy<i class="fa fa-external-link-alt"></i></span>：功能全，支持各种格式，快捷键（推荐）</li>
+</ul>
+<h2 id="JS-Bookmark"><a href="#JS-Bookmark" class="headerlink" title="JS Bookmark"></a>JS Bookmark</h2><p>第一次接触的同学可能不知道，可以用书签的方式在当前页面执行 JS 脚本，比如在地址栏输入：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javascript: alert(<span class="built_in">document</span>.title);</span><br></pre></td></tr></table></figure>
+
+<p>就会弹出当前页面的标题。那我们也可以通过这种方法实现复制链接的功能。<br>​</p>
+<p>PS: 有部分定制浏览器可能不支持这种方式</p>
+<h3 id="利用-copy-事件监听"><a href="#利用-copy-事件监听" class="headerlink" title="利用 copy 事件监听"></a>利用 <span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQVBJL0VsZW1lbnQvY29weV9ldmVudA==">copy<i class="fa fa-external-link-alt"></i></span> 事件监听</h3><p><code>copy</code> 事件的 <code>event</code> 对象可以直接访问 <code>clipboardData</code> 对象，可以设置剪贴板内容</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">copyHandler</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// markdown</span></span><br><span class="line">  <span class="comment">// e.clipboardData.setData('text/plain', `[$&#123;document.title&#125;]($&#123;location.href&#125;)`)</span></span><br><span class="line">  <span class="comment">// 富文本link</span></span><br><span class="line">  e.clipboardData.setData(</span><br><span class="line">    <span class="string">"text/html"</span>,</span><br><span class="line">    <span class="string">`&lt;a href="<span class="subst">$&#123;location.href&#125;</span>"&gt;<span class="subst">$&#123;<span class="built_in">document</span>.title&#125;</span>&lt;/a&gt;`</span></span><br><span class="line">  );</span><br><span class="line">  e.preventDefault();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">"copy"</span>, copyHandler);</span><br><span class="line"><span class="built_in">document</span>.execCommand(<span class="string">"copy"</span>);</span><br><span class="line"><span class="built_in">window</span>.removeEventListener(<span class="string">"copy"</span>, copyHandler);</span><br></pre></td></tr></table></figure>
+
+<h3 id="利用-Clipboard-write-方法"><a href="#利用-Clipboard-write-方法" class="headerlink" title="利用 Clipboard.write()方法"></a>利用 <span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvZW4tVVMvZG9jcy9XZWIvQVBJL0NsaXBib2FyZC93cml0ZQ==">Clipboard.write()<i class="fa fa-external-link-alt"></i></span>方法</h3><p>创建 <code>Clipboard</code> 对象，向剪贴板写入<br>例子：<span class="exturl" data-url="aHR0cHM6Ly93d3cuamF2YXNjcmlwdHVyZS5jb20vQ2xpcGJvYXJkSXRlbQ==">ClipboardItem JavaScript API<i class="fa fa-external-link-alt"></i></span></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> html = <span class="string">`&lt;a href="<span class="subst">$&#123;location.href&#125;</span>"&gt;<span class="subst">$&#123;<span class="built_in">document</span>.title&#125;</span>&lt;/a&gt;`</span>;</span><br><span class="line"><span class="keyword">const</span> blob = <span class="keyword">new</span> Blob([html], &#123; <span class="attr">type</span>: <span class="string">"text/html"</span> &#125;);</span><br><span class="line">navigator.clipboard.write([<span class="keyword">new</span> ClipboardItem(&#123; <span class="string">"text/html"</span>: blob &#125;)]);</span><br><span class="line"></span><br><span class="line"><span class="comment">// tip: 不能直接复制到 console 运行，否则会报 DOMException: Document is not focused.</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="FYI"><a href="#FYI" class="headerlink" title="FYI"></a>FYI</h3><p>这里提供下两种格式的书签，需要的可以添加到书签：</p>
+<h4 id="富文本"><a href="#富文本" class="headerlink" title="富文本"></a>富文本</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javascript: navigator.clipboard.write([new ClipboardItem(&#123;&#39;text&#x2F;html&#39;: new Blob([&#96;&lt;a href&#x3D;&quot;$&#123;location.href&#125;&quot;&gt;$&#123;document.title&#125;&lt;&#x2F;a&gt;&#96;], &#123;type: &#39;text&#x2F;html&#39;&#125;)&#125;)])</span><br></pre></td></tr></table></figure>
+
+<h4 id="markdown"><a href="#markdown" class="headerlink" title="markdown"></a>markdown</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javascript: navigator.clipboard.writeText(&#96;[$&#123;document.title&#125;]($&#123;location.href&#125;)&#96;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC9iZWVlY2ViMjFhZmQ=">通过 JS 将带格式的文本复制到剪贴版的两种方法 - 简书<i class="fa fa-external-link-alt"></i></span></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://marvinxu.top/2021/04/07/yuque/%E5%9C%A8WIN%2010%E6%89%93%E5%BC%80%E7%BD%91%E9%93%B6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -180,10 +285,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2021-04-07 07:32:47 / Modified: 07:39:40" itemprop="dateCreated datePublished" datetime="2021-04-07T07:32:47+00:00">2021-04-07</time>
+              <time title="Created: 2021-04-07 07:32:47" itemprop="dateCreated datePublished" datetime="2021-04-07T07:32:47+00:00">2021-04-07</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-06-05 13:27:26" itemprop="dateModified" datetime="2021-06-05T13:27:26+00:00">2021-06-05</time>
+              </span>
 
           
   
@@ -262,7 +373,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-04-07 07:39:40" itemprop="dateModified" datetime="2021-04-07T07:39:40+00:00">2021-04-07</time>
+                <time title="Modified: 2021-06-05 13:27:26" itemprop="dateModified" datetime="2021-06-05T13:27:26+00:00">2021-06-05</time>
               </span>
 
           
@@ -363,7 +474,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-04-07 07:39:40" itemprop="dateModified" datetime="2021-04-07T07:39:40+00:00">2021-04-07</time>
+                <time title="Modified: 2021-06-05 13:27:26" itemprop="dateModified" datetime="2021-06-05T13:27:26+00:00">2021-06-05</time>
               </span>
 
           
@@ -453,7 +564,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-04-07 07:39:41" itemprop="dateModified" datetime="2021-04-07T07:39:41+00:00">2021-04-07</time>
+                <time title="Modified: 2021-06-05 13:27:26" itemprop="dateModified" datetime="2021-06-05T13:27:26+00:00">2021-06-05</time>
               </span>
 
           
@@ -486,97 +597,6 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2020/07/12/yuque/Github%20Pages%20hexo%E5%8D%9A%E5%AE%A2%E5%8A%A0%E9%80%9F/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://marvinxu.top/2020/06/12/yuque/%E8%AF%AD%E9%9B%80%E6%96%87%E7%AB%A0%E8%87%AA%E5%8A%A8%E5%90%8C%E6%AD%A5%E5%88%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="//cdn.jsdelivr.net/gh/marvinxu/marvinxu.github.io@master/uploads/avatar.jpg">
-      <meta itemprop="name" content="Marvin Xu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Marvin's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/06/12/yuque/%E8%AF%AD%E9%9B%80%E6%96%87%E7%AB%A0%E8%87%AA%E5%8A%A8%E5%90%8C%E6%AD%A5%E5%88%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="post-title-link" itemprop="url">语雀文章自动同步到个人博客</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-06-12 17:03:59" itemprop="dateCreated datePublished" datetime="2020-06-12T17:03:59+00:00">2020-06-12</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-04-07 07:39:41" itemprop="dateModified" datetime="2021-04-07T07:39:41+00:00">2021-04-07</time>
-              </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine: </span>
-    
-    <a title="valine" href="/2020/06/12/yuque/%E8%AF%AD%E9%9B%80%E6%96%87%E7%AB%A0%E8%87%AA%E5%8A%A8%E5%90%8C%E6%AD%A5%E5%88%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/06/12/yuque/%E8%AF%AD%E9%9B%80%E6%96%87%E7%AB%A0%E8%87%AA%E5%8A%A8%E5%90%8C%E6%AD%A5%E5%88%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p><img data-src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592139758781-40601637-64a1-4ab2-a846-a256cfbc3766.png#align=left&display=inline&height=452&margin=%5Bobject%20Object%5D&name=yuque_diagram.png&originHeight=452&originWidth=1436&size=63972&status=done&style=none&width=1436" alt="yuque_diagram.png"></p>
-<blockquote>
-<p>接上篇 <span class="exturl" data-url="aHR0cHM6Ly93d3cueXVxdWUuY29tL21hcnZpbnh1L2Jsb2cvZ3psdnFr">hexo+travisCI 自动部署 github pages<i class="fa fa-external-link-alt"></i></span>，后面的部分操作是基于上篇的</p>
-</blockquote>
-<h2 id="yuque-hexo-拉取文章"><a href="#yuque-hexo-拉取文章" class="headerlink" title="yuque-hexo 拉取文章"></a>yuque-hexo 拉取文章</h2><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3gtY29sZC95dXF1ZS1oZXhv">https://github.com/x-cold/yuque-hexo<i class="fa fa-external-link-alt"></i></span></p>
-<h3 id="安装-yuque-hexo"><a href="#安装-yuque-hexo" class="headerlink" title="安装 yuque-hexo"></a>安装 yuque-hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i --save-dev yuque-hexo</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/06/12/yuque/%E8%AF%AD%E9%9B%80%E6%96%87%E7%AB%A0%E8%87%AA%E5%8A%A8%E5%90%8C%E6%AD%A5%E5%88%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -667,7 +687,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
