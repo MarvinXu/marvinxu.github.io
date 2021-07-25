@@ -2,28 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.1">
-<meta name="referrer" content="no-referrer" />
-  <link rel="apple-touch-icon" sizes="180x180" href="//cdn.jsdelivr.net/gh/marvinxu/marvinxu.github.io@master/images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="//cdn.jsdelivr.net/gh/marvinxu/marvinxu.github.io@master/images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="//cdn.jsdelivr.net/gh/marvinxu/marvinxu.github.io@master/images/favicon-16x16.png">
-  <link rel="mask-icon" href="//cdn.jsdelivr.net/gh/marvinxu/marvinxu.github.io@master/images/safari-pinned-tab.svg" color="#222">
-  <link rel="manifest" href="//cdn.jsdelivr.net/gh/marvinxu/marvinxu.github.io@master/images/site.webmanifest">
-  <meta name="msapplication-config" content="//cdn.jsdelivr.net/gh/marvinxu/marvinxu.github.io@master/images/browserconfig.xml">
-
-<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/marvinxu/marvinxu.github.io@master/css/main.css">
+<meta name="generator" content="Hexo 5.4.0">
 
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"marvinxu.top","root":"/","scheme":"Pisces","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
+<link rel="stylesheet" href="/css/main.css">
 
-  <meta name="description" content="两种方式利用 github pages 搭建个人博客一般有两种组织方式：  建两个项目，一个项目 blog 用于存放博客源码，另一个项目 xxx.github.io 用于部署生成的静态文件 只建一个项目 blog，master 分支存放博客源码，生成的静态文件部署到 gh-pages 分支  区别是第一种可以直接用https:&#x2F;&#x2F;xxx.github.io访问博客，而第二种要加项目名，即https">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"marvinxu.top","root":"/","images":"/images","scheme":"Pisces","version":"8.6.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/config.min.js"></script>
+<meta name="description" content="两种方式利用 github pages 搭建个人博客一般有两种组织方式：  建两个项目，一个项目 blog 用于存放博客源码，另一个项目 xxx.github.io 用于部署生成的静态文件 只建一个项目 blog，master 分支存放博客源码，生成的静态文件部署到 gh-pages 分支  区别是第一种可以直接用https:&#x2F;&#x2F;xxx.github.io访问博客，而第二种要加项目名，即https">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo+travisCI自动部署github pages">
 <meta property="og:url" content="https://marvinxu.top/2020/06/12/yuque/hexo+travisCI%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2github%20pages/index.html">
@@ -32,86 +29,48 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://cdn.nlark.com/yuque/0/2020/png/1310147/1591956537089-d4ddced6-4ad7-4d98-9197-75f4fe42dc38.png#align=left&display=inline&height=185&margin=%5Bobject%20Object%5D&name=image.png&originHeight=369&originWidth=1512&size=50103&status=done&style=none&width=756">
 <meta property="article:published_time" content="2020-06-12T09:24:27.000Z">
-<meta property="article:modified_time" content="2021-06-05T13:34:29.121Z">
+<meta property="article:modified_time" content="2021-07-25T02:54:38.089Z">
 <meta property="article:author" content="Marvin Xu">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2020/png/1310147/1591956537089-d4ddced6-4ad7-4d98-9197-75f4fe42dc38.png#align=left&display=inline&height=185&margin=%5Bobject%20Object%5D&name=image.png&originHeight=369&originWidth=1512&size=50103&status=done&style=none&width=756">
 
+
 <link rel="canonical" href="https://marvinxu.top/2020/06/12/yuque/hexo+travisCI%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2github%20pages/">
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'en'
-  };
-</script>
 
-  <title>hexo+travisCI自动部署github pages | Marvin's Blog</title>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://marvinxu.top/2020/06/12/yuque/hexo+travisCI%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2github%20pages/","path":"2020/06/12/yuque/hexo+travisCI自动部署github pages/","title":"hexo+travisCI自动部署github pages"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>hexo+travisCI自动部署github pages | Marvin's Blog</title>
   
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171092339-1"></script>
-    <script>
-      if (CONFIG.hostname === location.hostname) {
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-171092339-1');
-      }
-    </script>
 
 
 
-
-
+<meta name="referrer" content="no-referrer" />
 
   <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
+  <main class="main">
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
     </div>
   </div>
 
   <div class="site-meta">
 
     <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
+      <i class="logo-line"></i>
       <h1 class="site-title">Marvin's Blog</h1>
-      <span class="logo-line-after"><i></i></span>
+      <i class="logo-line"></i>
     </a>
   </div>
 
@@ -124,50 +83,100 @@
 
 
 
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">10</span></a>
-
-  </li>
-  </ul>
-</nav>
-
 
 
 
 </div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">两种方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo-%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA"><span class="nav-number">2.</span> <span class="nav-text">hexo 快速搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98"><span class="nav-number">2.1.</span> <span class="nav-text">配置主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%8B%E5%8A%A8%E9%83%A8%E7%BD%B2"><span class="nav-number">2.2.</span> <span class="nav-text">手动部署</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#travisCI-%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2"><span class="nav-number">3.</span> <span class="nav-text">travisCI 自动部署</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E7%99%BB%E5%BD%95-travisCI-%E5%B9%B6%E5%85%B3%E8%81%94%E9%A1%B9%E7%9B%AE"><span class="nav-number">3.1.</span> <span class="nav-text">1. 登录 travisCI 并关联项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-blog-%E9%A1%B9%E7%9B%AE%E6%B7%BB%E5%8A%A0-travis-yml"><span class="nav-number">3.2.</span> <span class="nav-text">2. blog 项目添加.travis.yml</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E8%8E%B7%E5%8F%96-github-token"><span class="nav-number">3.3.</span> <span class="nav-text">3. 获取 github token</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E5%9C%A8-travisCI-%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%B7%BB%E5%8A%A0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-number">3.4.</span> <span class="nav-text">4. 在 travisCI 项目中添加环境变量</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Marvin Xu</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/MarvinXu" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;MarvinXu" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:272077995@qq.com" title="E-Mail → mailto:272077995@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
     </header>
 
     
-  <div class="back-to-top">
+  <div class="back-to-top" role="button" aria-label="Back to top">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
 
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
 
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
 
-          <div class="content post posts-expand">
-            
+    <div class="main-inner post posts-expand">
 
-    
+
+  
+
+
+<div class="post-block">
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="https://marvinxu.top/2020/06/12/yuque/hexo+travisCI%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2github%20pages/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="//cdn.jsdelivr.net/gh/marvinxu/marvinxu.github.io@master/uploads/avatar.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Marvin Xu">
       <meta itemprop="description" content="">
     </span>
@@ -180,38 +189,26 @@
           hexo+travisCI自动部署github pages
         </h1>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-06-12 09:24:27" itemprop="dateCreated datePublished" datetime="2020-06-12T09:24:27+00:00">2020-06-12</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-06-05 13:34:29" itemprop="dateModified" datetime="2021-06-05T13:34:29+00:00">2021-06-05</time>
-              </span>
-
-          
-  
-  <span class="post-meta-item">
-    
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
       <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
+        <i class="far fa-calendar"></i>
       </span>
-      <span class="post-meta-item-text">Valine: </span>
-    
-    <a title="valine" href="/2020/06/12/yuque/hexo+travisCI%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2github%20pages/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/06/12/yuque/hexo+travisCI%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2github%20pages/" itemprop="commentCount"></span>
-    </a>
-  </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-06-12 09:24:27" itemprop="dateCreated datePublished" datetime="2020-06-12T09:24:27+00:00">2020-06-12</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-07-25 02:54:38" itemprop="dateModified" datetime="2021-07-25T02:54:38+00:00">2021-07-25</time>
+      </span>
+
   
-  
+</div>
 
         </div>
       </header>
@@ -220,21 +217,19 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
         <h2 id="两种方式"><a href="#两种方式" class="headerlink" title="两种方式"></a>两种方式</h2><p>利用 github pages 搭建个人博客一般有两种组织方式：</p>
 <ol>
 <li>建两个项目，一个项目 blog 用于存放博客源码，另一个项目 xxx.github.io 用于部署生成的静态文件</li>
 <li>只建一个项目 blog，master 分支存放博客源码，生成的静态文件部署到 gh-pages 分支</li>
 </ol>
-<p>区别是第一种可以直接用<span class="exturl" data-url="aHR0cHM6Ly94eHguZ2l0aHViLmlv">https://xxx.github.io<i class="fa fa-external-link-alt"></i></span>访问博客，而第二种要加项目名，即<span class="exturl" data-url="aHR0cHM6Ly94eHguZ2l0aHViLmlvL2Jsb2c=">https://xxx.github.io/blog<i class="fa fa-external-link-alt"></i></span>，我选的是第一种。</p>
-<a id="more"></a>
+<p>区别是第一种可以直接用<a target="_blank" rel="noopener" href="https://xxx.github.io/">https://xxx.github.io</a>访问博客，而第二种要加项目名，即<a target="_blank" rel="noopener" href="https://xxx.github.io/blog">https://xxx.github.io/blog</a>，我选的是第一种。</p>
+<!--- more -->
 
 <h2 id="hexo-快速搭建"><a href="#hexo-快速搭建" class="headerlink" title="hexo 快速搭建"></a>hexo 快速搭建</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm i -g hexo-cli</span><br><span class="line">hexo init blog-hexo</span><br><span class="line"><span class="built_in">cd</span> blog-hexo</span><br></pre></td></tr></table></figure>
 
-<h3 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h3><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25leHQtdGhlbWUvaGV4by10aGVtZS1uZXh0">https://github.com/next-theme/hexo-theme-next<i class="fa fa-external-link-alt"></i></span><br>使用 git clone 安装后 git commit 时会提示用 submodule，为了简单我直接把主题的.git 文件删掉了。</p>
+<h3 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h3><p><a target="_blank" rel="noopener" href="https://github.com/next-theme/hexo-theme-next">https://github.com/next-theme/hexo-theme-next</a><br>使用 git clone 安装后 git commit 时会提示用 submodule，为了简单我直接把主题的.git 文件删掉了。</p>
 <blockquote>
-<p>待研究：<span class="exturl" data-url="aHR0cHM6Ly9qdWVqaW4uaW0vcG9zdC81YzJlMjJmY2YyNjVkYTYxNWQ3MmM1OTY=">在 hexo 中使用 git submodules 管理主题<i class="fa fa-external-link-alt"></i></span></p>
+<p>待研究：<a target="_blank" rel="noopener" href="https://juejin.im/post/5c2e22fcf265da615d72c596">在 hexo 中使用 git submodules 管理主题</a></p>
 </blockquote>
 <h3 id="手动部署"><a href="#手动部署" class="headerlink" title="手动部署"></a>手动部署</h3><blockquote>
 <p>Just for a reminder，本文重点是后面的 Travis CI 自动部署</p>
@@ -244,15 +239,15 @@
 <p>_config.yml 添加配置</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: https://github.com/MarvinXu/marvinxu.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 
-<h2 id="travisCI-自动部署"><a href="#travisCI-自动部署" class="headerlink" title="travisCI 自动部署"></a>travisCI 自动部署</h2><h3 id="1-登录-travisCI-并关联项目"><a href="#1-登录-travisCI-并关联项目" class="headerlink" title="1. 登录 travisCI 并关联项目"></a>1. 登录 travisCI 并关联项目</h3><p><span class="exturl" data-url="aHR0cHM6Ly90cmF2aXMtY2kub3JnLw==">https://travis-ci.org/<i class="fa fa-external-link-alt"></i></span> 使用 github 账号登录，关联 blog 项目</p>
-<h3 id="2-blog-项目添加-travis-yml"><a href="#2-blog-项目添加-travis-yml" class="headerlink" title="2. blog 项目添加.travis.yml"></a>2. blog 项目添加.travis.yml</h3><p>流程：构建生成静态页 -&gt; 部署到 marvinxu.github.io<br>参考 <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLnRyYXZpcy1jaS5jb20vdXNlci9kZXBsb3ltZW50L3BhZ2VzLw==">https://docs.travis-ci.com/user/deployment/pages/<i class="fa fa-external-link-alt"></i></span></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">language: node_js</span><br><span class="line">node_js:</span><br><span class="line">  - 8</span><br><span class="line">script:</span><br><span class="line">  - <span class="string">"npm run build"</span></span><br><span class="line">cache:</span><br><span class="line">  directories:</span><br><span class="line">    - node_modules</span><br><span class="line">deploy:</span><br><span class="line">  provider: pages</span><br><span class="line">  skip_cleanup: <span class="literal">true</span></span><br><span class="line">  <span class="comment"># access token存储在环境变量中防止泄露，后面会说明如何添加</span></span><br><span class="line">  github_token: <span class="variable">$GITHUB_TOKEN</span></span><br><span class="line">  keep_history: <span class="literal">true</span></span><br><span class="line">  <span class="comment"># 指定部署的repo，默认为当前repo</span></span><br><span class="line">  repo: MarvinXu/marvinxu.github.io</span><br><span class="line">  <span class="comment"># 指定branch，默认为gh-pages</span></span><br><span class="line">  target_branch: master</span><br><span class="line">  <span class="comment"># 指定要部署的文件夹，hexo构建生成在public目录下</span></span><br><span class="line">  local_dir: public</span><br><span class="line">  on:</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
+<h2 id="travisCI-自动部署"><a href="#travisCI-自动部署" class="headerlink" title="travisCI 自动部署"></a>travisCI 自动部署</h2><h3 id="1-登录-travisCI-并关联项目"><a href="#1-登录-travisCI-并关联项目" class="headerlink" title="1. 登录 travisCI 并关联项目"></a>1. 登录 travisCI 并关联项目</h3><p><a target="_blank" rel="noopener" href="https://travis-ci.org/">https://travis-ci.org/</a> 使用 github 账号登录，关联 blog 项目</p>
+<h3 id="2-blog-项目添加-travis-yml"><a href="#2-blog-项目添加-travis-yml" class="headerlink" title="2. blog 项目添加.travis.yml"></a>2. blog 项目添加.travis.yml</h3><p>流程：构建生成静态页 -&gt; 部署到 marvinxu.github.io<br>参考 <a target="_blank" rel="noopener" href="https://docs.travis-ci.com/user/deployment/pages/">https://docs.travis-ci.com/user/deployment/pages/</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">language: node_js</span><br><span class="line">node_js:</span><br><span class="line">  - 8</span><br><span class="line">script:</span><br><span class="line">  - <span class="string">&quot;npm run build&quot;</span></span><br><span class="line">cache:</span><br><span class="line">  directories:</span><br><span class="line">    - node_modules</span><br><span class="line">deploy:</span><br><span class="line">  provider: pages</span><br><span class="line">  skip_cleanup: <span class="literal">true</span></span><br><span class="line">  <span class="comment"># access token存储在环境变量中防止泄露，后面会说明如何添加</span></span><br><span class="line">  github_token: <span class="variable">$GITHUB_TOKEN</span></span><br><span class="line">  keep_history: <span class="literal">true</span></span><br><span class="line">  <span class="comment"># 指定部署的repo，默认为当前repo</span></span><br><span class="line">  repo: MarvinXu/marvinxu.github.io</span><br><span class="line">  <span class="comment"># 指定branch，默认为gh-pages</span></span><br><span class="line">  target_branch: master</span><br><span class="line">  <span class="comment"># 指定要部署的文件夹，hexo构建生成在public目录下</span></span><br><span class="line">  local_dir: public</span><br><span class="line">  on:</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
 
 <h3 id="3-获取-github-token"><a href="#3-获取-github-token" class="headerlink" title="3. 获取 github token"></a>3. 获取 github token</h3><p>路径：Settings -&gt; Developer settings -&gt; Personal access tokens -&gt; generate new token<br>因为我们的 blog 项目是 public 的，只需选择 public_repo 权限，确定得到 token 串</p>
 <blockquote>
-<p>问题记录：我第一次选的权限是整个 repo，结果触发构建时报错了，提示“gh-token is invalid”，后来改为只选择 public_repo 才正常<br><span class="exturl" data-url="aHR0cHM6Ly9zdGFja292ZXJmbG93LmNvbS9xdWVzdGlvbnMvNTAyMjczNDIvZ2gtdG9rZW4taXMtaW52YWxpZC1naXRodWItcGFnZXMtZGVwbG95bWVudC1vbi10cmF2aXMvNjIzNDEyOTcjNjIzNDEyOTc=">https://stackoverflow.com/questions/50227342/gh-token-is-invalid-github-pages-deployment-on-travis/62341297#62341297<i class="fa fa-external-link-alt"></i></span> &gt; <span class="exturl" data-url="aHR0cHM6Ly9zdGFja292ZXJmbG93LmNvbS9xdWVzdGlvbnMvMjMyNzczOTEvaG93LXRvLXB1Ymxpc2gtdG8tZ2l0aHViLXBhZ2VzLWZyb20tdHJhdmlzLWNp">https://stackoverflow.com/questions/23277391/how-to-publish-to-github-pages-from-travis-ci<i class="fa fa-external-link-alt"></i></span></p>
+<p>问题记录：我第一次选的权限是整个 repo，结果触发构建时报错了，提示“gh-token is invalid”，后来改为只选择 public_repo 才正常<br><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/50227342/gh-token-is-invalid-github-pages-deployment-on-travis/62341297#62341297">https://stackoverflow.com/questions/50227342/gh-token-is-invalid-github-pages-deployment-on-travis/62341297#62341297</a> &gt; <a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/23277391/how-to-publish-to-github-pages-from-travis-ci">https://stackoverflow.com/questions/23277391/how-to-publish-to-github-pages-from-travis-ci</a></p>
 </blockquote>
-<h3 id="4-在-travisCI-项目中添加环境变量"><a href="#4-在-travisCI-项目中添加环境变量" class="headerlink" title="4. 在 travisCI 项目中添加环境变量"></a>4. 在 travisCI 项目中添加环境变量</h3><p>在项目设置里，添加变量名为 GITHUB_TOKEN，值为刚才获取的 token<br><img data-src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1591956537089-d4ddced6-4ad7-4d98-9197-75f4fe42dc38.png#align=left&display=inline&height=185&margin=%5Bobject%20Object%5D&name=image.png&originHeight=369&originWidth=1512&size=50103&status=done&style=none&width=756" alt="image.png"><br>至此已经完成自动部署的配置，当 blog 项目发生 push 操作时，自动部署就会触发啦~</p>
+<h3 id="4-在-travisCI-项目中添加环境变量"><a href="#4-在-travisCI-项目中添加环境变量" class="headerlink" title="4. 在 travisCI 项目中添加环境变量"></a>4. 在 travisCI 项目中添加环境变量</h3><p>在项目设置里，添加变量名为 GITHUB_TOKEN，值为刚才获取的 token<br><img src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1591956537089-d4ddced6-4ad7-4d98-9197-75f4fe42dc38.png#align=left&display=inline&height=185&margin=%5Bobject%20Object%5D&name=image.png&originHeight=369&originWidth=1512&size=50103&status=done&style=none&width=756" alt="image.png"><br>至此已经完成自动部署的配置，当 blog 项目发生 push 操作时，自动部署就会触发啦~</p>
 
     </div>
 
@@ -260,131 +255,39 @@
     
     
 
-      <footer class="post-footer">
+    <footer class="post-footer">
 
         
 
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2020/06/11/yuque/git-style-guide/" rel="prev" title="git-style-guide">
-      <i class="fa fa-chevron-left"></i> git-style-guide
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/06/12/yuque/%E8%AF%AD%E9%9B%80%E6%96%87%E7%AB%A0%E8%87%AA%E5%8A%A8%E5%90%8C%E6%AD%A5%E5%88%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" rel="next" title="语雀文章自动同步到个人博客">
-      语雀文章自动同步到个人博客 <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
-  
-
-
-
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/06/11/yuque/git-style-guide/" rel="prev" title="git-style-guide">
+                  <i class="fa fa-chevron-left"></i> git-style-guide
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/06/12/yuque/%E8%AF%AD%E9%9B%80%E6%96%87%E7%AB%A0%E8%87%AA%E5%8A%A8%E5%90%8C%E6%AD%A5%E5%88%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" rel="next" title="语雀文章自动同步到个人博客">
+                  语雀文章自动同步到个人博客 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
           </div>
-          
-    <div class="comments" id="valine-comments"></div>
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#两种方式"><span class="nav-number">1.</span> <span class="nav-text">两种方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo-快速搭建"><span class="nav-number">2.</span> <span class="nav-text">hexo 快速搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置主题"><span class="nav-number">2.1.</span> <span class="nav-text">配置主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#手动部署"><span class="nav-number">2.2.</span> <span class="nav-text">手动部署</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#travisCI-自动部署"><span class="nav-number">3.</span> <span class="nav-text">travisCI 自动部署</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-登录-travisCI-并关联项目"><span class="nav-number">3.1.</span> <span class="nav-text">1. 登录 travisCI 并关联项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-blog-项目添加-travis-yml"><span class="nav-number">3.2.</span> <span class="nav-text">2. blog 项目添加.travis.yml</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-获取-github-token"><span class="nav-number">3.3.</span> <span class="nav-text">3. 获取 github token</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-在-travisCI-项目中添加环境变量"><span class="nav-number">3.4.</span> <span class="nav-text">4. 在 travisCI 项目中添加环境变量</span></a></li></ol></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Marvin Xu"
-      src="//cdn.jsdelivr.net/gh/marvinxu/marvinxu.github.io@master/uploads/avatar.jpg">
-  <p class="site-author-name" itemprop="name">Marvin Xu</p>
-  <div class="site-description" itemprop="description"></div>
+    </footer>
+  </article>
 </div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">10</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
-  </nav>
+
+
+
+
+
+
 </div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL01hcnZpblh1" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;MarvinXu"><i class="fab fa-github fa-fw"></i></span>
-      </span>
-      <span class="links-of-author-item">
-        <span class="exturl" data-url="bWFpbHRvOjI3MjA3Nzk5NUBxcS5jb20=" title="E-Mail → mailto:272077995@qq.com"><i class="fa fa-envelope fa-fw"></i></span>
-      </span>
-  </div>
+  </main>
 
+  <footer class="footer">
+    <div class="footer-inner">
 
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
 
 <div class="copyright">
-  
   &copy; 
   <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
@@ -392,114 +295,26 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Marvin Xu</span>
 </div>
-  <div class="powered-by">Powered by <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl theme-link" data-url="aHR0cHM6Ly9waXNjZXMudGhlbWUtbmV4dC5vcmc=">NexT.Pisces</span>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
   </div>
 
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 
   
-  <script src="//cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/velocity-animate@1/velocity.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/velocity-animate@1/velocity.ui.min.js"></script>
-
-<script src="//cdn.jsdelivr.net/gh/marvinxu/marvinxu.github.io@master/js/utils.js"></script>
-
-<script src="//cdn.jsdelivr.net/gh/marvinxu/marvinxu.github.io@master/js/motion.js"></script>
-
-
-<script src="//cdn.jsdelivr.net/gh/marvinxu/marvinxu.github.io@master/js/schemes/pisces.js"></script>
-
-
-<script src="//cdn.jsdelivr.net/gh/marvinxu/marvinxu.github.io@master/js/next-boot.js"></script>
-
-
-
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/next-boot.min.js"></script>
 
   
-  <script>
-    (function(){
-      var canonicalURL, curProtocol;
-      //Get the <link> tag
-      var x=document.getElementsByTagName("link");
-		//Find the last canonical URL
-		if(x.length > 0){
-			for (i=0;i<x.length;i++){
-				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
-					canonicalURL=x[i].href;
-				}
-			}
-		}
-    //Get protocol
-	    if (!canonicalURL){
-	    	curProtocol = window.location.protocol.split(':')[0];
-	    }
-	    else{
-	    	curProtocol = canonicalURL.split(':')[0];
-	    }
-      //Get current URL if the canonical URL does not exist
-	    if (!canonicalURL) canonicalURL = window.location.href;
-	    //Assign script content. Replace current URL with the canonical URL
-      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
-  </script>
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 
   
 
-  
 
 
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
-    });
-    new Valine({
-      el         : '#valine-comments',
-      verify     : false,
-      notify     : false,
-      appId      : 'zTPXKB1PSz9j7vFogu1ipUEw-9Nh9j0Va',
-      appKey     : 'IWIGt2rvCDJ8Pu9CnWYMUiOb',
-      placeholder: "Just go go",
-      avatar     : 'mm',
-      meta       : guest,
-      pageSize   : '10' || 10,
-      visitor    : false,
-      lang       : '' || 'zh-cn',
-      path       : location.pathname,
-      recordIP   : false,
-      serverURLs : ''
-    });
-  }, window.Valine);
-});
-</script>
+
 
 </body>
 </html>
