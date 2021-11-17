@@ -20,19 +20,19 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"marvinxu.top","root":"/","images":"/images","scheme":"Pisces","version":"8.6.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/config.min.js"></script>
-<meta name="description" content="原理 新创建的存储空间有 30 天的测试域名，利用这个测试域名可以下载文件。 利用七牛云提供的命令行工具，把原空间文件批量拷贝到新空间    1. 下载 CLI 工具并绑定账号https:&#x2F;&#x2F;developer.qiniu.com&#x2F;kodo&#x2F;tools&#x2F;1302&#x2F;qshell以 window 为例，下载后在当前文件夹执行命令 1.&#x2F;qshell-windows-x64.exe account [A">
+<meta name="description" content="原理 新创建的存储空间有 30 天的测试域名，利用这个测试域名可以下载文件。 利用七牛云提供的命令行工具，把原空间文件批量拷贝到新空间  ​">
 <meta property="og:type" content="article">
 <meta property="og:title" content="七牛云图床挂了？不用自定义域名找回图片">
 <meta property="og:url" content="https://marvinxu.top/2020/06/11/yuque/%E4%B8%83%E7%89%9B%E4%BA%91%E5%9B%BE%E5%BA%8A%E6%8C%82%E4%BA%86%EF%BC%9F%E4%B8%8D%E7%94%A8%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E6%89%BE%E5%9B%9E%E5%9B%BE%E7%89%87/index.html">
 <meta property="og:site_name" content="Marvin&#39;s Blog">
-<meta property="og:description" content="原理 新创建的存储空间有 30 天的测试域名，利用这个测试域名可以下载文件。 利用七牛云提供的命令行工具，把原空间文件批量拷贝到新空间    1. 下载 CLI 工具并绑定账号https:&#x2F;&#x2F;developer.qiniu.com&#x2F;kodo&#x2F;tools&#x2F;1302&#x2F;qshell以 window 为例，下载后在当前文件夹执行命令 1.&#x2F;qshell-windows-x64.exe account [A">
+<meta property="og:description" content="原理 新创建的存储空间有 30 天的测试域名，利用这个测试域名可以下载文件。 利用七牛云提供的命令行工具，把原空间文件批量拷贝到新空间  ​">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2020/png/1310147/1591870705500-e2df6f7c-445b-4a31-9baf-725d206d4b10.png#align=left&display=inline&height=217&margin=%5Bobject%20Object%5D&name=image.png&originHeight=434&originWidth=1244&size=42893&status=done&style=none&width=622">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2020/png/1310147/1591870705500-e2df6f7c-445b-4a31-9baf-725d206d4b10.png#height=217&id=XYGFc&margin=%5Bobject%20Object%5D&name=image.png&originHeight=434&originWidth=1244&originalType=binary%E2%88%B6=1&size=42893&status=done&style=none&width=622">
 <meta property="article:published_time" content="2020-06-11T10:07:18.000Z">
-<meta property="article:modified_time" content="2021-07-25T03:52:05.417Z">
+<meta property="article:modified_time" content="2021-11-17T09:19:07.998Z">
 <meta property="article:author" content="Marvin Xu">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2020/png/1310147/1591870705500-e2df6f7c-445b-4a31-9baf-725d206d4b10.png#align=left&display=inline&height=217&margin=%5Bobject%20Object%5D&name=image.png&originHeight=434&originWidth=1244&size=42893&status=done&style=none&width=622">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2020/png/1310147/1591870705500-e2df6f7c-445b-4a31-9baf-725d206d4b10.png#height=217&id=XYGFc&margin=%5Bobject%20Object%5D&name=image.png&originHeight=434&originWidth=1244&originalType=binary%E2%88%B6=1&size=42893&status=done&style=none&width=622">
 
 
 <link rel="canonical" href="https://marvinxu.top/2020/06/11/yuque/%E4%B8%83%E7%89%9B%E4%BA%91%E5%9B%BE%E5%BA%8A%E6%8C%82%E4%BA%86%EF%BC%9F%E4%B8%8D%E7%94%A8%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E6%89%BE%E5%9B%9E%E5%9B%BE%E7%89%87/">
@@ -124,7 +124,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -204,7 +204,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-25 03:52:05" itemprop="dateModified" datetime="2021-07-25T03:52:05+00:00">2021-07-25</time>
+        <time title="Modified: 2021-11-17 09:19:07" itemprop="dateModified" datetime="2021-11-17T09:19:07+00:00">2021-11-17</time>
       </span>
 
   
@@ -221,7 +221,8 @@
 <li>新创建的存储空间有 30 天的测试域名，利用这个测试域名可以下载文件。</li>
 <li>利用七牛云提供的命令行工具，把原空间文件批量拷贝到新空间</li>
 </ul>
-<!--- more -->
+<p>​</p>
+<span id="more"></span>
 
 <h2 id="1-下载-CLI-工具并绑定账号"><a href="#1-下载-CLI-工具并绑定账号" class="headerlink" title="1. 下载 CLI 工具并绑定账号"></a>1. 下载 CLI 工具并绑定账号</h2><p><a target="_blank" rel="noopener" href="https://developer.qiniu.com/kodo/tools/1302/qshell">https://developer.qiniu.com/kodo/tools/1302/qshell</a><br>以 window 为例，下载后在当前文件夹执行命令</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./qshell-windows-x64.exe account [AccessKey] [SecretKey]</span><br></pre></td></tr></table></figure>
@@ -229,7 +230,7 @@
 <h2 id="2-下载原空间文件列表"><a href="#2-下载原空间文件列表" class="headerlink" title="2. 下载原空间文件列表"></a>2. 下载原空间文件列表</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./qshell-windows-x64.exe listbucket marvinxu-blog list.txt</span><br></pre></td></tr></table></figure>
 
 <p><strong>注意：下载完后的列表里包含文件类型、大小等其他信息，统统删掉，每行只保留文件名</strong></p>
-<h2 id="3-在七牛云控制台新建空间"><a href="#3-在七牛云控制台新建空间" class="headerlink" title="3. 在七牛云控制台新建空间"></a><strong>3. 在七牛云控制台新建空间</strong></h2><p><strong><img src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1591870705500-e2df6f7c-445b-4a31-9baf-725d206d4b10.png#align=left&display=inline&height=217&margin=%5Bobject%20Object%5D&name=image.png&originHeight=434&originWidth=1244&size=42893&status=done&style=none&width=622" alt="image.png"></strong><br><strong>注意</strong>：新建空间一定要与域名失效空间在一个地区服务器上，否则无法拷贝进文件。</p>
+<h2 id="3-在七牛云控制台新建空间"><a href="#3-在七牛云控制台新建空间" class="headerlink" title="3. 在七牛云控制台新建空间"></a><strong>3. 在七牛云控制台新建空间</strong></h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1591870705500-e2df6f7c-445b-4a31-9baf-725d206d4b10.png#height=217&id=XYGFc&margin=%5Bobject%20Object%5D&name=image.png&originHeight=434&originWidth=1244&originalType=binary%E2%88%B6=1&size=42893&status=done&style=none&width=622" alt="image.png"><br><strong>注意</strong>：新建空间一定要与域名失效空间在一个地区服务器上，否则无法拷贝进文件。</p>
 <h2 id="4-批量拷贝文件到新空间"><a href="#4-批量拷贝文件到新空间" class="headerlink" title="4. 批量拷贝文件到新空间"></a>4. 批量拷贝文件到新空间</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./qshell-windows-x64.exe batchcopy --force --overwrite marvinxu-blog marvin2006 list.txt</span><br></pre></td></tr></table></figure>
 
 <h2 id="5-下载文件"><a href="#5-下载文件" class="headerlink" title="5. 下载文件"></a>5. 下载文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./qshell-windows-x64.exe qdownload download.conf</span><br></pre></td></tr></table></figure>

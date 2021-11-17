@@ -22,21 +22,21 @@
 <script class="next-config" data-name="main" type="application/json">{"hostname":"marvinxu.top","root":"/","images":"/images","scheme":"Pisces","version":"8.6.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/config.min.js"></script>
 <meta property="og:type" content="website">
 <meta property="og:title" content="Marvin&#39;s Blog">
-<meta property="og:url" content="https://marvinxu.top/archives/2020/04/index.html">
+<meta property="og:url" content="https://marvinxu.top/page/2/index.html">
 <meta property="og:site_name" content="Marvin&#39;s Blog">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="Marvin Xu">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://marvinxu.top/archives/2020/04/">
+<link rel="canonical" href="https://marvinxu.top/page/2/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"en","comments":"","permalink":"","path":"archives/2020/04/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"en","comments":"","permalink":"","path":"page/2/index.html","title":""}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Archive | Marvin's Blog</title>
+<title>Marvin's Blog</title>
   
 
 
@@ -155,49 +155,100 @@
 </noscript>
 
 
-    <div class="main-inner archive posts-collapse">
+    <div class="main-inner index posts-expand">
+
+    
 
 
+<div class="post-block">
   
   
-  
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <span class="collection-header">Um..! 11 posts in total. Keep on posting.</span>
-      </div>
 
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://marvinxu.top/2020/04/19/yuque/%E7%94%A8Adobe%20Acrobat%E4%B8%BA%E7%94%B5%E5%AD%90%E4%B9%A6%E5%88%B6%E4%BD%9C%E4%B9%A6%E7%AD%BE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Marvin Xu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Marvin's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/04/19/yuque/%E7%94%A8Adobe%20Acrobat%E4%B8%BA%E7%94%B5%E5%AD%90%E4%B9%A6%E5%88%B6%E4%BD%9C%E4%B9%A6%E7%AD%BE/" class="post-title-link" itemprop="url">用Adobe Acrobat为电子书制作书签</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-04-19 10:42:16" itemprop="dateCreated datePublished" datetime="2020-04-19T10:42:16+00:00">2020-04-19</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-11-17 09:19:08" itemprop="dateModified" datetime="2021-11-17T09:19:08+00:00">2021-11-17</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>最近在翻看《JavaScript 高级程序设计 第 3 版》这本书，发现有些内容过时了，找了找发现第 4 版英文原版已经有了，但是网上找的免费的 PDF 都没有书签，看得很费劲，闲的自己做了个书签。</p>
+<h2 id="1-印刷版和页码相关知识"><a href="#1-印刷版和页码相关知识" class="headerlink" title="1. 印刷版和页码相关知识"></a>1. 印刷版和页码相关知识</h2><p>因为下载的这个 PDF 是印刷版，而且它除了没有书签，连<strong>页码也不连续</strong>，导致我一开始做书签的时候非常懵逼。通过查资料和跟其他制作好的电子书对比，让我逐渐对这个东西有了一些了解。</p>
+<p>印刷版 PDF 有两个特点：</p>
+<ol>
+<li>左右页边距大小不一，且相邻页的页边距也不一致（因为要装订且分正反页）</li>
+<li>有空白页（因为分正反页有的地方需要空一页，比如封面、章结尾）</li>
+</ol>
+<p>页码：很多书籍都会用<strong>分段页码</strong>，比如正文之前用小写罗马数字（i、ii、ixii…），正文部分用阿拉伯数字，这导致了正文部分的页码跟 PDF 的页码数不一致</p>
+<blockquote>
+<p>因为懒的再去找 Reference，上面都是基于我的理解写出来的，所以可能有不对</p>
+</blockquote>
+<h2 id="2-制作步骤"><a href="#2-制作步骤" class="headerlink" title="2. 制作步骤"></a>2. 制作步骤</h2><p>软件准备：Adobe Acrobat DC 2020 + AutoBookmark 插件<br>插件链接  <a target="_blank" rel="noopener" href="https://www.evermap.com/autobookmark.asp#SystemReq">https://www.evermap.com/autobookmark.asp#SystemReq</a></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/04/19/yuque/%E7%94%A8Adobe%20Acrobat%E4%B8%BA%E7%94%B5%E5%AD%90%E4%B9%A6%E5%88%B6%E4%BD%9C%E4%B9%A6%E7%AD%BE/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
-    <div class="collection-year">
-      <span class="collection-header">2020</span>
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-04-19T10:42:16+00:00"
-              content="2020-04-19">
-          04-19
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/04/19/yuque/%E7%94%A8Adobe%20Acrobat%E4%B8%BA%E7%94%B5%E5%AD%90%E4%B9%A6%E5%88%B6%E4%BD%9C%E4%B9%A6%E7%AD%BE/" itemprop="url">
-            <span itemprop="name">用Adobe Acrobat为电子书制作书签</span>
-          </a>
-      </div>
-
+    <footer class="post-footer">
+        <div class="post-eof"></div>
       
-    </header>
+    </footer>
   </article>
+</div>
 
 
-    </div>
-  </div>
-  
-  
-  
+
+
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
 
 </div>
   </main>
