@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timer</title>
+  <style>
+    label {
+      display: block;
+      color: #2196F3;
+      font-size: 40px;
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      text-align: center;
+      border: none;
+      outline: none;
+      font-size: 70px;
+    }
+
+    button {
+      background-color: #2196F3;
+      color: #fff;
+      font-weight: bold;
+      font-size: 30px;
+      border: none;
+      border-radius: 30px;
+      line-height: 60px;
+      padding: 0 40px;
+      /* margin-top: 50px; */
+    }
+
+    .count-down {
+      font-size: 25vw;
+      margin-bottom: 50px;
+    }
+
+    .progress {
+      font-size: 25vw;
+    }
+
+    .wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.runtime.min.js"></script>
+  <script>
+    function formatCountdown(remain) {
+      const ms = remain % 1000
+      const s = Math.floor((remain / 1000) % 60)
+      const m = Math.floor((remain / 1000 / 60) % 60)
+      return `${m > 9 ? m : '0' + m} : ${s > 9 ? s : '0' + s}`
+    }
+    const Home = {
+      data() {
+        return {
+          minute: 15,
+          nums: 19
+        }
+      },
+      render(h) {
+        console.log(this.minute)
+        return h('div', { class: 'wrap' }, [
+          h('label', 'Total minutes:'),
+          h('input', {
+            domProps: {
+              value: this.minute
+            },
+            on: {
+              input: (e) => {
+                this.minute = Number(e.target.value)
+              }
+            }
+          }),
+          h('label', 'Total questions:'),
+          h('input', {
+            domProps: {
+              value: this.nums
+            },
+            on: {
+              input: (e) => {
+                this.nums = Number(e.target.value)
+              }
+            }
+          }),
+          h('button', {
+            on: {
+              click: () => {
+                const { minute, nums } = this
+                this.$emit('submit', { minute, nums })
+              }
+            },
+          }, 'Start')
+        ])
+      }
+    }
+    const Main = {
+      props: ['minute', 'nums'],
+      data() {
+        return {
+          cur: 1,
+          startTime: Date.now(),
+          timeElapsed: 0
+        }
+      },
+      computed: {
+        ms() {
+          return this.minute * 60 * 1000
+        },
+        timeRemain() {
+          return this.ms - this.timeElapsed > 0 ? this.ms - this.timeElapsed : 0
+        },
+        formated() {
+          return formatCountdown(this.timeRemain)
+        }
+      },
+      created() {
+        window.requestAnimationFrame(this.update)
+      },
+      methods: {
+        update() {
+          const { startTime, nums, ms } = this
+          this.timeElapsed = Date.now() - startTime
+          if (this.timeRemain > 0) {
+            this.cur = nums + 1 - Math.ceil(this.timeRemain / (ms / nums))
+            window.requestAnimationFrame(this.update)
+          }
+        }
+      },
+      render(h) {
+        return h('div', {
+          class: 'wrap'
+        }, [
+          h('div', {
+            class: 'count-down'
+          }, this.formated),
+          h('div', {
+            class: 'progress'
+          }, `${this.cur} / ${this.nums}`)
+        ])
+      }
+    }
+    new Vue({
+      el: '#app',
+      data() {
+        return {
+          starting: false,
+          d: null
+        }
+      },
+      render(h) {
+        return this.starting
+          ? h(Main, {
+            props: this.d
+          })
+          : h(Home, {
+            on: {
+              submit: (d) => {
+                this.starting = true
+                this.d = d
+              }
+            }
+          })
+      }
+    })
+  </script>
+</body>
+
+</html>
