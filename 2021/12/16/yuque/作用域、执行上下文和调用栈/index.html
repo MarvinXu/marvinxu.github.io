@@ -16,24 +16,26 @@
 
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"marvinxu.top","root":"/","images":"/images","scheme":"Pisces","version":"8.6.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/config.min.js"></script>
-<meta name="description" content="执行上下文执行上下文（Execution Context）是一段代码执行时的环境，每个函数都有它自己的执行上下文。这个环境里面大概包含：  传入函数的参数（arguments） 函数的作用域链 this 的值  ​ 调用栈调用栈（call stack）就是执行上下文栈（execution context stack），用来记录当前正在执行的函数  执行一个函数 -&gt; 加入调用栈 函数结束 -">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"marvinxu.top","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.8.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/config.min.js"></script>
+<meta name="description" content="执行上下文执行上下文（Execution Context）是一段代码执行时的环境，每个函数都有它自己的执行上下文。这个环境里面大概包含：  传入函数的参数（arguments） 函数的作用域链 this 的值  ​">
 <meta property="og:type" content="article">
 <meta property="og:title" content="作用域、执行上下文和调用栈">
 <meta property="og:url" content="https://marvinxu.top/2021/12/16/yuque/%E4%BD%9C%E7%94%A8%E5%9F%9F%E3%80%81%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87%E5%92%8C%E8%B0%83%E7%94%A8%E6%A0%88/index.html">
 <meta property="og:site_name" content="Marvin&#39;s Blog">
-<meta property="og:description" content="执行上下文执行上下文（Execution Context）是一段代码执行时的环境，每个函数都有它自己的执行上下文。这个环境里面大概包含：  传入函数的参数（arguments） 函数的作用域链 this 的值  ​ 调用栈调用栈（call stack）就是执行上下文栈（execution context stack），用来记录当前正在执行的函数  执行一个函数 -&gt; 加入调用栈 函数结束 -">
+<meta property="og:description" content="执行上下文执行上下文（Execution Context）是一段代码执行时的环境，每个函数都有它自己的执行上下文。这个环境里面大概包含：  传入函数的参数（arguments） 函数的作用域链 this 的值  ​">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/1310147/1639648637579-3f42b6f6-8363-4728-b631-355ed94263c2.png#clientId=u3053d531-2218-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=306&id=ubd74c4ea&margin=%5Bobject%20Object%5D&name=image.png&originHeight=611&originWidth=915&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=90339&status=done&style=none&taskId=u9fe9b5ee-2aa9-4ca5-9ad0-809e61f7faf&title=&width=457.5">
 <meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/1310147/1639649109908-a75b492f-48f2-4bfb-8bff-25048692dcab.png#clientId=u3053d531-2218-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=296&id=u86f83817&margin=%5Bobject%20Object%5D&name=image.png&originHeight=592&originWidth=906&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=86744&status=done&style=none&taskId=ue44e0767-0bcc-48e0-b819-cd6f48e074e&title=&width=453">
 <meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/1310147/1639649316053-9d71b24e-bff6-4c36-bf03-e9c01bcb768a.png#clientId=u3053d531-2218-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=313&id=u3100b66d&margin=%5Bobject%20Object%5D&name=image.png&originHeight=626&originWidth=959&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=95409&status=done&style=none&taskId=u0a5e93c1-530f-446e-a3fd-fa795bc67a5&title=&width=479.5">
 <meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/1310147/1639649850832-4d02e2fe-ba46-40a9-94b8-c713e837ba70.png#clientId=u3053d531-2218-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=314&id=u85e7a3b8&margin=%5Bobject%20Object%5D&name=image.png&originHeight=627&originWidth=830&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=51385&status=done&style=none&taskId=ud44550b0-b518-437d-b485-d6798d6183f&title=&width=415">
 <meta property="article:published_time" content="2021-12-16T10:34:52.000Z">
-<meta property="article:modified_time" content="2021-12-16T10:43:13.354Z">
+<meta property="article:modified_time" content="2021-12-16T15:51:50.590Z">
 <meta property="article:author" content="Marvin Xu">
+<meta property="article:tag" content="JS">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2021/png/1310147/1639648637579-3f42b6f6-8363-4728-b631-355ed94263c2.png#clientId=u3053d531-2218-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=306&id=ubd74c4ea&margin=%5Bobject%20Object%5D&name=image.png&originHeight=611&originWidth=915&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=90339&status=done&style=none&taskId=u9fe9b5ee-2aa9-4ca5-9ad0-809e61f7faf&title=&width=457.5">
 
@@ -48,6 +50,8 @@
 <title>作用域、执行上下文和调用栈 | Marvin's Blog</title>
   
 
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/third-party/analytics/baidu-analytics.min.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?42816faac3897e94b2a0d933f46eb3a2"></script>
 
 
 <meta name="referrer" content="no-referrer" />
@@ -72,7 +76,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Marvin's Blog</h1>
+      <p class="site-title">Marvin's Blog</p>
       <i class="logo-line"></i>
     </a>
   </div>
@@ -118,33 +122,41 @@
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-overview">
-            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">Marvin Xu</p>
   <div class="site-description" itemprop="description"></div>
 </div>
 <div class="site-state-wrap site-overview-item animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives">
+        <a href="/archives/">
           <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">posts</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
   <div class="links-of-author site-overview-item animated">
       <span class="links-of-author-item">
-        <a href="https://github.com/MarvinXu" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;MarvinXu" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+        <a href="https://github.com/MarvinXu" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;MarvinXu" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
       </span>
       <span class="links-of-author-item">
-        <a href="mailto:272077995@qq.com" title="E-Mail → mailto:272077995@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+        <a href="mailto:272077995@qq.com" title="E-Mail → mailto:272077995@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
       </span>
   </div>
 
 
 
-          </div>
         </div>
       </div>
     </div>
@@ -201,7 +213,16 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-12-16 10:34:52 / Modified: 10:43:13" itemprop="dateCreated datePublished" datetime="2021-12-16T10:34:52+00:00">2021-12-16</time>
+      <time title="Created: 2021-12-16 10:34:52 / Modified: 15:51:50" itemprop="dateCreated datePublished" datetime="2021-12-16T10:34:52+00:00">2021-12-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+        </span>
     </span>
 
   
@@ -221,6 +242,8 @@
 <li>this 的值</li>
 </ul>
 <p>​</p>
+<span id="more"></span>
+
 <h2 id="调用栈"><a href="#调用栈" class="headerlink" title="调用栈"></a>调用栈</h2><p>调用栈（call stack）就是执行上下文栈（execution context stack），用来记录当前正在执行的函数</p>
 <ul>
 <li>执行一个函数 -&gt; 加入调用栈</li>
@@ -238,8 +261,8 @@
 <li>JS 的作用域是词法作用域（对比动态作用域），是在编译时就确定的</li>
 </ul>
 <p>​</p>
-<h3 id="浏览器-和-Node-的实现"><a href="#浏览器-和-Node-的实现" class="headerlink" title="浏览器 和 Node 的实现"></a>浏览器 和 Node 的实现</h3><p><img src="https://cdn.nlark.com/yuque/0/2021/png/1310147/1639648637579-3f42b6f6-8363-4728-b631-355ed94263c2.png#clientId=u3053d531-2218-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=306&id=ubd74c4ea&margin=%5Bobject%20Object%5D&name=image.png&originHeight=611&originWidth=915&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=90339&status=done&style=none&taskId=u9fe9b5ee-2aa9-4ca5-9ad0-809e61f7faf&title=&width=457.5" alt="image.png"><br>可以看到左侧 VARIABLES 栏就是作用域，当前代码执行到 a 函数，此时有局部（函数）作用域：b + foo + this，但是注意下面的 WATCH，此时是访问不到 bar 的。<br>这是因为在编译时 JS 引擎并不会把外层的作用域一股脑儿地给你，而是通过闭包的形式让你访问，而闭包只有在内部函数引用了外部变量的情况下产生。在 a 函数里并没有引用全局变量 bar 或者 foo，所以没有产生闭包。<br>​</p>
-<p>把下面一行注释取消后，发现产生了一个 Closure 对象，包含变量 bar：<br><img src="https://cdn.nlark.com/yuque/0/2021/png/1310147/1639649109908-a75b492f-48f2-4bfb-8bff-25048692dcab.png#clientId=u3053d531-2218-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=296&id=u86f83817&margin=%5Bobject%20Object%5D&name=image.png&originHeight=592&originWidth=906&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=86744&status=done&style=none&taskId=ue44e0767-0bcc-48e0-b819-cd6f48e074e&title=&width=453" alt="image.png"><br>执行到函数 c 时，可以看到作用域链为：Local:c + Closure(b) + Closure(global) + Global<br>没有 Closure(a) 是因为没有地方引用 a 中的变量<br><img src="https://cdn.nlark.com/yuque/0/2021/png/1310147/1639649316053-9d71b24e-bff6-4c36-bf03-e9c01bcb768a.png#clientId=u3053d531-2218-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=313&id=u3100b66d&margin=%5Bobject%20Object%5D&name=image.png&originHeight=626&originWidth=959&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=95409&status=done&style=none&taskId=u0a5e93c1-530f-446e-a3fd-fa795bc67a5&title=&width=479.5" alt="image.png"><br>再看看 Chrome 中的作用域：<br><img src="https://cdn.nlark.com/yuque/0/2021/png/1310147/1639649850832-4d02e2fe-ba46-40a9-94b8-c713e837ba70.png#clientId=u3053d531-2218-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=314&id=u85e7a3b8&margin=%5Bobject%20Object%5D&name=image.png&originHeight=627&originWidth=830&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=51385&status=done&style=none&taskId=ud44550b0-b518-437d-b485-d6798d6183f&title=&width=415" alt="image.png"><br>与 Node 环境不同的是，全局变量并不会产生闭包，所以不需要在函数中引用也能访问。<br>另外，可以看到 Scope 栏的 Script 对象，只有 bar 属性，因为另外两个 var 定义的全局变量在 window 上。<br>​</p>
+<h3 id="浏览器-和-Node-的实现"><a href="#浏览器-和-Node-的实现" class="headerlink" title="浏览器 和 Node 的实现"></a>浏览器 和 Node 的实现</h3><p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/1310147/1639648637579-3f42b6f6-8363-4728-b631-355ed94263c2.png#clientId=u3053d531-2218-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=306&id=ubd74c4ea&margin=%5Bobject%20Object%5D&name=image.png&originHeight=611&originWidth=915&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=90339&status=done&style=none&taskId=u9fe9b5ee-2aa9-4ca5-9ad0-809e61f7faf&title=&width=457.5" alt="image.png"><br>可以看到左侧 VARIABLES 栏就是作用域，当前代码执行到 a 函数，此时有局部（函数）作用域：b + foo + this，但是注意下面的 WATCH，此时是访问不到 bar 的。<br>这是因为在编译时 JS 引擎并不会把外层的作用域一股脑儿地给你，而是通过闭包的形式让你访问，而闭包只有在内部函数引用了外部变量的情况下产生。在 a 函数里并没有引用全局变量 bar 或者 foo，所以没有产生闭包。<br>​</p>
+<p>把下面一行注释取消后，发现产生了一个 Closure 对象，包含变量 bar：<br><img data-src="https://cdn.nlark.com/yuque/0/2021/png/1310147/1639649109908-a75b492f-48f2-4bfb-8bff-25048692dcab.png#clientId=u3053d531-2218-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=296&id=u86f83817&margin=%5Bobject%20Object%5D&name=image.png&originHeight=592&originWidth=906&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=86744&status=done&style=none&taskId=ue44e0767-0bcc-48e0-b819-cd6f48e074e&title=&width=453" alt="image.png"><br>执行到函数 c 时，可以看到作用域链为：Local:c + Closure(b) + Closure(global) + Global<br>没有 Closure(a) 是因为没有地方引用 a 中的变量<br><img data-src="https://cdn.nlark.com/yuque/0/2021/png/1310147/1639649316053-9d71b24e-bff6-4c36-bf03-e9c01bcb768a.png#clientId=u3053d531-2218-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=313&id=u3100b66d&margin=%5Bobject%20Object%5D&name=image.png&originHeight=626&originWidth=959&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=95409&status=done&style=none&taskId=u0a5e93c1-530f-446e-a3fd-fa795bc67a5&title=&width=479.5" alt="image.png"><br>再看看 Chrome 中的作用域：<br><img data-src="https://cdn.nlark.com/yuque/0/2021/png/1310147/1639649850832-4d02e2fe-ba46-40a9-94b8-c713e837ba70.png#clientId=u3053d531-2218-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=314&id=u85e7a3b8&margin=%5Bobject%20Object%5D&name=image.png&originHeight=627&originWidth=830&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=51385&status=done&style=none&taskId=ud44550b0-b518-437d-b485-d6798d6183f&title=&width=415" alt="image.png"><br>与 Node 环境不同的是，全局变量并不会产生闭包，所以不需要在函数中引用也能访问。<br>另外，可以看到 Scope 栏的 Script 对象，只有 bar 属性，因为另外两个 var 定义的全局变量在 window 上。<br>​</p>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://medium.com/koderlabs/javascript-scope-chain-and-execution-context-simplified-ffb54fc6ad02">Javascript Scope Chain and Execution Context simplified | by Bilal Alam | KoderLabs | Medium</a><br><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/55140096/is-call-stack-the-same-as-execution-context-stack-in-javascript/55140367">Is “Call stack” the same as “Execution context stack” in JavaScript? - Stack Overflow</a></p>
 
     </div>
@@ -249,6 +272,9 @@
     
 
     <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/JS/" rel="tag"># JS</a>
+          </div>
 
         
 
@@ -270,6 +296,7 @@
 
 
 
+    <div class="comments utterances-container"></div>
 </div>
   </main>
 
@@ -293,18 +320,26 @@
 
   
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/next-boot.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/pjax.min.js"></script>
+
+  
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/third-party/fancybox.min.js"></script>
+
 
   
 
 
 
 
-  
-
-
-
-
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"MarvinXu/blog-comments","issue_term":"pathname","theme":"github-light"}</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/third-party/comments/utterances.min.js"></script>
 
 </body>
 </html>

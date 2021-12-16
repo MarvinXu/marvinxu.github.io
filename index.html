@@ -16,10 +16,11 @@
 
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"marvinxu.top","root":"/","images":"/images","scheme":"Pisces","version":"8.6.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/config.min.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"marvinxu.top","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.8.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/config.min.js"></script>
 <meta property="og:type" content="website">
 <meta property="og:title" content="Marvin&#39;s Blog">
 <meta property="og:url" content="https://marvinxu.top/index.html">
@@ -39,6 +40,8 @@
 <title>Marvin's Blog</title>
   
 
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/third-party/analytics/baidu-analytics.min.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?42816faac3897e94b2a0d933f46eb3a2"></script>
 
 
 <meta name="referrer" content="no-referrer" />
@@ -108,33 +111,41 @@
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-overview">
-            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">Marvin Xu</p>
   <div class="site-description" itemprop="description"></div>
 </div>
 <div class="site-state-wrap site-overview-item animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives">
+        <a href="/archives/">
           <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">posts</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
   <div class="links-of-author site-overview-item animated">
       <span class="links-of-author-item">
-        <a href="https://github.com/MarvinXu" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;MarvinXu" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+        <a href="https://github.com/MarvinXu" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;MarvinXu" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
       </span>
       <span class="links-of-author-item">
-        <a href="mailto:272077995@qq.com" title="E-Mail → mailto:272077995@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+        <a href="mailto:272077995@qq.com" title="E-Mail → mailto:272077995@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
       </span>
   </div>
 
 
 
-          </div>
         </div>
       </div>
     </div>
@@ -190,7 +201,16 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-12-16 10:34:52 / Modified: 10:43:13" itemprop="dateCreated datePublished" datetime="2021-12-16T10:34:52+00:00">2021-12-16</time>
+      <time title="Created: 2021-12-16 10:34:52 / Modified: 15:51:50" itemprop="dateCreated datePublished" datetime="2021-12-16T10:34:52+00:00">2021-12-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+        </span>
     </span>
 
   
@@ -210,27 +230,14 @@
 <li>this 的值</li>
 </ul>
 <p>​</p>
-<h2 id="调用栈"><a href="#调用栈" class="headerlink" title="调用栈"></a>调用栈</h2><p>调用栈（call stack）就是执行上下文栈（execution context stack），用来记录当前正在执行的函数</p>
-<ul>
-<li>执行一个函数 -&gt; 加入调用栈</li>
-<li>函数结束 -&gt; 弹出调用栈</li>
-<li>调用栈的顶部就是当前正在执行的函数</li>
-</ul>
-<p>​</p>
-<h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><p>作用域（scope）指在一个函数的 执行上下文 中能够访问的变量的集合</p>
-<blockquote>
-<p>A scope is just a finite set of variables/objects that an execution context have access to</p>
-</blockquote>
-<ul>
-<li>每个函数有自己的作用域，除此之外还有全局作用域，ES6 又有了块级作用域</li>
-<li>每个函数都有权访问外层函数的作用域和全局作用域，这些作用域加起来构成了一个作用域链</li>
-<li>JS 的作用域是词法作用域（对比动态作用域），是在编译时就确定的</li>
-</ul>
-<p>​</p>
-<h3 id="浏览器-和-Node-的实现"><a href="#浏览器-和-Node-的实现" class="headerlink" title="浏览器 和 Node 的实现"></a>浏览器 和 Node 的实现</h3><p><img src="https://cdn.nlark.com/yuque/0/2021/png/1310147/1639648637579-3f42b6f6-8363-4728-b631-355ed94263c2.png#clientId=u3053d531-2218-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=306&id=ubd74c4ea&margin=%5Bobject%20Object%5D&name=image.png&originHeight=611&originWidth=915&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=90339&status=done&style=none&taskId=u9fe9b5ee-2aa9-4ca5-9ad0-809e61f7faf&title=&width=457.5" alt="image.png"><br>可以看到左侧 VARIABLES 栏就是作用域，当前代码执行到 a 函数，此时有局部（函数）作用域：b + foo + this，但是注意下面的 WATCH，此时是访问不到 bar 的。<br>这是因为在编译时 JS 引擎并不会把外层的作用域一股脑儿地给你，而是通过闭包的形式让你访问，而闭包只有在内部函数引用了外部变量的情况下产生。在 a 函数里并没有引用全局变量 bar 或者 foo，所以没有产生闭包。<br>​</p>
-<p>把下面一行注释取消后，发现产生了一个 Closure 对象，包含变量 bar：<br><img src="https://cdn.nlark.com/yuque/0/2021/png/1310147/1639649109908-a75b492f-48f2-4bfb-8bff-25048692dcab.png#clientId=u3053d531-2218-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=296&id=u86f83817&margin=%5Bobject%20Object%5D&name=image.png&originHeight=592&originWidth=906&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=86744&status=done&style=none&taskId=ue44e0767-0bcc-48e0-b819-cd6f48e074e&title=&width=453" alt="image.png"><br>执行到函数 c 时，可以看到作用域链为：Local:c + Closure(b) + Closure(global) + Global<br>没有 Closure(a) 是因为没有地方引用 a 中的变量<br><img src="https://cdn.nlark.com/yuque/0/2021/png/1310147/1639649316053-9d71b24e-bff6-4c36-bf03-e9c01bcb768a.png#clientId=u3053d531-2218-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=313&id=u3100b66d&margin=%5Bobject%20Object%5D&name=image.png&originHeight=626&originWidth=959&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=95409&status=done&style=none&taskId=u0a5e93c1-530f-446e-a3fd-fa795bc67a5&title=&width=479.5" alt="image.png"><br>再看看 Chrome 中的作用域：<br><img src="https://cdn.nlark.com/yuque/0/2021/png/1310147/1639649850832-4d02e2fe-ba46-40a9-94b8-c713e837ba70.png#clientId=u3053d531-2218-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=314&id=u85e7a3b8&margin=%5Bobject%20Object%5D&name=image.png&originHeight=627&originWidth=830&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=51385&status=done&style=none&taskId=ud44550b0-b518-437d-b485-d6798d6183f&title=&width=415" alt="image.png"><br>与 Node 环境不同的是，全局变量并不会产生闭包，所以不需要在函数中引用也能访问。<br>另外，可以看到 Scope 栏的 Script 对象，只有 bar 属性，因为另外两个 var 定义的全局变量在 window 上。<br>​</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://medium.com/koderlabs/javascript-scope-chain-and-execution-context-simplified-ffb54fc6ad02">Javascript Scope Chain and Execution Context simplified | by Bilal Alam | KoderLabs | Medium</a><br><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/55140096/is-call-stack-the-same-as-execution-context-stack-in-javascript/55140367">Is “Call stack” the same as “Execution context stack” in JavaScript? - Stack Overflow</a></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/12/16/yuque/%E4%BD%9C%E7%94%A8%E5%9F%9F%E3%80%81%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87%E5%92%8C%E8%B0%83%E7%94%A8%E6%A0%88/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -287,8 +294,17 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-12-16 10:43:13" itemprop="dateModified" datetime="2021-12-16T10:43:13+00:00">2021-12-16</time>
+        <time title="Modified: 2021-12-16 15:51:50" itemprop="dateModified" datetime="2021-12-16T15:51:50+00:00">2021-12-16</time>
       </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+        </span>
+    </span>
 
   
 </div>
@@ -306,33 +322,15 @@
 <blockquote>
 <p>With the release of iOS 10, we’ve made some minor adjustments to the behavior of our fast tapping, and an important change to a very common user interaction: pinch zooming.</p>
 </blockquote>
-<p>参考：<a target="_blank" rel="noopener" href="https://webkit.org/blog/7367/new-interaction-behaviors-in-ios-10/">New Interaction Behaviors in iOS 10 | WebKit</a><br>​</p>
-<h4 id="preventDefault"><a href="#preventDefault" class="headerlink" title="preventDefault()"></a>preventDefault()</h4><p>还有其他办法吗？“缩放”的操作一般是双指手势，可以监听 touch 事件，阻止其默认行为</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">&quot;touchmove&quot;</span>, <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">  e.preventDefault();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<p>但是！在 ios14.7 实测并不生效，原因：<br><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener">EventTarget.addEventListener() - Web APIs | MDN</a></p>
-<blockquote>
-<p><strong>passive</strong><br>A boolean value that, if true, indicates that the function specified by listener will never call <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault">preventDefault()</a>. If a passive listener does call preventDefault(), the user agent will do nothing other than generate a console warning. See <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#improving_scrolling_performance_with_passive_listeners">Improving scrolling performance with passive listeners</a> to learn more.</p>
-</blockquote>
-<blockquote>
-<p>some browsers (specifically, Chrome and Firefox) have changed the default value of the passive option to true for the <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/Events/touchstart">touchstart</a> and <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/Document/touchmove_event">touchmove</a> events on the document-level nodes <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/Window">Window</a>, <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/Document">Document</a>, and <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/Document/body">Document.body</a></p>
-</blockquote>
-<p>所以，加上 <code>passive: false</code> 就生效了。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.addEventListener(</span><br><span class="line">  <span class="string">&quot;touchmove&quot;</span>,</span><br><span class="line">  <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">    e.preventDefault();</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123; <span class="attr">passive</span>: <span class="literal">false</span> &#125;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-
-<p>但是，这样会同样禁止页面滚动，通常我们不希望这样，加个条件试试：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.addEventListener(</span><br><span class="line">  <span class="string">&quot;touchmove&quot;</span>,</span><br><span class="line">  <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (e.touches.length &gt; <span class="number">1</span>) &#123;</span><br><span class="line">      e.preventDefault();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123; <span class="attr">passive</span>: <span class="literal">false</span> &#125;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-
-<p>实测发现，两指都接触屏幕后滑动没有问题，但是当一指先滑动再放另一指上去时，就又能缩放了。<br>实时打印 <code>e.cancelable</code> 属性发现，后一种情况下 <code>cancelable</code> 属性为 false，即无法阻止默认行为，所以此时调用 <code>preventDefault</code> 也就没有效果了。</p>
-<p>除了监听 touch 事件， Safari 还有一个特有的 <a target="_blank" rel="noopener" href="https://developer.apple.com/documentation/webkitjs/gestureevent">GestureEvent</a>，可以省去上述例子中双指的判断逻辑，但是效果跟上面一样，无法 100% 禁止缩放。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">&quot;gesturestart&quot;</span>, <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">  e.preventDefault();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<h4 id="touch-action"><a href="#touch-action" class="headerlink" title="touch-action"></a>touch-action</h4><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/touch-action">touch-action - CSS（层叠样式表） | MDN</a><br>从 <a target="_blank" rel="noopener" href="https://caniuse.com/?search=touch-action">iOS 13</a> 开始，Safari 了支持 touch-action 的 <code>pan-x</code>、<code>pan-y</code> 值，可以限制用户的屏幕操作只能进行 x 或 y 方向上的滚动。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  touch-action: pan-x pan-y;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>​</p>
-<p>​</p>
-
+<p>参考：<a target="_blank" rel="noopener" href="https://webkit.org/blog/7367/new-interaction-behaviors-in-ios-10/">New Interaction Behaviors in iOS 10 | WebKit</a></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/11/17/yuque/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E7%A6%81%E6%AD%A2%E9%A1%B5%E9%9D%A2%E7%BC%A9%E6%94%BE/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -389,8 +387,17 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-12-16 10:43:13" itemprop="dateModified" datetime="2021-12-16T10:43:13+00:00">2021-12-16</time>
+        <time title="Modified: 2021-12-16 15:51:50" itemprop="dateModified" datetime="2021-12-16T15:51:50+00:00">2021-12-16</time>
       </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%88%E7%8E%87/" itemprop="url" rel="index"><span itemprop="name">效率</span></a>
+        </span>
+    </span>
 
   
 </div>
@@ -408,14 +415,6 @@
 <li>markdown 格式，适合纯文本的编辑器：<code>[百度一下，你就知道](https://www.baidu.com/)</code></li>
 <li>富文本格式，适合富文本编辑器：<a target="_blank" rel="noopener" href="https://www.baidu.com/">百度一下，你就知道</a></li>
 </ol>
-<h2 id="Chrome-插件"><a href="#Chrome-插件" class="headerlink" title="Chrome 插件"></a>Chrome 插件</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/laobie/mUrl">mUrl</a>：个人开发，轻量，仅支持 markdown</li>
-<li><a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/tabcopy/micdllihgoppmejpecmkilggmaagfdmb/">TabCopy</a>：功能全，支持各种格式，快捷键（推荐）</li>
-</ul>
-<h2 id="JS-Bookmark"><a href="#JS-Bookmark" class="headerlink" title="JS Bookmark"></a>JS Bookmark</h2><p>第一次接触的同学可能不知道，可以用书签的方式在当前页面执行 JS 脚本，比如在地址栏输入：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javascript: alert(<span class="built_in">document</span>.title);</span><br></pre></td></tr></table></figure>
-
-<p>就会弹出当前页面的标题。那我们也可以通过这种方法实现复制链接的功能。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/06/02/yuque/%E4%B8%80%E9%94%AE%E5%A4%8D%E5%88%B6%20markdown%20%E9%93%BE%E6%8E%A5/#more" rel="contents">
@@ -480,7 +479,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-12-16 10:43:13" itemprop="dateModified" datetime="2021-12-16T10:43:13+00:00">2021-12-16</time>
+        <time title="Modified: 2021-12-16 15:51:50" itemprop="dateModified" datetime="2021-12-16T15:51:50+00:00">2021-12-16</time>
       </span>
 
   
@@ -494,7 +493,7 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>Microsoft Edge -&gt; 设置 -&gt; 默认浏览器 -&gt; Internet Explorer 兼容性</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2021/png/1310147/1617780807225-9e77b157-5d6f-4b5b-b65c-539350fd9afc.png#height=514&id=N2KYE&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1027&originWidth=1915&originalType=binary%E2%88%B6=1&size=135711&status=done&style=none&width=957.5" alt="image.png"></p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2021/png/1310147/1617780807225-9e77b157-5d6f-4b5b-b65c-539350fd9afc.png#height=514&id=N2KYE&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1027&originWidth=1915&originalType=binary%E2%88%B6=1&size=135711&status=done&style=none&width=957.5" alt="image.png"></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/04/07/yuque/%E5%9C%A8WIN%2010%E6%89%93%E5%BC%80%E7%BD%91%E9%93%B6/#more" rel="contents">
@@ -559,8 +558,17 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-12-16 10:43:13" itemprop="dateModified" datetime="2021-12-16T10:43:13+00:00">2021-12-16</time>
+        <time title="Modified: 2021-12-16 15:51:50" itemprop="dateModified" datetime="2021-12-16T15:51:50+00:00">2021-12-16</time>
       </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%88%E7%8E%87/" itemprop="url" rel="index"><span itemprop="name">效率</span></a>
+        </span>
+    </span>
 
   
 </div>
@@ -644,8 +652,17 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-12-16 10:43:13" itemprop="dateModified" datetime="2021-12-16T10:43:13+00:00">2021-12-16</time>
+        <time title="Modified: 2021-12-16 15:51:50" itemprop="dateModified" datetime="2021-12-16T15:51:50+00:00">2021-12-16</time>
       </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+        </span>
+    </span>
 
   
 </div>
@@ -660,7 +677,7 @@
           <h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><blockquote>
 <p>Object.defineProperty(obj, prop, descriptor)</p>
 </blockquote>
-<p>返回值：传入的 obj<br>testing!!</p>
+<p>返回值：传入的 obj</p>
 <h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>通过赋值创建的属性默认是可枚举 (for…in \ Object.keys)，可以修改值，也可以被删除的。而 Object.defineProperty 可以修改这些特性。<br>默认通过 Object.defineProperty 添加的属性是不可修改且不可枚举的。<br>​</p>
           <!--noindex-->
             <div class="post-button">
@@ -726,7 +743,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-12-16 10:43:13" itemprop="dateModified" datetime="2021-12-16T10:43:13+00:00">2021-12-16</time>
+        <time title="Modified: 2021-12-16 15:51:50" itemprop="dateModified" datetime="2021-12-16T15:51:50+00:00">2021-12-16</time>
       </span>
 
   
@@ -739,30 +756,18 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="使用-CDN"><a href="#使用-CDN" class="headerlink" title="使用 CDN"></a>使用 CDN</h2><p>首先考察了一些 CDN 服务商，还是以免费为原则，参考<br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/wpjamer/articles/10925764.html">https://www.cnblogs.com/wpjamer/articles/10925764.html</a><br>但试了几个我就放弃了，国内 CDN 都需要备案，Cloudfare 速度又太慢。。</p>
+          <h2 id="使用-CDN"><a href="#使用-CDN" class="headerlink" title="使用 CDN"></a>使用 CDN</h2><p>更新：新版 next 主题支持配置 CDN</p>
+<hr>
+<p>首先考察了一些 CDN 服务商，还是以免费为原则，参考<br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/wpjamer/articles/10925764.html">https://www.cnblogs.com/wpjamer/articles/10925764.html</a><br>但试了几个我就放弃了，国内 CDN 都需要备案，Cloudfare 速度又太慢。。</p>
 <h3 id="jsDelivr"><a href="#jsDelivr" class="headerlink" title="jsDelivr"></a><strong>jsDelivr</strong></h3><p>后来发现这个，即插即用的方式真是如获至宝，所有 github 资源都能直接用 cdn 访问</p>
-<!--- more -->
-
-<h4 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// load any GitHub release, commit, or branch</span><br><span class="line">// note: we recommend using npm for projects that support it</span><br><span class="line">https://cdn.jsdelivr.net/gh/user/repo@version/file</span><br><span class="line"></span><br><span class="line">// load jQuery v3.2.1</span><br><span class="line">https://cdn.jsdelivr.net/gh/jquery/jquery@3.2.1/dist/jquery.min.js</span><br></pre></td></tr></table></figure>
-
-<p>例子：<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/marvinxu/marvinxu.github.io@master/images/favicon-32x32.png">https://cdn.jsdelivr.net/gh/marvinxu/marvinxu.github.io@master/images/favicon-32x32.png</a></p>
-<h3 id="Hexo-next-主题-CDN-配置"><a href="#Hexo-next-主题-CDN-配置" class="headerlink" title="Hexo - next 主题 CDN 配置"></a>Hexo - next 主题 CDN 配置</h3><p>主题配置文件 config.yml：</p>
-<ul>
-<li>vendors 下配置 library 使用 CDN</li>
-<li>favicon\avatar 使用 CDN</li>
-</ul>
-<p>源码修改：<br>main.css -&gt; head.swig<br>js -&gt; engine.js</p>
-<p>直接看 commit 吧<br><a target="_blank" rel="noopener" href="https://github.com/MarvinXu/blog-hexo/commit/7fdf252e2d80d661b68471908615990f5bb892b8">https://github.com/MarvinXu/blog-hexo/commit/7fdf252e2d80d661b68471908615990f5bb892b8</a></p>
-<h2 id="HTML-瘦身"><a href="#HTML-瘦身" class="headerlink" title="HTML 瘦身"></a>HTML 瘦身</h2><p>因为 index.html 不走 CDN，所以也要控制大小。next 主题默认首页会展示文章全文，导致 index.html 很大，可以进行如下设置</p>
-<h3 id="设置文章截断"><a href="#设置文章截断" class="headerlink" title="设置文章截断"></a>设置文章截断</h3><p>语雀写文章的时候加入截断标志</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--- more --&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="减小首页-pagesize"><a href="#减小首页-pagesize" class="headerlink" title="减小首页 pagesize"></a>减小首页 pagesize</h3><p>config.yml</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Home page setting</span></span><br><span class="line"><span class="comment"># path: Root path for your blogs index page. (default = &#x27;&#x27;)</span></span><br><span class="line"><span class="comment"># per_page: Posts displayed per page. (0 = disable pagination)</span></span><br><span class="line"><span class="comment"># order_by: Posts order. (Order by date descending by default)</span></span><br><span class="line"><span class="attr">index_generator:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">&quot;&quot;</span></span><br><span class="line">  <span class="attr">per_page:</span> <span class="number">5</span></span><br><span class="line">  <span class="attr">order_by:</span> <span class="string">-date</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><p>之前加载 8<del>15s，加速后基本 1</del>2s</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://theme-next.js.org/docs/advanced-settings.html">https://theme-next.js.org/docs/advanced-settings.html</a><br><a target="_blank" rel="noopener" href="https://hexo.io/docs/helpers#url-for">https://hexo.io/docs/helpers#url-for</a><br><a target="_blank" rel="noopener" href="https://theme-next.js.org/docs/theme-settings/posts.html">https://theme-next.js.org/docs/theme-settings/posts.html</a></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/07/12/yuque/Github%20Pages%20hexo%E5%8D%9A%E5%AE%A2%E5%8A%A0%E9%80%9F/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -819,7 +824,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-12-16 10:43:13" itemprop="dateModified" datetime="2021-12-16T10:43:13+00:00">2021-12-16</time>
+        <time title="Modified: 2021-12-16 15:51:50" itemprop="dateModified" datetime="2021-12-16T15:51:50+00:00">2021-12-16</time>
       </span>
 
   
@@ -832,36 +837,20 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592139758781-40601637-64a1-4ab2-a846-a256cfbc3766.png#height=452&id=zHM4g&margin=%5Bobject%20Object%5D&name=yuque_diagram.png&originHeight=452&originWidth=1436&originalType=binary%E2%88%B6=1&size=63972&status=done&style=none&width=1436" alt="yuque_diagram.png"></p>
+          <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p><img data-src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592139758781-40601637-64a1-4ab2-a846-a256cfbc3766.png#crop=0&crop=0&crop=1&crop=1&height=452&id=zHM4g&margin=%5Bobject%20Object%5D&name=yuque_diagram.png&originHeight=452&originWidth=1436&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=63972&status=done&style=none&title=&width=1436" alt="yuque_diagram.png"></p>
 <blockquote>
 <p>接上篇 <a target="_blank" rel="noopener" href="https://www.yuque.com/marvinxu/blog/gzlvqk">hexo+travisCI 自动部署 github pages</a>，后面的部分操作是基于上篇的</p>
 </blockquote>
 <h2 id="yuque-hexo-拉取文章"><a href="#yuque-hexo-拉取文章" class="headerlink" title="yuque-hexo 拉取文章"></a>yuque-hexo 拉取文章</h2><p><a target="_blank" rel="noopener" href="https://github.com/x-cold/yuque-hexo">https://github.com/x-cold/yuque-hexo</a></p>
 <h3 id="安装-yuque-hexo"><a href="#安装-yuque-hexo" class="headerlink" title="安装 yuque-hexo"></a>安装 yuque-hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i --save-dev yuque-hexo</span><br></pre></td></tr></table></figure>
-
-<!--- more -->
-
-<h3 id="修改-package-json-文件"><a href="#修改-package-json-文件" class="headerlink" title="修改 package.json 文件"></a>修改 package.json 文件</h3><p>参数说明：以我的博客知识库为例，链接为<a target="_blank" rel="noopener" href="https://www.yuque.com/marvinxu/blog">https://www.yuque.com/marvinxu/blog</a>，login 和 repo 参数对应如下</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;yuqueConfig&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;baseUrl&quot;</span>: <span class="string">&quot;https://www.yuque.com/api/v2&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;login&quot;</span>: <span class="string">&quot;marvinxu&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;repo&quot;</span>: <span class="string">&quot;blog&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;sync&quot;</span>: <span class="string">&quot;yuque-hexo sync&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;clean:yuque&quot;</span>: <span class="string">&quot;yuque-hexo clean&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;build:yuque&quot;</span>: <span class="string">&quot;npm run sync &amp;&amp; hexo clean &amp;&amp; hexo g&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="本地测试"><a href="#本地测试" class="headerlink" title="本地测试"></a>本地测试</h3><p>语雀 token 获取：<a target="_blank" rel="noopener" href="https://www.yuque.com/settings/tokens">https://www.yuque.com/settings/tokens</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">YUQUE_TOKEN=xxx npm run sync</span><br></pre></td></tr></table></figure>
-
-<p>执行成功会得到类似如下的日志</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[INFO] clear previous directory.</span><br><span class="line">[INFO] remove yuque posts: /home/travis/build/MarvinXu/blog-hexo/source/_posts/yuque</span><br><span class="line">[INFO] reading from local file: /home/travis/build/MarvinXu/blog-hexo/yuque.json</span><br><span class="line">[INFO] article amount: 6</span><br><span class="line">[INFO] download article body: 语雀web-hook触发travis-ci构建</span><br><span class="line">[INFO] download articles done!</span><br><span class="line">[INFO] writing to local file: /home/travis/build/MarvinXu/blog-hexo/yuque.json</span><br><span class="line">[INFO] create posts directory (if it not exists): /home/travis/build/MarvinXu/blog-hexo/source/_posts/yuque</span><br><span class="line">[INFO] generate post file: /home/travis/build/MarvinXu/blog-hexo/source/_posts/yuque/How to add more to Git Bash on Windows.md</span><br><span class="line">[INFO] generate post file: /home/travis/build/MarvinXu/blog-hexo/source/_posts/yuque/hexo+travisCI自动部署github pages.md</span><br><span class="line">[INFO] generate post file: /home/travis/build/MarvinXu/blog-hexo/source/_posts/yuque/git-style-guide.md</span><br><span class="line">[INFO] generate post file: /home/travis/build/MarvinXu/blog-hexo/source/_posts/yuque/七牛云图床挂了？不用自定义域名找回图片.md</span><br><span class="line">[INFO] generate post file: /home/travis/build/MarvinXu/blog-hexo/source/_posts/yuque/用Adobe Acrobat为电子书制作书签.md</span><br><span class="line">[INFO] generate post file: /home/travis/build/MarvinXu/blog-hexo/source/_posts/yuque/语雀web-hook触发travis-ci构建.md</span><br><span class="line">[INFO] yuque-hexo sync done!</span><br></pre></td></tr></table></figure>
-
-<h2 id="配置-TravisCI"><a href="#配置-TravisCI" class="headerlink" title="配置 TravisCI"></a>配置 TravisCI</h2><h3 id="修改-travis-yml"><a href="#修改-travis-yml" class="headerlink" title="修改.travis.yml"></a>修改.travis.yml</h3><p>script 要换成  npm run build:yuque</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">language: node_js</span><br><span class="line">node_js:</span><br><span class="line">  - 10</span><br><span class="line">script:</span><br><span class="line">  - <span class="string">&quot;npm run build:yuque&quot;</span></span><br><span class="line">cache:</span><br><span class="line">  directories:</span><br><span class="line">    - node_modules</span><br><span class="line">deploy:</span><br><span class="line">  provider: pages</span><br><span class="line">  skip_cleanup: <span class="literal">true</span></span><br><span class="line">  github_token: <span class="variable">$GITHUB_TOKEN</span>  <span class="comment"># Set in the settings page of your repository, as a secure variable</span></span><br><span class="line">  keep_history: <span class="literal">true</span></span><br><span class="line">  repo: MarvinXu/marvinxu.github.io</span><br><span class="line">  target_branch: master</span><br><span class="line">  local_dir: public</span><br><span class="line">  on:</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
-
-<h3 id="新增环境变量-YUQUE-TOKEN"><a href="#新增环境变量-YUQUE-TOKEN" class="headerlink" title="新增环境变量 YUQUE_TOKEN"></a>新增环境变量 YUQUE_TOKEN</h3><p><img src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592034125382-283aede7-7e4b-4dfd-a03e-82b14593520c.png#height=125&id=sBFfe&margin=%5Bobject%20Object%5D&name=image.png&originHeight=249&originWidth=1004&originalType=binary%E2%88%B6=1&size=25649&status=done&style=none&width=502" alt="image.png"></p>
-<h2 id="新建阿里云函数"><a href="#新建阿里云函数" class="headerlink" title="新建阿里云函数"></a>新建阿里云函数</h2><p>打开阿里云控制台，搜索“函数计算”，在某个服务下新建函数，选择“HTTP 函数”<br><img src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592034259601-b681eac4-ce6d-413d-a8a9-ab7751581821.png#height=298&id=PFBir&margin=%5Bobject%20Object%5D&name=image.png&originHeight=595&originWidth=1188&originalType=binary%E2%88%B6=1&size=77287&status=done&style=none&width=594" alt="image.png"><br>注意配置触发器时，请求方式一定要加上 POST（语雀 webhook 是 POST 请求）<br><img src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592034434408-4701e454-0c25-4338-875b-72312a06a5d3.png#height=242&id=SMDt6&margin=%5Bobject%20Object%5D&name=image.png&originHeight=484&originWidth=1021&originalType=binary%E2%88%B6=1&size=56122&status=done&style=none&width=510.5" alt="image.png"><br>打开云函数，在“代码执行”里编写云函数，写法参考：<br><a target="_blank" rel="noopener" href="https://github.com/x-cold/aliyun-function/blob/master/travis_ci/travis_ci.js">https://github.com/x-cold/aliyun-function/blob/master/travis_ci/travis_ci.js</a></p>
-<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>在“触发器”里，得到访问的路径，可在本地用 postman 调用，如果调用成功，就会触发 TravisCI 的构建。</p>
-<p>参数说明：</p>
-<p>| token | 从  <a target="_blank" rel="noopener" href="https://travis-ci.org/account/preferences">https://travis-ci.org/account/preferences</a><br>  获取 |<br>| — | — |<br>| repos | travis 项目 id 或 slug(eg: MarvinXu/blog-hexo) |<br>| branch | 要构建的分支 |</p>
-<p><a target="_blank" rel="noopener" href="https://1255463568451268.cn-hangzhou.fc.aliyuncs.com/2016-08-15/proxy/travis-ci/yuque/?token=xxx&branch=master&repos=MarvinXu/blog-hexo">https://1255463568451268.cn-hangzhou.fc.aliyuncs.com/2016-08-15/proxy/travis-ci/yuque/?token=xxx&amp;branch=master&amp;repos=MarvinXu/blog-hexo</a></p>
-<h2 id="配置语雀-webhook"><a href="#配置语雀-webhook" class="headerlink" title="配置语雀 webhook"></a>配置语雀 webhook</h2><p>你的知识库 -&gt; 设置 -&gt; 开发者 -&gt;添加 Web Hook<br>注意：单选“仅主动推送更新触发”没有用，必须配合后面的选项使用<br><img src="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592035695558-9f8f4e92-ff6c-4d5b-887b-6d66da9b7c7d.png#height=235&id=jXR23&margin=%5Bobject%20Object%5D&name=image.png&originHeight=470&originWidth=716&originalType=binary%E2%88%B6=1&size=47632&status=done&style=none&width=358" alt="image.png"></p>
-<p>好啦~ 现在可以在语雀写文章，发布或更新时勾选“文章有较大更新，推送…”，就会自动同步到博客啦~<br>欢迎访问我的博客 <a href="https://marvinxu.top/">https://marvinxu.top</a></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/06/12/yuque/%E8%AF%AD%E9%9B%80%E6%96%87%E7%AB%A0%E8%87%AA%E5%8A%A8%E5%90%8C%E6%AD%A5%E5%88%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -918,7 +907,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-12-16 10:43:13" itemprop="dateModified" datetime="2021-12-16T10:43:13+00:00">2021-12-16</time>
+        <time title="Modified: 2021-12-16 15:51:50" itemprop="dateModified" datetime="2021-12-16T15:51:50+00:00">2021-12-16</time>
       </span>
 
   
@@ -1001,7 +990,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-12-16 10:43:13" itemprop="dateModified" datetime="2021-12-16T10:43:13+00:00">2021-12-16</time>
+        <time title="Modified: 2021-12-16 15:51:51" itemprop="dateModified" datetime="2021-12-16T15:51:51+00:00">2021-12-16</time>
       </span>
 
   
@@ -1075,18 +1064,26 @@
 
   
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/next-boot.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/pjax.min.js"></script>
+
+  
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/third-party/fancybox.min.js"></script>
+
 
   
 
 
 
 
-  
-
-
-
-
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"MarvinXu/blog-comments","issue_term":"pathname","theme":"github-light"}</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/third-party/comments/utterances.min.js"></script>
 
 </body>
 </html>
