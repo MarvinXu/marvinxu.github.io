@@ -118,7 +118,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -175,6 +175,116 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://marvinxu.top/2022/02/08/yuque/Chrome%20%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E4%B9%B1%E7%A0%81/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Marvin Xu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Marvin's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/02/08/yuque/Chrome%20%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E4%B9%B1%E7%A0%81/" class="post-title-link" itemprop="url">Chrome 特殊字符乱码</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-02-08 16:14:19 / Modified: 20:11:52" itemprop="dateCreated datePublished" datetime="2022-02-08T16:14:19+00:00">2022-02-08</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote>
+<p>—— 一个特殊字符乱码引发的故事</p>
+</blockquote>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2022/png/1310147/1644336498088-ad783f74-5c3b-4424-8e6e-3a4765e42ff6.png#clientId=u3de7b7ca-2d66-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=275&id=u618cb174&margin=%5Bobject%20Object%5D&name=image.png&originHeight=453&originWidth=900&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=40945&status=done&style=none&taskId=uee97e595-acda-4dc0-8512-98e90a9288b&title=&width=545.4545139281236" alt="image.png"><br>这个是 Vue3 源码里的 example todomvc 在 Chrome 98 里打开的样子</p>
+<h3 id="解决过程"><a href="#解决过程" class="headerlink" title="解决过程"></a>解决过程</h3><ul>
+<li>一开始以为是 encoding 编码问题，修改编码后发现不管用（Chrome 需要用<a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/%E7%BD%91%E9%A1%B5%E7%BC%96%E7%A0%81%E4%BF%AE%E6%94%B9%EF%BC%88charset%EF%BC%89/mnnlnpbaaojjmihapdoffoicnnaokpmj">插件</a>切换编码）</li>
+<li>尝试在 Firefox 打开，正常</li>
+<li>查看源码，发现是一个特殊字符 ❯ （U+276f）</li>
+<li>Google 关键词 “chrome u+276f”发现跟字体有关</li>
+<li>修改 css font 为 ‘Segoe UI Symbol’，不生效</li>
+<li>发现 css 在一个叫 todomvc-app-css 的包里<ul>
+<li>todomvc 是一个帮你做技术选型的项目</li>
+<li>在 <a target="_blank" rel="noopener" href="https://todomvc.com/examples/vue/">online 版的 todomvc demo</a> 里符号显示正常</li>
+</ul>
+</li>
+<li>给 html 加上 <code>&lt;meta charset=&quot;utf-8&quot;&gt;</code>解决</li>
+</ul>
+<h3 id="Rendered-font"><a href="#Rendered-font" class="headerlink" title="Rendered font"></a>Rendered font</h3><p>在 devtool 里找到元素，查看 computed font-family 是一长串。怎么看实际渲染的是什么字体？<br>​</p>
+<p>Chrome:<br><img data-src="https://cdn.nlark.com/yuque/0/2022/png/1310147/1644338407221-901c57a2-adf2-4923-93c7-da2d035675f5.png#clientId=u60648569-a7b0-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=481&id=ue0a56fd0&margin=%5Bobject%20Object%5D&name=image.png&originHeight=794&originWidth=942&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=47064&status=done&style=none&taskId=ubd27d473-6253-4334-960d-dfaf605d15f&title=&width=570.909057911436" alt="image.png"><br>Firefox:<br><img data-src="https://cdn.nlark.com/yuque/0/2022/png/1310147/1644338645806-22e37caf-6bfc-405a-9ab1-bad31c442fec.png#clientId=u60648569-a7b0-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=399&id=u9af116e4&margin=%5Bobject%20Object%5D&name=image.png&originHeight=659&originWidth=1314&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=87057&status=done&style=none&taskId=ue4193cf4-ebff-4eb8-a64f-13c86bfbff1&title=&width=796.3635903350604" alt="image.png"></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.toggle-all</span> + <span class="selector-tag">label</span>:before &#123;</span><br><span class="line">  content: <span class="string">&quot;❯&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>In Firefox work because by default is used <em>Segoe UI Symbol</em> as <em>“replacement font”</em></p>
+</blockquote>
+<p>Firefox 正常显示，是因为有这个特殊字符 fallback 字体</p>
+<h3 id="charset"><a href="#charset" class="headerlink" title="charset"></a>charset</h3><p>查看页面实际使用的字符集：<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/Document/characterSet">Document.characterSet - Web APIs | MDN</a><br>Chrome 结果：<code>&#39;windows-1252&#39;</code><br>Firefox 结果：<code>&quot;UTF-8&quot;</code><br><a target="_blank" rel="noopener" href="https://unicode-table.com/cn/276F/">❯ - 粗右指尖引号装饰: U+276F - Unicode 字符百科</a><br>​</p>
+<p>归根结底还是编码的问题，文件是用 UTF-8 编码，而 Chrome 使用 <code>&#39;windows-1252&#39;</code>解码，所以就乱码了。说明那个修改编码的插件没生效。<br>​</p>
+<p>Firefox 不支持修改 charset：<a target="_blank" rel="noopener" href="https://support.mozilla.org/en-US/kb/text-encoding-no-longer-available-firefox-menu">Text Encoding no longer available in the Firefox menu panel | Firefox Help</a></p>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><ul>
+<li><p>Chrome 会 auto-detect 字符集，当 HTML 中有 ❯ 符号解析为 UTF-8，没有时解析为 windows-1252</p>
+<ul>
+<li>当 HTML 不包含特殊符号，css 里包含特殊符号时，就出现乱码</li>
+<li>css 里加上 <code>@charset &quot;utf-8&quot;</code>后正常</li>
+</ul>
+</li>
+<li><p>live server 下打开正常，因为 server 自动加上了响应头 <code>Content-Type: text/html; charset=UTF-8 </code></p>
+</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>TODO: <a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/2281646/whats-the-difference-between-encoding-and-charset">What’s the difference between encoding and charset? - Stack Overflow</a></p>
+<ul>
+<li>unicode 是字符集，UTF-8 是编码方式。</li>
+<li>现在代码一般都是以 UTF-8 编码了，如果解码的时候不以 UTF-8 解码，就会出现乱码。</li>
+<li>浏览器会根据响应头的 <code>Content-Type</code>、或者文档中定义的 charset 来解析，如果都不存在，则会自动选择“合适”的编码方式，但是各个浏览器的自动选择行为表现不一致。</li>
+<li>Chrome、Firefox 的新版本都禁用了用户主动选择编码的功能。</li>
+</ul>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/21654259/chrome-doesnt-display-special-character-while-other-browsers-do">html - Chrome doesn’t display special character while other browsers do - Stack Overflow</a><br><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/33727516/web-fonts-dont-show-some-characters-in-chrome-for-windows">Web fonts don’t show some characters in Chrome for Windows - Stack Overflow</a><br><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/2281646/whats-the-difference-between-encoding-and-charset">What’s the difference between encoding and charset? - Stack Overflow</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://marvinxu.top/2021/12/16/yuque/%E4%BD%9C%E7%94%A8%E5%9F%9F%E3%80%81%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87%E5%92%8C%E8%B0%83%E7%94%A8%E6%A0%88/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -206,7 +316,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-12-26 03:21:02" itemprop="dateModified" datetime="2021-12-26T03:21:02+00:00">2021-12-26</time>
+        <time title="Modified: 2022-02-08 20:11:52" itemprop="dateModified" datetime="2022-02-08T20:11:52+00:00">2022-02-08</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -298,7 +408,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-12-26 03:21:02" itemprop="dateModified" datetime="2021-12-26T03:21:02+00:00">2021-12-26</time>
+        <time title="Modified: 2022-02-08 20:11:52" itemprop="dateModified" datetime="2022-02-08T20:11:52+00:00">2022-02-08</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -391,7 +501,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-12-26 03:21:02" itemprop="dateModified" datetime="2021-12-26T03:21:02+00:00">2021-12-26</time>
+        <time title="Modified: 2022-02-08 20:11:52" itemprop="dateModified" datetime="2022-02-08T20:11:52+00:00">2022-02-08</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -483,7 +593,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-12-26 03:21:02" itemprop="dateModified" datetime="2021-12-26T03:21:02+00:00">2021-12-26</time>
+        <time title="Modified: 2022-02-08 20:11:52" itemprop="dateModified" datetime="2022-02-08T20:11:52+00:00">2022-02-08</time>
       </span>
 
   
@@ -562,7 +672,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-12-26 03:21:02" itemprop="dateModified" datetime="2021-12-26T03:21:02+00:00">2021-12-26</time>
+        <time title="Modified: 2022-02-08 20:11:52" itemprop="dateModified" datetime="2022-02-08T20:11:52+00:00">2022-02-08</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -656,7 +766,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-12-26 03:21:02" itemprop="dateModified" datetime="2021-12-26T03:21:02+00:00">2021-12-26</time>
+        <time title="Modified: 2022-02-08 20:11:52" itemprop="dateModified" datetime="2022-02-08T20:11:52+00:00">2022-02-08</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -747,7 +857,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-12-26 03:21:02" itemprop="dateModified" datetime="2021-12-26T03:21:02+00:00">2021-12-26</time>
+        <time title="Modified: 2022-02-08 20:11:52" itemprop="dateModified" datetime="2022-02-08T20:11:52+00:00">2022-02-08</time>
       </span>
 
   
@@ -828,7 +938,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-12-26 03:21:02" itemprop="dateModified" datetime="2021-12-26T03:21:02+00:00">2021-12-26</time>
+        <time title="Modified: 2022-02-08 20:11:52" itemprop="dateModified" datetime="2022-02-08T20:11:52+00:00">2022-02-08</time>
       </span>
 
   
@@ -911,7 +1021,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-12-26 03:21:02" itemprop="dateModified" datetime="2021-12-26T03:21:02+00:00">2021-12-26</time>
+        <time title="Modified: 2022-02-08 20:11:52" itemprop="dateModified" datetime="2022-02-08T20:11:52+00:00">2022-02-08</time>
       </span>
 
   
@@ -955,92 +1065,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://marvinxu.top/2020/06/11/yuque/git-style-guide/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Marvin Xu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Marvin's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/06/11/yuque/git-style-guide/" class="post-title-link" itemprop="url">git-style-guide</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2020-06-11 12:06:39" itemprop="dateCreated datePublished" datetime="2020-06-11T12:06:39+00:00">2020-06-11</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-12-26 03:21:02" itemprop="dateModified" datetime="2021-12-26T03:21:02+00:00">2021-12-26</time>
-      </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="branch"><a href="#branch" class="headerlink" title="branch"></a>branch</h2><ul>
-<li>分支名要求简洁、清楚描述分支的作用，使用短横线’-‘分隔</li>
-<li>合并后删除远端分支</li>
-</ul>
-<h2 id="commit"><a href="#commit" class="headerlink" title="commit"></a>commit</h2><ul>
-<li>一个提交对应一个逻辑修改。不要将多个逻辑修改放在一次提交，也不要将一个逻辑修改拆分为多次提交。</li>
-<li>确保每次提交改动的文件与此次修改相关。不要把 merge 过来的代码放到本次提交。</li>
-<li>小步提交、尽早提交。只有提交过的代码才是可恢复的。</li>
-</ul>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/06/11/yuque/git-style-guide/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
@@ -1054,7 +1078,7 @@
 
 <div class="copyright">
   &copy; 
-  <span itemprop="copyrightYear">2021</span>
+  <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
