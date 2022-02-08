@@ -20,18 +20,18 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"marvinxu.top","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.8.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/config.min.js"></script>
-<meta name="description" content="—— 一个特殊字符乱码引发的故事  这个是 Vue3 源码里的 example todomvc 在 Chrome 98 里打开的样子 解决过程 一开始以为是 encoding 编码问题，修改编码后发现不管用（Chrome 需要用插件切换编码） 尝试在 Firefox 打开，正常 查看源码，发现是一个特殊字符 ❯ （U+276f） Google 关键词 “chrome u+276f”发现跟字体有关">
+<meta name="description" content="—— 一个特殊字符乱码引发的故事  这个是 Vue3 源码里的 example todomvc 在 Chrome 98 里打开的样子​">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Chrome 特殊字符乱码">
 <meta property="og:url" content="https://marvinxu.top/2022/02/08/yuque/Chrome%20%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E4%B9%B1%E7%A0%81/index.html">
 <meta property="og:site_name" content="Marvin&#39;s Blog">
-<meta property="og:description" content="—— 一个特殊字符乱码引发的故事  这个是 Vue3 源码里的 example todomvc 在 Chrome 98 里打开的样子 解决过程 一开始以为是 encoding 编码问题，修改编码后发现不管用（Chrome 需要用插件切换编码） 尝试在 Firefox 打开，正常 查看源码，发现是一个特殊字符 ❯ （U+276f） Google 关键词 “chrome u+276f”发现跟字体有关">
+<meta property="og:description" content="—— 一个特殊字符乱码引发的故事  这个是 Vue3 源码里的 example todomvc 在 Chrome 98 里打开的样子​">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/1310147/1644336498088-ad783f74-5c3b-4424-8e6e-3a4765e42ff6.png#clientId=u3de7b7ca-2d66-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=275&id=u618cb174&margin=%5Bobject%20Object%5D&name=image.png&originHeight=453&originWidth=900&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=40945&status=done&style=none&taskId=uee97e595-acda-4dc0-8512-98e90a9288b&title=&width=545.4545139281236">
 <meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/1310147/1644338407221-901c57a2-adf2-4923-93c7-da2d035675f5.png#clientId=u60648569-a7b0-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=481&id=ue0a56fd0&margin=%5Bobject%20Object%5D&name=image.png&originHeight=794&originWidth=942&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=47064&status=done&style=none&taskId=ubd27d473-6253-4334-960d-dfaf605d15f&title=&width=570.909057911436">
 <meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/1310147/1644338645806-22e37caf-6bfc-405a-9ab1-bad31c442fec.png#clientId=u60648569-a7b0-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=399&id=u9af116e4&margin=%5Bobject%20Object%5D&name=image.png&originHeight=659&originWidth=1314&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=87057&status=done&style=none&taskId=ue4193cf4-ebff-4eb8-a64f-13c86bfbff1&title=&width=796.3635903350604">
 <meta property="article:published_time" content="2022-02-08T16:14:19.000Z">
-<meta property="article:modified_time" content="2022-02-08T20:11:52.218Z">
+<meta property="article:modified_time" content="2022-02-08T20:24:18.549Z">
 <meta property="article:author" content="Marvin Xu">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2022/png/1310147/1644336498088-ad783f74-5c3b-4424-8e6e-3a4765e42ff6.png#clientId=u3de7b7ca-2d66-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=275&id=u618cb174&margin=%5Bobject%20Object%5D&name=image.png&originHeight=453&originWidth=900&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=40945&status=done&style=none&taskId=uee97e595-acda-4dc0-8512-98e90a9288b&title=&width=545.4545139281236">
@@ -210,7 +210,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-02-08 16:14:19 / Modified: 20:11:52" itemprop="dateCreated datePublished" datetime="2022-02-08T16:14:19+00:00">2022-02-08</time>
+      <time title="Created: 2022-02-08 16:14:19 / Modified: 20:24:18" itemprop="dateCreated datePublished" datetime="2022-02-08T16:14:19+00:00">2022-02-08</time>
     </span>
 
   
@@ -226,7 +226,9 @@
         <blockquote>
 <p>—— 一个特殊字符乱码引发的故事</p>
 </blockquote>
-<p><img data-src="https://cdn.nlark.com/yuque/0/2022/png/1310147/1644336498088-ad783f74-5c3b-4424-8e6e-3a4765e42ff6.png#clientId=u3de7b7ca-2d66-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=275&id=u618cb174&margin=%5Bobject%20Object%5D&name=image.png&originHeight=453&originWidth=900&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=40945&status=done&style=none&taskId=uee97e595-acda-4dc0-8512-98e90a9288b&title=&width=545.4545139281236" alt="image.png"><br>这个是 Vue3 源码里的 example todomvc 在 Chrome 98 里打开的样子</p>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2022/png/1310147/1644336498088-ad783f74-5c3b-4424-8e6e-3a4765e42ff6.png#clientId=u3de7b7ca-2d66-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=275&id=u618cb174&margin=%5Bobject%20Object%5D&name=image.png&originHeight=453&originWidth=900&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=40945&status=done&style=none&taskId=uee97e595-acda-4dc0-8512-98e90a9288b&title=&width=545.4545139281236" alt="image.png"><br>这个是 Vue3 源码里的 example todomvc 在 Chrome 98 里打开的样子<br>​</p>
+<span id="more"></span>
+
 <h3 id="解决过程"><a href="#解决过程" class="headerlink" title="解决过程"></a>解决过程</h3><ul>
 <li>一开始以为是 encoding 编码问题，修改编码后发现不管用（Chrome 需要用<a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/%E7%BD%91%E9%A1%B5%E7%BC%96%E7%A0%81%E4%BF%AE%E6%94%B9%EF%BC%88charset%EF%BC%89/mnnlnpbaaojjmihapdoffoicnnaokpmj">插件</a>切换编码）</li>
 <li>尝试在 Firefox 打开，正常</li>
