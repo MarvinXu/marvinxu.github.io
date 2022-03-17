@@ -20,15 +20,15 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"marvinxu.top","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.8.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/config.min.js"></script>
-<meta name="description" content="语法 Object.defineProperty(obj, prop, descriptor)  返回值：传入的 obj 描述通过赋值创建的属性默认是可枚举 (for…in \ Object.keys)，可以修改值，也可以被删除的。而 Object.defineProperty 可以修改这些特性。默认通过 Object.defineProperty 添加的属性是不可修改且不可枚举的。​">
+<meta name="description" content="语法 Object.defineProperty(obj, prop, descriptor)  返回值：传入的 obj 描述通过赋值创建的属性默认是可枚举 (for…in \ Object.keys)，可以修改值，也可以被删除的。而 Object.defineProperty 可以修改这些特性。默认通过 Object.defineProperty 添加的属性是不可修改且不可枚举的。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Dive into Object.defineProperty">
 <meta property="og:url" content="https://marvinxu.top/2020/10/12/yuque/Dive%20into%20Object.defineProperty/index.html">
 <meta property="og:site_name" content="Marvin&#39;s Blog">
-<meta property="og:description" content="语法 Object.defineProperty(obj, prop, descriptor)  返回值：传入的 obj 描述通过赋值创建的属性默认是可枚举 (for…in \ Object.keys)，可以修改值，也可以被删除的。而 Object.defineProperty 可以修改这些特性。默认通过 Object.defineProperty 添加的属性是不可修改且不可枚举的。​">
+<meta property="og:description" content="语法 Object.defineProperty(obj, prop, descriptor)  返回值：传入的 obj 描述通过赋值创建的属性默认是可枚举 (for…in \ Object.keys)，可以修改值，也可以被删除的。而 Object.defineProperty 可以修改这些特性。默认通过 Object.defineProperty 添加的属性是不可修改且不可枚举的。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-10-12T07:45:21.000Z">
-<meta property="article:modified_time" content="2022-02-08T20:24:18.809Z">
+<meta property="article:modified_time" content="2022-03-17T16:02:52.075Z">
 <meta property="article:author" content="Marvin Xu">
 <meta property="article:tag" content="JS">
 <meta name="twitter:card" content="summary">
@@ -124,7 +124,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">14</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -213,7 +213,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-02-08 20:24:18" itemprop="dateModified" datetime="2022-02-08T20:24:18+00:00">2022-02-08</time>
+        <time title="Modified: 2022-03-17 16:02:52" itemprop="dateModified" datetime="2022-03-17T16:02:52+00:00">2022-03-17</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -239,7 +239,7 @@
 <p>Object.defineProperty(obj, prop, descriptor)</p>
 </blockquote>
 <p>返回值：传入的 obj</p>
-<h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>通过赋值创建的属性默认是可枚举 (for…in \ Object.keys)，可以修改值，也可以被删除的。而 Object.defineProperty 可以修改这些特性。<br>默认通过 Object.defineProperty 添加的属性是不可修改且不可枚举的。<br>​</p>
+<h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>通过赋值创建的属性默认是可枚举 (for…in \ Object.keys)，可以修改值，也可以被删除的。而 Object.defineProperty 可以修改这些特性。<br>默认通过 Object.defineProperty 添加的属性是不可修改且不可枚举的。</p>
 <span id="more"></span>
 
 <h3 id="两种形式的描述符"><a href="#两种形式的描述符" class="headerlink" title="两种形式的描述符"></a>两种形式的描述符</h3><ul>

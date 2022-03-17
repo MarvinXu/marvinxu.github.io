@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.0.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"marvinxu.top","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.8.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/config.min.js"></script>
+<meta name="description" content="群里有人提了这个问题，问他的代码怎么不生效：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="禁用 el-radio-group 的方向键切换">
+<meta property="og:url" content="https://marvinxu.top/2022/03/17/yuque/%E7%A6%81%E7%94%A8%20el-radio-group%20%E7%9A%84%E6%96%B9%E5%90%91%E9%94%AE%E5%88%87%E6%8D%A2/index.html">
+<meta property="og:site_name" content="Marvin&#39;s Blog">
+<meta property="og:description" content="群里有人提了这个问题，问他的代码怎么不生效：">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/1310147/1647521639899-238fa59a-f403-4555-bbb6-3cb1a47d499a.png#clientId=u85db5277-f5d9-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=84&id=u1eaa0ace&margin=%5Bobject%20Object%5D&name=e90aab3ce7e3149baea27c178b8d6b1.png&originHeight=138&originWidth=516&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=10040&status=done&style=none&taskId=u088c89f5-26a8-4eee-b5bb-1c95e761fdf&title=&width=312.7272546521242">
+<meta property="article:published_time" content="2022-03-17T12:51:25.000Z">
+<meta property="article:modified_time" content="2022-03-17T16:02:51.718Z">
+<meta property="article:author" content="Marvin Xu">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2022/png/1310147/1647521639899-238fa59a-f403-4555-bbb6-3cb1a47d499a.png#clientId=u85db5277-f5d9-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=84&id=u1eaa0ace&margin=%5Bobject%20Object%5D&name=e90aab3ce7e3149baea27c178b8d6b1.png&originHeight=138&originWidth=516&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=10040&status=done&style=none&taskId=u088c89f5-26a8-4eee-b5bb-1c95e761fdf&title=&width=312.7272546521242">
+
+
+<link rel="canonical" href="https://marvinxu.top/2022/03/17/yuque/%E7%A6%81%E7%94%A8%20el-radio-group%20%E7%9A%84%E6%96%B9%E5%90%91%E9%94%AE%E5%88%87%E6%8D%A2/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://marvinxu.top/2022/03/17/yuque/%E7%A6%81%E7%94%A8%20el-radio-group%20%E7%9A%84%E6%96%B9%E5%90%91%E9%94%AE%E5%88%87%E6%8D%A2/","path":"2022/03/17/yuque/禁用 el-radio-group 的方向键切换/","title":"禁用 el-radio-group 的方向键切换"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>禁用 el-radio-group 的方向键切换 | Marvin's Blog</title>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/third-party/analytics/baidu-analytics.min.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?42816faac3897e94b2a0d933f46eb3a2"></script>
+
+
+<meta name="referrer" content="no-referrer" />
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Marvin's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E8%BF%87%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text">解决过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.</span> <span class="nav-text">事件模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#addEventListener"><span class="nav-number">2.1.</span> <span class="nav-text">addEventListener</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#stopPropagation"><span class="nav-number">2.2.</span> <span class="nav-text">stopPropagation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#stopImmediatePropagation"><span class="nav-number">2.3.</span> <span class="nav-text">stopImmediatePropagation</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%A6%E4%B9%A0%E5%88%A9%E5%99%A8%EF%BC%9A%E5%8F%AF%E8%A7%86%E5%8C%96%E5%B7%A5%E5%85%B7"><span class="nav-number">3.</span> <span class="nav-text">学习利器：可视化工具</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Marvin Xu</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/MarvinXu" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;MarvinXu" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:272077995@qq.com" title="E-Mail → mailto:272077995@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://marvinxu.top/2022/03/17/yuque/%E7%A6%81%E7%94%A8%20el-radio-group%20%E7%9A%84%E6%96%B9%E5%90%91%E9%94%AE%E5%88%87%E6%8D%A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Marvin Xu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Marvin's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          禁用 el-radio-group 的方向键切换
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-03-17 12:51:25 / Modified: 16:02:51" itemprop="dateCreated datePublished" datetime="2022-03-17T12:51:25+00:00">2022-03-17</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>群里有人提了这个问题，问他的代码怎么不生效：<br><img data-src="https://cdn.nlark.com/yuque/0/2022/png/1310147/1647521639899-238fa59a-f403-4555-bbb6-3cb1a47d499a.png#clientId=u85db5277-f5d9-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=84&id=u1eaa0ace&margin=%5Bobject%20Object%5D&name=e90aab3ce7e3149baea27c178b8d6b1.png&originHeight=138&originWidth=516&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=10040&status=done&style=none&taskId=u088c89f5-26a8-4eee-b5bb-1c95e761fdf&title=&width=312.7272546521242" alt="e90aab3ce7e3149baea27c178b8d6b1.png"></p>
+<span id="more"></span>
+
+<h3 id="解决过程"><a href="#解决过程" class="headerlink" title="解决过程"></a>解决过程</h3><p>我的第一反应是，这应该是浏览器的默认行为，于是写了个 <a target="_blank" rel="noopener" href="https://stackblitz.com/edit/web-platform-dsxgrf?file=index.html">demo</a>，关键点：</p>
+<ul>
+<li>**keydown **而不是 keyup</li>
+<li>preventDefault 来阻止浏览器默认行为</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">group.addEventListener(</span><br><span class="line">  <span class="string">&quot;keydown&quot;</span>,</span><br><span class="line">  <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;bubble in group&quot;</span>);</span><br><span class="line">    <span class="keyword">if</span> (</span><br><span class="line">      [<span class="string">&quot;ArrowUp&quot;</span>, <span class="string">&quot;ArrowDown&quot;</span>, <span class="string">&quot;ArrowLeft&quot;</span>, <span class="string">&quot;ArrowRight&quot;</span>].indexOf(e.code) &gt; -<span class="number">1</span></span><br><span class="line">    ) &#123;</span><br><span class="line">      e.preventDefault();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="literal">false</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>发过去之后，他改成了 keydown 还是不行，于是我在 ElementUI 中<a target="_blank" rel="noopener" href="https://element-plus.run/#eyJBcHAudnVlIjoiPHRlbXBsYXRlPlxuICA8ZWwtcmFkaW8tZ3JvdXAgdi1tb2RlbD1cInJhZGlvXCIgQGtleWRvd24ucHJldmVudD5cbiAgICA8ZWwtcmFkaW8gOmxhYmVsPVwiM1wiPk9wdGlvbiBBPC9lbC1yYWRpbz5cbiAgICA8ZWwtcmFkaW8gOmxhYmVsPVwiNlwiPk9wdGlvbiBCPC9lbC1yYWRpbz5cbiAgICA8ZWwtcmFkaW8gOmxhYmVsPVwiOVwiPk9wdGlvbiBDPC9lbC1yYWRpbz5cbiAgPC9lbC1yYWRpby1ncm91cD5cbiAgXG4gIDxkaXYgQGtleWRvd24ucHJldmVudD5cbiAgXHQ8bGFiZWw+PGlucHV0IHR5cGU9XCJyYWRpb1wiIG5hbWU9XCJmb29cIi8+YTwvbGFiZWw+XG4gIFx0PGxhYmVsPjxpbnB1dCB0eXBlPVwicmFkaW9cIiBuYW1lPVwiZm9vXCIvPmI8L2xhYmVsPlxuICA8L2Rpdj5cbjwvdGVtcGxhdGU+XG5cbjxzY3JpcHQgbGFuZz1cInRzXCIgc2V0dXA+XG5pbXBvcnQgeyByZWYgfSBmcm9tICd2dWUnXG5cbmNvbnN0IHJhZGlvID0gcmVmKDMpXG48L3NjcmlwdD5cbiIsImltcG9ydC1tYXAuanNvbiI6IntcImltcG9ydHNcIjp7fX0ifQ==">试验了一下</a>，它的组件上确实不行。<br>看了源码发现，ElementUI 在 el-radio-group 上做了<a target="_blank" rel="noopener" href="https://github.com/element-plus/element-plus/blob/dev/packages/components/radio/src/radio-group.vue"> keydown 事件处理</a>，可能是为了保证浏览器的一致性。<br>怎样绕过它的事件处理函数呢？</p>
+<p><a target="_blank" rel="noopener" href="https://element-plus.run/#eyJBcHAudnVlIjoiPHRlbXBsYXRlPlxuICA8ZWwtcmFkaW8tZ3JvdXAgdi1tb2RlbD1cInJhZGlvXCIgQGtleWRvd24uc3RvcC5jYXB0dXJlLnByZXZlbnQ+XG4gICAgPGVsLXJhZGlvIDpsYWJlbD1cIjNcIj5PcHRpb24gQTwvZWwtcmFkaW8+XG4gICAgPGVsLXJhZGlvIDpsYWJlbD1cIjZcIj5PcHRpb24gQjwvZWwtcmFkaW8+XG4gICAgPGVsLXJhZGlvIDpsYWJlbD1cIjlcIj5PcHRpb24gQzwvZWwtcmFkaW8+XG4gIDwvZWwtcmFkaW8tZ3JvdXA+XG48L3RlbXBsYXRlPlxuXG48c2NyaXB0IGxhbmc9XCJ0c1wiIHNldHVwPlxuaW1wb3J0IHsgcmVmIH0gZnJvbSAndnVlJ1xuXG5jb25zdCByYWRpbyA9IHJlZigzKVxuPC9zY3JpcHQ+XG4iLCJpbXBvcnQtbWFwLmpzb24iOiJ7XCJpbXBvcnRzXCI6e319In0=">ElementUI demo</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;el-radio-group v-model=&quot;radio&quot; @keydown.capture.stop.prevent&gt;</span><br><span class="line">    &lt;el-radio :label=&quot;3&quot;&gt;Option A&lt;/el-radio&gt;</span><br><span class="line">    &lt;el-radio :label=&quot;6&quot;&gt;Option B&lt;/el-radio&gt;</span><br><span class="line">    &lt;el-radio :label=&quot;9&quot;&gt;Option C&lt;/el-radio&gt;</span><br><span class="line">  &lt;/el-radio-group&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+
+<p>关键点：使用 capture 让自己的 handler 先于 Element 的 handler 执行，stop 让这个事件停止传播，那么他设在冒泡阶段的 handler 就不会执行了，再加 prevent 是阻止浏览器默认的键盘移动行为</p>
+<h3 id="事件模型"><a href="#事件模型" class="headerlink" title="事件模型"></a>事件模型</h3><p><a target="_blank" rel="noopener" href="https://javascript.info/bubbling-and-capturing">https://javascript.info/bubbling-and-capturing</a><br>复习一下事件模型，事件的传播分为三个阶段：</p>
+<ul>
+<li>捕获阶段：从根元素到目标元素（事件实际触发的元素）的过程</li>
+<li>目标阶段：目标元素</li>
+<li>冒泡阶段：从目标元素到根元素</li>
+</ul>
+<h4 id="addEventListener"><a href="#addEventListener" class="headerlink" title="addEventListener"></a>addEventListener</h4><p><code>elm.addEventListener(&#39;click&#39;, (e) =&gt; &#123;&#125;, true)</code>表示“当点击事件在捕获阶段传播到 elm 元素上时执行该函数”</p>
+<h4 id="stopPropagation"><a href="#stopPropagation" class="headerlink" title="stopPropagation"></a>stopPropagation</h4><p>阻止当前事件在上述三个阶段中的传播。<br>若在捕获阶段途中调用<code>stopPropagation</code>，那么该事件在后续捕获阶段、目标阶段以及冒泡阶段的监听函数都不会执行。<br><a target="_blank" rel="noopener" href="https://stackblitz.com/edit/web-platform-ootxw3?file=script.js">demo</a></p>
+<h4 id="stopImmediatePropagation"><a href="#stopImmediatePropagation" class="headerlink" title="stopImmediatePropagation"></a>stopImmediatePropagation</h4><p>区别：</p>
+<ul>
+<li>stopPropagation：当前阶段、当前目标上的所有监听器都处理完之后才会停止 (stop once it has finished processing all the <strong>event listeners</strong> on the <strong>current target</strong> in the **current phase **)</li>
+<li>stopImmediatePropagation: 同一个目标、同一个阶段上的多个监听器，会按照它们添加的顺序依次执行。调用后后添加的监听器不会执行。(stop right away. no other <strong>event listener</strong> will be called)</li>
+</ul>
+<h3 id="学习利器：可视化工具"><a href="#学习利器：可视化工具" class="headerlink" title="学习利器：可视化工具"></a>学习利器：可视化工具</h3><p><a target="_blank" rel="noopener" href="https://domevents.dev/">https://domevents.dev/</a><br>例子：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://domevents.dev/?state=N4IgNglgzgLgpgOzgJyiAXAbVJWiUCSAJhiCADQgID2RcxpAxgBYRgmVwBmXcjMadKEYBDBIzhhSNALSjxkiiFjUADqRXqAvpTUwI1BINCrmIqHCYjVMAK7JLlVeagQAbpfRVDM51FceSoYS0tQwMsGWWjo40PBIyAxeSjR0SSDODggwSty8-MYg8hJSXrLFipSaoTLVOiB6BkYYJmYWVjb2jhku7p7eCL69gboKoeGRINHksXgJ6Sm09CReXBCoMAAEAObIYkQsbBwgeXwCLUViJTUVUlUwajV1ujZNhabm-aKdDkp+Af0aIN-n0gmMymEImNprN4oQVmRKKllqQ1hsdnsEAdWOxcjwzoVbjcrpVlA91BDauSpi99IZ3m1+gAjWxMplgbogwIQ4HDbqTCETaExcBxfCJBGLNIIw64zj4goXImUon3R6U54NV70i4fdpeFlsjl-PmhXn+UGjEKCqEhGGiubw0hSlFeWXHU6KoSXBSlbxyEl3Mnq-2axo6716r7WOy-JymnlDC0jBrg7xCu0i3BwiXOpFLdJo2AY-buvH5c7e5X+1XBimh6n1cPNSOMjqxzkJgZJgFg63p21RLQAXU4HmyFzg45gABURMhtnAYIX1sXdqWccdbiJ2Z4YMhbHBKIbd4J94f6h5UE1SABGKZAA">捕获阶段中断</a></li>
+<li><a target="_blank" rel="noopener" href="https://domevents.dev/?state=N4IgNglgzgLgpgOzgJyiAXAbVJWiUCSAJhiCADQgID2RcxpAxgBYRgmVwBmXcjMadKEYBDBIzhhSNALSjxkiiFjUADtOoyV6gL6U1MCNQSDQq5iKhwmI1TACuya5VWWoEAG7X0VYzNdQ7l5KxhIaMDKh1jp6ONDwSMgMPko0dMkgrk4IMErcvPymIPISUj6yJYqU2hpaMGogeiAGRiYYZhZWNnaOzplunt6+CP4DwfoK4ZGTMeRxeIkZqbT0JD5cEKgwAAQA5shiRCxsHCD5fALtxWKltZVS1fXq5Zo1TS3GReaWQ6I9TkoAkEhjQRkDBiFJi8IlFGrFwPF8Ek1mRKGlVqQNls9gcEEdWOw8jwLkV7ncblVlE9am99HZWl9OkMAEb2ZnMsB9cHBF5gsZ9WHQ6ZhWbzBKEFHLdIo46EzjEwpXMkvOQUh5Uhoq2nNemfK7fLo+VnszmA-kaPmBCETMJC2GihELCWkKUYnyy07nRVCa4KMq+VV+pQ1HzaGQQAC2EbgRAgIngjTphj1PoNLLZHK55t5oyt42aUN8MJm8Nw4uRLrRKwyHqJBUuPuVAbJj01Ae1HzaqaZpGNmbNeZBfm5AsLNGLIp0AF1OF4clc4HOYAAVETIXZwGAZLGwHGHWuUe4ifvoGDIexwSh9zmCM8XppeVCtUgARkaQA">多个监听器 stopImmediatePropagation</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/02/08/yuque/Chrome%20%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E4%B9%B1%E7%A0%81/" rel="prev" title="Chrome 特殊字符乱码">
+                  <i class="fa fa-chevron-left"></i> Chrome 特殊字符乱码
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments utterances-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Marvin Xu</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/pjax.min.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"MarvinXu/blog-comments","issue_term":"title","theme":"github-light"}</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/third-party/comments/utterances.min.js"></script>
+
+</body>
+</html>
