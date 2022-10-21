@@ -20,31 +20,29 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"marvinxu.top","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.13.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.13.1/source/js/config.min.js"></script>
 
-    <meta name="description" content="最近要下载一个国外种子，迅雷慢的要死，搜了一下国外种子离线下载https:&#x2F;&#x2F;www.iplaysoft.com&#x2F;bt-cloud-download.html 经过对比发现这么一款神器，Seedr  离线下载超快，2 个 G 种子大概 1 分钟 免费 2G 空间，并可赚取免费空间 国内下载速度快，平均 5MB&#x2F;S">
+    <meta name="description" content="tags:[python]  6. Modules — Python 3.10.7 documentation 查找规则 builtin module (sys.builtin_module_names) sys.path 执行脚本所在目录 环境变量 PYTHONPATH 包安装目录（site-packages）     how to import local moduleHow to impor">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Seedr - 国外 BT 种子离线下载神器">
-<meta property="og:url" content="https://marvinxu.top/2021/02/07/yuque/Seedr%20-%20%E5%9B%BD%E5%A4%96%20BT%20%E7%A7%8D%E5%AD%90%E7%A6%BB%E7%BA%BF%E4%B8%8B%E8%BD%BD%E7%A5%9E%E5%99%A8/index.html">
+<meta property="og:title" content="Python local module">
+<meta property="og:url" content="https://marvinxu.top/2022/09/09/yuque/Python%20local%20module/index.html">
 <meta property="og:site_name" content="Marvin&#39;s Blog">
-<meta property="og:description" content="最近要下载一个国外种子，迅雷慢的要死，搜了一下国外种子离线下载https:&#x2F;&#x2F;www.iplaysoft.com&#x2F;bt-cloud-download.html 经过对比发现这么一款神器，Seedr  离线下载超快，2 个 G 种子大概 1 分钟 免费 2G 空间，并可赚取免费空间 国内下载速度快，平均 5MB&#x2F;S">
+<meta property="og:description" content="tags:[python]  6. Modules — Python 3.10.7 documentation 查找规则 builtin module (sys.builtin_module_names) sys.path 执行脚本所在目录 环境变量 PYTHONPATH 包安装目录（site-packages）     how to import local moduleHow to impor">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/1310147/1612693132689-2e35511a-635f-4505-a41e-225f1021b395.png#crop=0&crop=0&crop=1&crop=1&height=903&id=afqjD&margin=%5Bobject%20Object%5D&name=2021-02-07_175514.png&originHeight=903&originWidth=1920&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=122136&status=done&style=none&title=&width=1920">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/1310147/1612693256005-54b201f7-e043-4dd4-8f79-706e5ad26d84.png#crop=0&crop=0&crop=1&crop=1&height=903&id=RJJrf&margin=%5Bobject%20Object%5D&name=2021-02-07_175845.png&originHeight=903&originWidth=1920&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=48045&status=done&style=none&title=&width=1920">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/1310147/1612693302337-73312314-061b-482e-b823-a6cacb697203.png#crop=0&crop=0&crop=1&crop=1&height=542&id=rlmbM&margin=%5Bobject%20Object%5D&name=2021-02-07_175816.png&originHeight=542&originWidth=680&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=76458&status=done&style=none&title=&width=680">
-<meta property="article:published_time" content="2021-02-07T09:56:20.000Z">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/1310147/1662713878098-df46dacf-d662-4542-9a23-da85eab21f91.png#clientId=u50eeba5a-5f59-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=104&id=ud2e9324b&margin=%5Bobject%20Object%5D&name=image.png&originHeight=143&originWidth=704&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=19077&status=done&style=none&taskId=u1789355b-b36f-4d54-87f1-1d3e88d779f&title=&width=512">
+<meta property="article:published_time" content="2022-09-09T10:42:09.000Z">
 <meta property="article:modified_time" content="2022-10-21T10:00:44.080Z">
 <meta property="article:author" content="Marvin Xu">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2021/png/1310147/1612693132689-2e35511a-635f-4505-a41e-225f1021b395.png#crop=0&crop=0&crop=1&crop=1&height=903&id=afqjD&margin=%5Bobject%20Object%5D&name=2021-02-07_175514.png&originHeight=903&originWidth=1920&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=122136&status=done&style=none&title=&width=1920">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2022/png/1310147/1662713878098-df46dacf-d662-4542-9a23-da85eab21f91.png#clientId=u50eeba5a-5f59-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=104&id=ud2e9324b&margin=%5Bobject%20Object%5D&name=image.png&originHeight=143&originWidth=704&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=19077&status=done&style=none&taskId=u1789355b-b36f-4d54-87f1-1d3e88d779f&title=&width=512">
 
 
-<link rel="canonical" href="https://marvinxu.top/2021/02/07/yuque/Seedr%20-%20%E5%9B%BD%E5%A4%96%20BT%20%E7%A7%8D%E5%AD%90%E7%A6%BB%E7%BA%BF%E4%B8%8B%E8%BD%BD%E7%A5%9E%E5%99%A8/">
+<link rel="canonical" href="https://marvinxu.top/2022/09/09/yuque/Python%20local%20module/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://marvinxu.top/2021/02/07/yuque/Seedr%20-%20%E5%9B%BD%E5%A4%96%20BT%20%E7%A7%8D%E5%AD%90%E7%A6%BB%E7%BA%BF%E4%B8%8B%E8%BD%BD%E7%A5%9E%E5%99%A8/","path":"2021/02/07/yuque/Seedr - 国外 BT 种子离线下载神器/","title":"Seedr - 国外 BT 种子离线下载神器"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://marvinxu.top/2022/09/09/yuque/Python%20local%20module/","path":"2022/09/09/yuque/Python local module/","title":"Python local module"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Seedr - 国外 BT 种子离线下载神器 | Marvin's Blog</title>
+<title>Python local module | Marvin's Blog</title>
   
 
   <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.13.1/source/js/third-party/analytics/baidu-analytics.min.js"></script>
@@ -103,7 +101,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -116,6 +114,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE%E8%A7%84%E5%88%99"><span class="nav-number">1.</span> <span class="nav-text">查找规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#how-to-import-local-module"><span class="nav-number">2.</span> <span class="nav-text">how to import local module</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pylance-error-fix"><span class="nav-number">3.</span> <span class="nav-text">pylance error fix</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -186,7 +185,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://marvinxu.top/2021/02/07/yuque/Seedr%20-%20%E5%9B%BD%E5%A4%96%20BT%20%E7%A7%8D%E5%AD%90%E7%A6%BB%E7%BA%BF%E4%B8%8B%E8%BD%BD%E7%A5%9E%E5%99%A8/">
+    <link itemprop="mainEntityOfPage" href="https://marvinxu.top/2022/09/09/yuque/Python%20local%20module/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -199,12 +198,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Seedr - 国外 BT 种子离线下载神器 | Marvin's Blog">
+      <meta itemprop="name" content="Python local module | Marvin's Blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Seedr - 国外 BT 种子离线下载神器
+          Python local module
         </h1>
 
         <div class="post-meta-container">
@@ -215,7 +214,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2021-02-07 09:56:20" itemprop="dateCreated datePublished" datetime="2021-02-07T09:56:20+00:00">2021-02-07</time>
+      <time title="Created: 2022-09-09 10:42:09" itemprop="dateCreated datePublished" datetime="2022-09-09T10:42:09+00:00">2022-09-09</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -223,15 +222,6 @@
       </span>
       <span class="post-meta-item-text">Edited on</span>
       <time title="Modified: 2022-10-21 10:00:44" itemprop="dateModified" datetime="2022-10-21T10:00:44+00:00">2022-10-21</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%88%E7%8E%87/" itemprop="url" rel="index"><span itemprop="name">效率</span></a>
-        </span>
     </span>
 
   
@@ -244,27 +234,24 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>最近要下载一个国外种子，迅雷慢的要死，搜了一下国外种子离线下载<br><a target="_blank" rel="noopener" href="https://www.iplaysoft.com/bt-cloud-download.html">https://www.iplaysoft.com/bt-cloud-download.html</a></p>
-<p>经过对比发现这么一款神器，<a target="_blank" rel="noopener" href="https://www.seedr.cc/?r=3433208">Seedr</a></p>
-<ol>
-<li>离线下载超快，2 个 G 种子大概 1 分钟</li>
-<li>免费 2G 空间，并可赚取免费空间</li>
-<li>国内下载速度快，平均 5MB/S</li>
+        <p>tags:[python]</p>
+<hr>
+<p><a target="_blank" rel="noopener" href="https://docs.python.org/3/tutorial/modules.html#the-module-search-path">6. Modules — Python 3.10.7 documentation</a></p>
+<h2 id="查找规则"><a href="#查找规则" class="headerlink" title="查找规则"></a>查找规则</h2><ol>
+<li>builtin module (sys.builtin_module_names)</li>
+<li>sys.path<ol>
+<li>执行脚本所在目录</li>
+<li>环境变量 PYTHONPATH</li>
+<li>包安装目录（site-packages）</li>
 </ol>
-<span id="more"></span>
+</li>
+</ol>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2022/png/1310147/1662713878098-df46dacf-d662-4542-9a23-da85eab21f91.png#clientId=u50eeba5a-5f59-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=104&id=ud2e9324b&margin=%5Bobject%20Object%5D&name=image.png&originHeight=143&originWidth=704&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=19077&status=done&style=none&taskId=u1789355b-b36f-4d54-87f1-1d3e88d779f&title=&width=512" alt="image.png"></p>
+<h2 id="how-to-import-local-module"><a href="#how-to-import-local-module" class="headerlink" title="how to import local module"></a>how to import local module</h2><p><a target="_blank" rel="noopener" href="https://fortierq.github.io/python-import/">How to import local modules with Python - Quentin Fortier</a></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">project</span><br><span class="line">├── e.py</span><br><span class="line">└── src</span><br><span class="line">    ├── a</span><br><span class="line">    │   └── b.py</span><br><span class="line">    └── c</span><br><span class="line">        └── d.py</span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<p>Seedr.cc can be a next-generation product or service going to deliver the bit-torrent protocol to another level as it is extremely fast and efficient as compared to the traditional torrent clients that uses peer to peer protocol to fetch torrents online.</p>
-<p>Seedr.cc is an online torrent client that works just fine in almost every network across the globe. They also torrent streaming feature and there are options for non premium and premium users seperately. Seedr.cc is a great alternative and a much better user-friendly website than filestream.me and zbigz. You can use Internet Download Manager (IDM) to download cached torrents from seedr. The best part is that you can delete the torrents from the server whenever finished downloading, and get your space back for more torrents.</p>
-<ul>
-<li>Download torrents even if torrent traffic is blocked in your network, thus bypass torrent filter.</li>
-<li>No need to keep your machine powered on , just add your torrent file/magnet link to leech, and it will automatically leech for you.</li>
-<li>The torrent health doesn’t matter, thus you can even download torrents with lesser seeds.</li>
-<li>You can download torrents via IDM with Resume support!</li>
-</ul>
-</blockquote>
-<p>与著名离线下载网站 Offcloud 的对比：<img data-src="https://cdn.nlark.com/yuque/0/2021/png/1310147/1612693132689-2e35511a-635f-4505-a41e-225f1021b395.png#crop=0&crop=0&crop=1&crop=1&height=903&id=afqjD&margin=%5Bobject%20Object%5D&name=2021-02-07_175514.png&originHeight=903&originWidth=1920&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=122136&status=done&style=none&title=&width=1920" alt="2021-02-07_175514.png"><br>离线下载慢，将近 2 小时，而 Seedr 秒完成<br><img data-src="https://cdn.nlark.com/yuque/0/2021/png/1310147/1612693256005-54b201f7-e043-4dd4-8f79-706e5ad26d84.png#crop=0&crop=0&crop=1&crop=1&height=903&id=RJJrf&margin=%5Bobject%20Object%5D&name=2021-02-07_175845.png&originHeight=903&originWidth=1920&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=48045&status=done&style=none&title=&width=1920" alt="2021-02-07_175845.png"></p>
-<p>IDM 下载速度实测：<br><img data-src="https://cdn.nlark.com/yuque/0/2021/png/1310147/1612693302337-73312314-061b-482e-b823-a6cacb697203.png#crop=0&crop=0&crop=1&crop=1&height=542&id=rlmbM&margin=%5Bobject%20Object%5D&name=2021-02-07_175816.png&originHeight=542&originWidth=680&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=76458&status=done&style=none&title=&width=680" alt="2021-02-07_175816.png"><br>放下我的推广链接，注册可以获得额外 500MB 容量：<a target="_blank" rel="noopener" href="https://www.seedr.cc/?r=3433208">https://www.seedr.cc/?r=3433208</a></p>
+<h2 id="pylance-error-fix"><a href="#pylance-error-fix" class="headerlink" title="pylance error fix"></a>pylance error fix</h2><p>ipynb 文件错误提示：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;python.analysis.extraPaths&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;../&quot;</span><span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -278,14 +265,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2020/10/12/yuque/Dive%20into%20Object.defineProperty/" rel="prev" title="Dive into Object.defineProperty">
-                  <i class="fa fa-chevron-left"></i> Dive into Object.defineProperty
+                <a href="/2022/03/17/yuque/%E7%A6%81%E7%94%A8%20el-radio-group%20%E7%9A%84%E6%96%B9%E5%90%91%E9%94%AE%E5%88%87%E6%8D%A2/" rel="prev" title="禁用 el-radio-group 的方向键切换">
+                  <i class="fa fa-chevron-left"></i> 禁用 el-radio-group 的方向键切换
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/04/07/yuque/%E5%9C%A8WIN%2010%E6%89%93%E5%BC%80%E7%BD%91%E9%93%B6/" rel="next" title="在WIN 10打开网银">
-                  在WIN 10打开网银 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>

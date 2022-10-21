@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 6.0.0">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
@@ -16,11 +15,12 @@
 
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"marvinxu.top","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.8.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/config.min.js"></script>
-<meta name="description" content="思路  接上篇 hexo+travisCI 自动部署 github pages，后面的部分操作是基于上篇的  yuque-hexo 拉取文章https:&#x2F;&#x2F;github.com&#x2F;x-cold&#x2F;yuque-hexo 安装 yuque-hexo1npm i --save-dev yuque-hexo">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"marvinxu.top","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.13.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.13.1/source/js/config.min.js"></script>
+
+    <meta name="description" content="思路  接上篇 hexo+travisCI 自动部署 github pages，后面的部分操作是基于上篇的  yuque-hexo 拉取文章https:&#x2F;&#x2F;github.com&#x2F;x-cold&#x2F;yuque-hexo 安装 yuque-hexo1npm i --save-dev yuque-hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="语雀文章自动同步到个人博客">
 <meta property="og:url" content="https://marvinxu.top/2020/06/12/yuque/%E8%AF%AD%E9%9B%80%E6%96%87%E7%AB%A0%E8%87%AA%E5%8A%A8%E5%90%8C%E6%AD%A5%E5%88%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/index.html">
@@ -33,7 +33,7 @@
 <meta property="og:image" content="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592034434408-4701e454-0c25-4338-875b-72312a06a5d3.png#crop=0&crop=0&crop=1&crop=1&height=242&id=SMDt6&margin=%5Bobject%20Object%5D&name=image.png&originHeight=484&originWidth=1021&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=56122&status=done&style=none&title=&width=510.5">
 <meta property="og:image" content="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592035695558-9f8f4e92-ff6c-4d5b-887b-6d66da9b7c7d.png#crop=0&crop=0&crop=1&crop=1&height=235&id=jXR23&margin=%5Bobject%20Object%5D&name=image.png&originHeight=470&originWidth=716&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=47632&status=done&style=none&title=&width=358">
 <meta property="article:published_time" content="2020-06-12T17:03:59.000Z">
-<meta property="article:modified_time" content="2022-03-17T16:02:52.187Z">
+<meta property="article:modified_time" content="2022-10-21T10:00:44.080Z">
 <meta property="article:author" content="Marvin Xu">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2020/png/1310147/1592139758781-40601637-64a1-4ab2-a846-a256cfbc3766.png#crop=0&crop=0&crop=1&crop=1&height=452&id=zHM4g&margin=%5Bobject%20Object%5D&name=yuque_diagram.png&originHeight=452&originWidth=1436&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=63972&status=done&style=none&title=&width=1436">
@@ -49,8 +49,10 @@
 <title>语雀文章自动同步到个人博客 | Marvin's Blog</title>
   
 
-  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/third-party/analytics/baidu-analytics.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.13.1/source/js/third-party/analytics/baidu-analytics.min.js"></script>
   <script async src="https://hm.baidu.com/hm.js?42816faac3897e94b2a0d933f46eb3a2"></script>
+
+
 
 
 <meta name="referrer" content="no-referrer" />
@@ -129,7 +131,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-count">15</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -192,11 +194,16 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Marvin Xu">
-      <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Marvin's Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="语雀文章自动同步到个人博客 | Marvin's Blog">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -213,13 +220,13 @@
 
       <time title="Created: 2020-06-12 17:03:59" itemprop="dateCreated datePublished" datetime="2020-06-12T17:03:59+00:00">2020-06-12</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-03-17 16:02:52" itemprop="dateModified" datetime="2022-03-17T16:02:52+00:00">2022-03-17</time>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
       </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-10-21 10:00:44" itemprop="dateModified" datetime="2022-10-21T10:00:44+00:00">2022-10-21</time>
+    </span>
 
   
 </div>
@@ -241,10 +248,10 @@
 <span id="more"></span>
 
 <h3 id="修改-package-json-文件"><a href="#修改-package-json-文件" class="headerlink" title="修改 package.json 文件"></a>修改 package.json 文件</h3><p>参数说明：以我的博客知识库为例，链接为<a target="_blank" rel="noopener" href="https://www.yuque.com/marvinxu/blog">https://www.yuque.com/marvinxu/blog</a>，login 和 repo 参数对应如下</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;yuqueConfig&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;baseUrl&quot;</span>: <span class="string">&quot;https://www.yuque.com/api/v2&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;login&quot;</span>: <span class="string">&quot;marvinxu&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;repo&quot;</span>: <span class="string">&quot;blog&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;sync&quot;</span>: <span class="string">&quot;yuque-hexo sync&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;clean:yuque&quot;</span>: <span class="string">&quot;yuque-hexo clean&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;build:yuque&quot;</span>: <span class="string">&quot;npm run sync &amp;&amp; hexo clean &amp;&amp; hexo g&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;yuqueConfig&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;baseUrl&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://www.yuque.com/api/v2&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;login&quot;</span><span class="punctuation">:</span> <span class="string">&quot;marvinxu&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;repo&quot;</span><span class="punctuation">:</span> <span class="string">&quot;blog&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;sync&quot;</span><span class="punctuation">:</span> <span class="string">&quot;yuque-hexo sync&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;clean:yuque&quot;</span><span class="punctuation">:</span> <span class="string">&quot;yuque-hexo clean&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;build:yuque&quot;</span><span class="punctuation">:</span> <span class="string">&quot;npm run sync &amp;&amp; hexo clean &amp;&amp; hexo g&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="本地测试"><a href="#本地测试" class="headerlink" title="本地测试"></a>本地测试</h3><p>语雀 token 获取：<a target="_blank" rel="noopener" href="https://www.yuque.com/settings/tokens">https://www.yuque.com/settings/tokens</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">YUQUE_TOKEN=xxx npm run sync</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">YUQUE_TOKEN=xxx npm run <span class="built_in">sync</span></span><br></pre></td></tr></table></figure>
 
 <p>执行成功会得到类似如下的日志</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[INFO] clear previous directory.</span><br><span class="line">[INFO] remove yuque posts: /home/travis/build/MarvinXu/blog-hexo/source/_posts/yuque</span><br><span class="line">[INFO] reading from local file: /home/travis/build/MarvinXu/blog-hexo/yuque.json</span><br><span class="line">[INFO] article amount: 6</span><br><span class="line">[INFO] download article body: 语雀web-hook触发travis-ci构建</span><br><span class="line">[INFO] download articles done!</span><br><span class="line">[INFO] writing to local file: /home/travis/build/MarvinXu/blog-hexo/yuque.json</span><br><span class="line">[INFO] create posts directory (if it not exists): /home/travis/build/MarvinXu/blog-hexo/source/_posts/yuque</span><br><span class="line">[INFO] generate post file: /home/travis/build/MarvinXu/blog-hexo/source/_posts/yuque/How to add more to Git Bash on Windows.md</span><br><span class="line">[INFO] generate post file: /home/travis/build/MarvinXu/blog-hexo/source/_posts/yuque/hexo+travisCI自动部署github pages.md</span><br><span class="line">[INFO] generate post file: /home/travis/build/MarvinXu/blog-hexo/source/_posts/yuque/git-style-guide.md</span><br><span class="line">[INFO] generate post file: /home/travis/build/MarvinXu/blog-hexo/source/_posts/yuque/七牛云图床挂了？不用自定义域名找回图片.md</span><br><span class="line">[INFO] generate post file: /home/travis/build/MarvinXu/blog-hexo/source/_posts/yuque/用Adobe Acrobat为电子书制作书签.md</span><br><span class="line">[INFO] generate post file: /home/travis/build/MarvinXu/blog-hexo/source/_posts/yuque/语雀web-hook触发travis-ci构建.md</span><br><span class="line">[INFO] yuque-hexo sync done!</span><br></pre></td></tr></table></figure>
@@ -318,7 +325,7 @@
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/pjax.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.13.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.13.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.13.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.13.1/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.13.1/source/js/pjax.min.js"></script>
 
   
 
@@ -332,7 +339,7 @@
 
 
 <script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"MarvinXu/blog-comments","issue_term":"title","theme":"github-light"}</script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/third-party/comments/utterances.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.13.1/source/js/third-party/comments/utterances.min.js"></script>
 
 </body>
 </html>

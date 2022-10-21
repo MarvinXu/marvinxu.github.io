@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 6.0.0">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
@@ -16,11 +15,12 @@
 
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"marvinxu.top","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.8.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/config.min.js"></script>
-<meta name="description" content="两种方式利用 github pages 搭建个人博客一般有两种组织方式：  建两个项目，一个项目 blog 用于存放博客源码，另一个项目 xxx.github.io 用于部署生成的静态文件 只建一个项目 blog，master 分支存放博客源码，生成的静态文件部署到 gh-pages 分支  区别是第一种可以直接用https:&#x2F;&#x2F;xxx.github.io访问博客，而第二种要加项目名，即https">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"marvinxu.top","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.13.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.13.1/source/js/config.min.js"></script>
+
+    <meta name="description" content="两种方式利用 github pages 搭建个人博客一般有两种组织方式：  建两个项目，一个项目 blog 用于存放博客源码，另一个项目 xxx.github.io 用于部署生成的静态文件 只建一个项目 blog，master 分支存放博客源码，生成的静态文件部署到 gh-pages 分支  区别是第一种可以直接用https:&#x2F;&#x2F;xxx.github.io访问博客，而第二种要加项目名，即https">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo+travisCI自动部署github pages">
 <meta property="og:url" content="https://marvinxu.top/2020/06/12/yuque/hexo+travisCI%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2github%20pages/index.html">
@@ -29,7 +29,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://cdn.nlark.com/yuque/0/2020/png/1310147/1591956537089-d4ddced6-4ad7-4d98-9197-75f4fe42dc38.png#height=185&id=wV0gP&margin=%5Bobject%20Object%5D&name=image.png&originHeight=369&originWidth=1512&originalType=binary%E2%88%B6=1&size=50103&status=done&style=none&width=756">
 <meta property="article:published_time" content="2020-06-12T09:24:27.000Z">
-<meta property="article:modified_time" content="2022-03-17T16:02:52.215Z">
+<meta property="article:modified_time" content="2022-10-21T10:00:44.080Z">
 <meta property="article:author" content="Marvin Xu">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2020/png/1310147/1591956537089-d4ddced6-4ad7-4d98-9197-75f4fe42dc38.png#height=185&id=wV0gP&margin=%5Bobject%20Object%5D&name=image.png&originHeight=369&originWidth=1512&originalType=binary%E2%88%B6=1&size=50103&status=done&style=none&width=756">
@@ -45,8 +45,10 @@
 <title>hexo+travisCI自动部署github pages | Marvin's Blog</title>
   
 
-  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/third-party/analytics/baidu-analytics.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.13.1/source/js/third-party/analytics/baidu-analytics.min.js"></script>
   <script async src="https://hm.baidu.com/hm.js?42816faac3897e94b2a0d933f46eb3a2"></script>
+
+
 
 
 <meta name="referrer" content="no-referrer" />
@@ -125,7 +127,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-count">15</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -188,11 +190,16 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Marvin Xu">
-      <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Marvin's Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="hexo+travisCI自动部署github pages | Marvin's Blog">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -209,13 +216,13 @@
 
       <time title="Created: 2020-06-12 09:24:27" itemprop="dateCreated datePublished" datetime="2020-06-12T09:24:27+00:00">2020-06-12</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-03-17 16:02:52" itemprop="dateModified" datetime="2022-03-17T16:02:52+00:00">2022-03-17</time>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
       </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-10-21 10:00:44" itemprop="dateModified" datetime="2022-10-21T10:00:44+00:00">2022-10-21</time>
+    </span>
 
   
 </div>
@@ -316,7 +323,7 @@
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/pjax.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.13.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.13.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.13.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.13.1/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.13.1/source/js/pjax.min.js"></script>
 
   
 
@@ -330,7 +337,7 @@
 
 
 <script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"MarvinXu/blog-comments","issue_term":"title","theme":"github-light"}</script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.2/source/js/third-party/comments/utterances.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.13.1/source/js/third-party/comments/utterances.min.js"></script>
 
 </body>
 </html>
